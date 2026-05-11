@@ -1,0 +1,451 @@
+Running harness with project name: cvdp_agentic_arithmetic_progression_generator_1_1777959809
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 5 items
+
+../../src/test_runner.py::test_arithmetic_progression_generator[0-0-8]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1777959811
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_arithmetic_progression_generator.test_arithmetic_progression_generator (1/1)
+[INFO] Clock started.
+DATA_WIDTH= 8, SEQUENCE_LENGTH= 1, WIDTH_OUT_VAL=8 
+Overflow check !
+WIDTH_OUT_VAL = 8, EXPECTED_WIDTH_OUT_VAL = 9
+    50.00ns WARNING  ..arithmetic_progression_generator Wrong calculation of WIDTH_OUT_VAL
+                                                        assert 8 == 9
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_arithmetic_progression_generator.py", line 158, in test_arithmetic_progression_generator
+                                                            assert WIDTH_OUT_VAL == EXPECTED_WIDTH_OUT_VAL, "Wrong calculation of WIDTH_OUT_VAL"
+                                                        AssertionError: Wrong calculation of WIDTH_OUT_VAL
+                                                        assert 8 == 9
+    50.00ns WARNING  cocotb.regression                  test_arithmetic_progression_generator.test_arithmetic_progression_generator failed
+    50.00ns INFO     cocotb.regression                  *************************************************************************************************************************************
+                                                        ** TEST                                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************************************
+                                                        ** test_arithmetic_progression_generator.test_arithmetic_progression_generator   FAIL          50.00           0.00      17273.31  **
+                                                        *************************************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                                50.00           0.01       4758.04  **
+                                                        *************************************************************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=8, SEQUENCE_LENGTH=0
+[DEBUG] Start Value: 0, Step Size: 0
+[DEBUG] Parameters: {'DATA_WIDTH': 8, 'SEQUENCE_LENGTH': 0}
+FAILED
+../../src/test_runner.py::test_arithmetic_progression_generator[1-0-8]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1777959811
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_arithmetic_progression_generator.test_arithmetic_progression_generator (1/1)
+[INFO] Clock started.
+DATA_WIDTH= 8, SEQUENCE_LENGTH= 1, WIDTH_OUT_VAL=8 
+Overflow check !
+WIDTH_OUT_VAL = 8, EXPECTED_WIDTH_OUT_VAL = 9
+    50.00ns WARNING  ..arithmetic_progression_generator Wrong calculation of WIDTH_OUT_VAL
+                                                        assert 8 == 9
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_arithmetic_progression_generator.py", line 158, in test_arithmetic_progression_generator
+                                                            assert WIDTH_OUT_VAL == EXPECTED_WIDTH_OUT_VAL, "Wrong calculation of WIDTH_OUT_VAL"
+                                                        AssertionError: Wrong calculation of WIDTH_OUT_VAL
+                                                        assert 8 == 9
+    50.00ns WARNING  cocotb.regression                  test_arithmetic_progression_generator.test_arithmetic_progression_generator failed
+    50.00ns INFO     cocotb.regression                  *************************************************************************************************************************************
+                                                        ** TEST                                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************************************
+                                                        ** test_arithmetic_progression_generator.test_arithmetic_progression_generator   FAIL          50.00           0.00      16123.26  **
+                                                        *************************************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                                50.00           0.01       4694.03  **
+                                                        *************************************************************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=8, SEQUENCE_LENGTH=0
+[DEBUG] Start Value: 0, Step Size: 0
+[DEBUG] Parameters: {'DATA_WIDTH': 8, 'SEQUENCE_LENGTH': 0}
+FAILED
+../../src/test_runner.py::test_arithmetic_progression_generator[2-0-8]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1777959812
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_arithmetic_progression_generator.test_arithmetic_progression_generator (1/1)
+[INFO] Clock started.
+DATA_WIDTH= 8, SEQUENCE_LENGTH= 1, WIDTH_OUT_VAL=8 
+    50.00ns WARNING  ..arithmetic_progression_generator Wrong calculation of WIDTH_OUT_VAL
+                                                        assert 8 == 9
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_arithmetic_progression_generator.py", line 158, in test_arithmetic_progression_generator
+                                                            assert WIDTH_OUT_VAL == EXPECTED_WIDTH_OUT_VAL, "Wrong calculation of WIDTH_OUT_VAL"
+                                                        AssertionError: Wrong calculation of WIDTH_OUT_VAL
+                                                        assert 8 == 9
+    50.00ns WARNING  cocotb.regression                  test_arithmetic_progression_generator.test_arithmetic_progression_generator failed
+    50.00ns INFO     cocotb.regression                  *************************************************************************************************************************************
+                                                        ** TEST                                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************************************
+                                                        ** test_arithmetic_progression_generator.test_arithmetic_progression_generator   FAIL          50.00           0.00      17574.39  **
+                                                        *************************************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                                50.00           0.01       4743.19  **
+                                                        *************************************************************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=8, SEQUENCE_LENGTH=0
+[DEBUG] Start Value: 0, Step Size: 0
+[DEBUG] Parameters: {'DATA_WIDTH': 8, 'SEQUENCE_LENGTH': 0}
+FAILED
+../../src/test_runner.py::test_arithmetic_progression_generator[3-0-8]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1777959812
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_arithmetic_progression_generator.test_arithmetic_progression_generator (1/1)
+[INFO] Clock started.
+DATA_WIDTH= 8, SEQUENCE_LENGTH= 1, WIDTH_OUT_VAL=8 
+    50.00ns WARNING  ..arithmetic_progression_generator Wrong calculation of WIDTH_OUT_VAL
+                                                        assert 8 == 9
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_arithmetic_progression_generator.py", line 158, in test_arithmetic_progression_generator
+                                                            assert WIDTH_OUT_VAL == EXPECTED_WIDTH_OUT_VAL, "Wrong calculation of WIDTH_OUT_VAL"
+                                                        AssertionError: Wrong calculation of WIDTH_OUT_VAL
+                                                        assert 8 == 9
+    50.00ns WARNING  cocotb.regression                  test_arithmetic_progression_generator.test_arithmetic_progression_generator failed
+    50.00ns INFO     cocotb.regression                  *************************************************************************************************************************************
+                                                        ** TEST                                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************************************
+                                                        ** test_arithmetic_progression_generator.test_arithmetic_progression_generator   FAIL          50.00           0.00      19040.78  **
+                                                        *************************************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                                50.00           0.01       4782.67  **
+                                                        *************************************************************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=8, SEQUENCE_LENGTH=0
+[DEBUG] Start Value: 0, Step Size: 0
+[DEBUG] Parameters: {'DATA_WIDTH': 8, 'SEQUENCE_LENGTH': 0}
+FAILED
+../../src/test_runner.py::test_arithmetic_progression_generator[4-0-8]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1777959813
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_arithmetic_progression_generator.test_arithmetic_progression_generator (1/1)
+[INFO] Clock started.
+DATA_WIDTH= 8, SEQUENCE_LENGTH= 1, WIDTH_OUT_VAL=8 
+Overflow check !
+WIDTH_OUT_VAL = 8, EXPECTED_WIDTH_OUT_VAL = 9
+    50.00ns WARNING  ..arithmetic_progression_generator Wrong calculation of WIDTH_OUT_VAL
+                                                        assert 8 == 9
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_arithmetic_progression_generator.py", line 158, in test_arithmetic_progression_generator
+                                                            assert WIDTH_OUT_VAL == EXPECTED_WIDTH_OUT_VAL, "Wrong calculation of WIDTH_OUT_VAL"
+                                                        AssertionError: Wrong calculation of WIDTH_OUT_VAL
+                                                        assert 8 == 9
+    50.00ns WARNING  cocotb.regression                  test_arithmetic_progression_generator.test_arithmetic_progression_generator failed
+    50.00ns INFO     cocotb.regression                  *************************************************************************************************************************************
+                                                        ** TEST                                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************************************
+                                                        ** test_arithmetic_progression_generator.test_arithmetic_progression_generator   FAIL          50.00           0.00      22012.72  **
+                                                        *************************************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                                50.00           0.01       5046.20  **
+                                                        *************************************************************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=8, SEQUENCE_LENGTH=0
+[DEBUG] Start Value: 0, Step Size: 0
+[DEBUG] Parameters: {'DATA_WIDTH': 8, 'SEQUENCE_LENGTH': 0}
+FAILED
+
+=================================== FAILURES ===================================
+_________________ test_arithmetic_progression_generator[0-0-8] _________________
+
+DATA_WIDTH = 8, SEQUENCE_LENGTH = 0, test = 0
+
+    @pytest.mark.parametrize("DATA_WIDTH", [random.randint(4, 32)])
+    @pytest.mark.parametrize("SEQUENCE_LENGTH", [0])
+    @pytest.mark.parametrize("test", range(5))  # Run 50 tests
+    def test_arithmetic_progression_generator(DATA_WIDTH, SEQUENCE_LENGTH,test):
+>       runner(DATA_WIDTH=DATA_WIDTH, SEQUENCE_LENGTH=SEQUENCE_LENGTH)
+
+/src/test_runner.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 8, SEQUENCE_LENGTH = 0, start_val = 0, step_size = 0, enable = 0
+
+    def runner(DATA_WIDTH: int=0, SEQUENCE_LENGTH: int=0, start_val: int=0, step_size: int=0, enable: int=0):
+        # Plusargs to pass simulation parameters enable
+        plusargs = [
+            f'+start_val={start_val}',
+            f'+step_size={step_size}',
+            f'+enable={enable}'
+        ]
+    
+        parameters = {
+            "DATA_WIDTH": DATA_WIDTH,
+            "SEQUENCE_LENGTH": SEQUENCE_LENGTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}, SEQUENCE_LENGTH={SEQUENCE_LENGTH}")
+        print(f"[DEBUG] Start Value: {start_val}, Step Size: {step_size}")
+        print(f"[DEBUG] Parameters: {parameters}")
+    
+        # Configure the simulation runner
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameters,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave, plusargs=plusargs)
+E       SystemExit: 1
+
+/src/test_runner.py:46: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s arithmetic_progression_generator -g2012 -Parithmetic_progression_generator.DATA_WIDTH=8 -Parithmetic_progression_generator.SEQUENCE_LENGTH=0 -f /code/rundir/sim_build/cmds.f /code/rtl/arithmetic_progression_generator.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp +start_val=0 +step_size=0 +enable=0 -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_________________ test_arithmetic_progression_generator[1-0-8] _________________
+
+DATA_WIDTH = 8, SEQUENCE_LENGTH = 0, test = 1
+
+    @pytest.mark.parametrize("DATA_WIDTH", [random.randint(4, 32)])
+    @pytest.mark.parametrize("SEQUENCE_LENGTH", [0])
+    @pytest.mark.parametrize("test", range(5))  # Run 50 tests
+    def test_arithmetic_progression_generator(DATA_WIDTH, SEQUENCE_LENGTH,test):
+>       runner(DATA_WIDTH=DATA_WIDTH, SEQUENCE_LENGTH=SEQUENCE_LENGTH)
+
+/src/test_runner.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 8, SEQUENCE_LENGTH = 0, start_val = 0, step_size = 0, enable = 0
+
+    def runner(DATA_WIDTH: int=0, SEQUENCE_LENGTH: int=0, start_val: int=0, step_size: int=0, enable: int=0):
+        # Plusargs to pass simulation parameters enable
+        plusargs = [
+            f'+start_val={start_val}',
+            f'+step_size={step_size}',
+            f'+enable={enable}'
+        ]
+    
+        parameters = {
+            "DATA_WIDTH": DATA_WIDTH,
+            "SEQUENCE_LENGTH": SEQUENCE_LENGTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}, SEQUENCE_LENGTH={SEQUENCE_LENGTH}")
+        print(f"[DEBUG] Start Value: {start_val}, Step Size: {step_size}")
+        print(f"[DEBUG] Parameters: {parameters}")
+    
+        # Configure the simulation runner
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameters,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave, plusargs=plusargs)
+E       SystemExit: 1
+
+/src/test_runner.py:46: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s arithmetic_progression_generator -g2012 -Parithmetic_progression_generator.DATA_WIDTH=8 -Parithmetic_progression_generator.SEQUENCE_LENGTH=0 -f /code/rundir/sim_build/cmds.f /code/rtl/arithmetic_progression_generator.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp +start_val=0 +step_size=0 +enable=0 -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_________________ test_arithmetic_progression_generator[2-0-8] _________________
+
+DATA_WIDTH = 8, SEQUENCE_LENGTH = 0, test = 2
+
+    @pytest.mark.parametrize("DATA_WIDTH", [random.randint(4, 32)])
+    @pytest.mark.parametrize("SEQUENCE_LENGTH", [0])
+    @pytest.mark.parametrize("test", range(5))  # Run 50 tests
+    def test_arithmetic_progression_generator(DATA_WIDTH, SEQUENCE_LENGTH,test):
+>       runner(DATA_WIDTH=DATA_WIDTH, SEQUENCE_LENGTH=SEQUENCE_LENGTH)
+
+/src/test_runner.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 8, SEQUENCE_LENGTH = 0, start_val = 0, step_size = 0, enable = 0
+
+    def runner(DATA_WIDTH: int=0, SEQUENCE_LENGTH: int=0, start_val: int=0, step_size: int=0, enable: int=0):
+        # Plusargs to pass simulation parameters enable
+        plusargs = [
+            f'+start_val={start_val}',
+            f'+step_size={step_size}',
+            f'+enable={enable}'
+        ]
+    
+        parameters = {
+            "DATA_WIDTH": DATA_WIDTH,
+            "SEQUENCE_LENGTH": SEQUENCE_LENGTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}, SEQUENCE_LENGTH={SEQUENCE_LENGTH}")
+        print(f"[DEBUG] Start Value: {start_val}, Step Size: {step_size}")
+        print(f"[DEBUG] Parameters: {parameters}")
+    
+        # Configure the simulation runner
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameters,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave, plusargs=plusargs)
+E       SystemExit: 1
+
+/src/test_runner.py:46: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s arithmetic_progression_generator -g2012 -Parithmetic_progression_generator.DATA_WIDTH=8 -Parithmetic_progression_generator.SEQUENCE_LENGTH=0 -f /code/rundir/sim_build/cmds.f /code/rtl/arithmetic_progression_generator.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp +start_val=0 +step_size=0 +enable=0 -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_________________ test_arithmetic_progression_generator[3-0-8] _________________
+
+DATA_WIDTH = 8, SEQUENCE_LENGTH = 0, test = 3
+
+    @pytest.mark.parametrize("DATA_WIDTH", [random.randint(4, 32)])
+    @pytest.mark.parametrize("SEQUENCE_LENGTH", [0])
+    @pytest.mark.parametrize("test", range(5))  # Run 50 tests
+    def test_arithmetic_progression_generator(DATA_WIDTH, SEQUENCE_LENGTH,test):
+>       runner(DATA_WIDTH=DATA_WIDTH, SEQUENCE_LENGTH=SEQUENCE_LENGTH)
+
+/src/test_runner.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 8, SEQUENCE_LENGTH = 0, start_val = 0, step_size = 0, enable = 0
+
+    def runner(DATA_WIDTH: int=0, SEQUENCE_LENGTH: int=0, start_val: int=0, step_size: int=0, enable: int=0):
+        # Plusargs to pass simulation parameters enable
+        plusargs = [
+            f'+start_val={start_val}',
+            f'+step_size={step_size}',
+            f'+enable={enable}'
+        ]
+    
+        parameters = {
+            "DATA_WIDTH": DATA_WIDTH,
+            "SEQUENCE_LENGTH": SEQUENCE_LENGTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}, SEQUENCE_LENGTH={SEQUENCE_LENGTH}")
+        print(f"[DEBUG] Start Value: {start_val}, Step Size: {step_size}")
+        print(f"[DEBUG] Parameters: {parameters}")
+    
+        # Configure the simulation runner
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameters,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave, plusargs=plusargs)
+E       SystemExit: 1
+
+/src/test_runner.py:46: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s arithmetic_progression_generator -g2012 -Parithmetic_progression_generator.DATA_WIDTH=8 -Parithmetic_progression_generator.SEQUENCE_LENGTH=0 -f /code/rundir/sim_build/cmds.f /code/rtl/arithmetic_progression_generator.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp +start_val=0 +step_size=0 +enable=0 -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_________________ test_arithmetic_progression_generator[4-0-8] _________________
+
+DATA_WIDTH = 8, SEQUENCE_LENGTH = 0, test = 4
+
+    @pytest.mark.parametrize("DATA_WIDTH", [random.randint(4, 32)])
+    @pytest.mark.parametrize("SEQUENCE_LENGTH", [0])
+    @pytest.mark.parametrize("test", range(5))  # Run 50 tests
+    def test_arithmetic_progression_generator(DATA_WIDTH, SEQUENCE_LENGTH,test):
+>       runner(DATA_WIDTH=DATA_WIDTH, SEQUENCE_LENGTH=SEQUENCE_LENGTH)
+
+/src/test_runner.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 8, SEQUENCE_LENGTH = 0, start_val = 0, step_size = 0, enable = 0
+
+    def runner(DATA_WIDTH: int=0, SEQUENCE_LENGTH: int=0, start_val: int=0, step_size: int=0, enable: int=0):
+        # Plusargs to pass simulation parameters enable
+        plusargs = [
+            f'+start_val={start_val}',
+            f'+step_size={step_size}',
+            f'+enable={enable}'
+        ]
+    
+        parameters = {
+            "DATA_WIDTH": DATA_WIDTH,
+            "SEQUENCE_LENGTH": SEQUENCE_LENGTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}, SEQUENCE_LENGTH={SEQUENCE_LENGTH}")
+        print(f"[DEBUG] Start Value: {start_val}, Step Size: {step_size}")
+        print(f"[DEBUG] Parameters: {parameters}")
+    
+        # Configure the simulation runner
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameters,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave, plusargs=plusargs)
+E       SystemExit: 1
+
+/src/test_runner.py:46: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s arithmetic_progression_generator -g2012 -Parithmetic_progression_generator.DATA_WIDTH=8 -Parithmetic_progression_generator.SEQUENCE_LENGTH=0 -f /code/rundir/sim_build/cmds.f /code/rtl/arithmetic_progression_generator.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp +start_val=0 +step_size=0 +enable=0 -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-eysdu6su'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/lastfailed: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-pho_jrdq'
+    config.cache.set("cache/lastfailed", self.lastfailed)
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-1vpze_vl'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_arithmetic_progression_generator[0-0-8]
+FAILED ../../src/test_runner.py::test_arithmetic_progression_generator[1-0-8]
+FAILED ../../src/test_runner.py::test_arithmetic_progression_generator[2-0-8]
+FAILED ../../src/test_runner.py::test_arithmetic_progression_generator[3-0-8]
+FAILED ../../src/test_runner.py::test_arithmetic_progression_generator[4-0-8]
+======================== 5 failed, 3 warnings in 2.93s =========================
+Cleaning up Docker resources...

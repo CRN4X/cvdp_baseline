@@ -1,0 +1,10 @@
+[
+  "src/test_runner.py::test_min_distance[4-10-0]",
+  "src/test_runner.py::test_min_distance[4-20-0]",
+  "src/test_runner.py::test_min_distance[4-3-0]",
+  "src/test_runner.py::test_min_distance[4-4-0]",
+  "src/test_runner.py::test_min_distance[8-10-0]",
+  "src/test_runner.py::test_min_distance[8-20-0]",
+  "src/test_runner.py::test_min_distance[8-3-0]",
+  "src/test_runner.py::test_min_distance[8-4-0]"
+]

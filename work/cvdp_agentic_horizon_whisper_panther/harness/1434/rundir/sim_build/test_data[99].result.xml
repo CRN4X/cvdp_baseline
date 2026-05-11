@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778493610" />
+    <testcase name="test_convolution_0" classname="test_phase_lut" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_horizon_whisper_panther/harness/1434/src/test_phase_lut.py" lineno="9" time="0.011134147644042969" sim_time_ns="1020.0" ratio_time="91610.06595289079" />
+  </testsuite>
+</testsuites>

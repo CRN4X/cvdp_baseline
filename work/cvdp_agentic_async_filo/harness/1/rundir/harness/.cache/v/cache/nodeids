@@ -1,0 +1,7 @@
+[
+  "src/test_runner.py::test_filo[16-12]",
+  "src/test_runner.py::test_filo[16-8]",
+  "src/test_runner.py::test_filo[8-12]",
+  "src/test_runner.py::test_filo[8-8]",
+  "src/test_runner.py::test_runner"
+]

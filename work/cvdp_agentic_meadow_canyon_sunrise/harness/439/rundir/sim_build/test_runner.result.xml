@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778495284" />
+    <testcase name="test_basic" classname="test_swizzler_supervisor" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_meadow_canyon_sunrise/harness/439/src/test_swizzler_supervisor.py" lineno="9" time="0.0007679462432861328" sim_time_ns="70.0" ratio_time="91152.21359826141" />
+    <testcase name="test_random" classname="test_swizzler_supervisor" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_meadow_canyon_sunrise/harness/439/src/test_swizzler_supervisor.py" lineno="35" time="0.0024590492248535156" sim_time_ns="420.0" ratio_time="170797.71960442117" />
+    <testcase name="test_edge" classname="test_swizzler_supervisor" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_meadow_canyon_sunrise/harness/439/src/test_swizzler_supervisor.py" lineno="67" time="0.00042128562927246094" sim_time_ns="59.99999999999994" ratio_time="142421.18845500835" />
+  </testsuite>
+</testsuites>

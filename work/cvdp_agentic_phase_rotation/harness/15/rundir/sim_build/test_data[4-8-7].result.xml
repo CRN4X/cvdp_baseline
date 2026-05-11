@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777960005" />
+    <testcase name="test_convolution_0" classname="test_phase_rot" file="/src/test_phase_rot.py" lineno="9" time="0.0047724246978759766" sim_time_ns="0.0" ratio_time="0.0">
+      <failure error_type="AttributeError" error_msg="top_phase_rotation contains no child object named rst_async_n" />
+    </testcase>
+  </testsuite>
+</testsuites>

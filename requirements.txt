@@ -1,0 +1,13 @@
+pyyaml
+requests
+pydantic
+openai
+python-dotenv
+psutil
+nltk
+tabulate
+numpy
+colorama
+pytest
+cocotb==2.0.1
+tiktoken>=0.7.0

@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777959959" />
+    <testcase name="monte_carlo_simulation" classname="test_monte_carlo_dsp_monitor_top" file="/src/test_monte_carlo_dsp_monitor_top.py" lineno="20" time="0.22538423538208008" sim_time_ns="7215.0" ratio_time="32011.999365301006">
+      <failure error_type="AssertionError" error_msg=" Transfers exceed input attempts — possible sync bug&#10;assert 549 &lt;= 500" />
+    </testcase>
+  </testsuite>
+</testsuites>

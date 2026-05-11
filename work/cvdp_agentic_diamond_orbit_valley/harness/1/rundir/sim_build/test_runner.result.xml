@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778495517" />
+    <testcase name="test_traffic_light_controller_top" classname="test_traffic_light_controller_top" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_diamond_orbit_valley/harness/1/src/test_traffic_light_controller_top.py" lineno="17" time="0.008258342742919922" sim_time_ns="2870.0" ratio_time="347527.3537733125" />
+  </testsuite>
+</testsuites>

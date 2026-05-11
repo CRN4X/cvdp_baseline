@@ -1,0 +1,40 @@
+# OS/editor noise
+.DS_Store
+
+# Python cache/build
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environments
+agent_env/
+**/agent_env/
+
+# Local agent-generated artifacts
+NVIDIA-ICLAD25-Hackathon-main/my-agent/batch_reports/*.log
+NVIDIA-ICLAD25-Hackathon-main/my-agent/batch_reports/*.json
+
+# Harness runtime outputs (generated per run)
+NVIDIA-ICLAD25-Hackathon-main/work/**/rundir/
+
+# Docker-generated patch/log artifacts (not needed for local no-Docker workflow)
+NVIDIA-ICLAD25-Hackathon-main/work/**/harness/**/agent_changes.patch
+NVIDIA-ICLAD25-Hackathon-main/work/**/reports/*_agent.txt
+NVIDIA-ICLAD25-Hackathon-main/work/**/reports/*_harness.txt
+
+# Simulator/waveform outputs
+NVIDIA-ICLAD25-Hackathon-main/work/**/harness/**/sim_build/
+NVIDIA-ICLAD25-Hackathon-main/work/**/*.vcd
+NVIDIA-ICLAD25-Hackathon-main/work/**/*.fst
+
+# Docker helper scripts generated inside harnesses
+NVIDIA-ICLAD25-Hackathon-main/work/**/harness/**/run_docker*.sh
+NVIDIA-ICLAD25-Hackathon-main/work/**/harness/**/run_docker_*.sh
+
+# misc
+/Archive/
+*/batch_reports/
+/Python-3.12.7/
+
+# Runtime archived logs
+***/logs/

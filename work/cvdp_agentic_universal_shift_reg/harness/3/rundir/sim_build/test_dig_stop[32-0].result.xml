@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777960180" />
+    <testcase name="test_universal_shift_register" classname="test_universal_shift_register" file="/src/test_universal_shift_register.py" lineno="132" time="0.0028076171875" sim_time_ns="0.0" ratio_time="0.0">
+      <failure error_type="AttributeError" error_msg="universal_shift_register contains no child object named en" />
+    </testcase>
+  </testsuite>
+</testsuites>

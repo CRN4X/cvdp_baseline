@@ -1,0 +1,279 @@
+Running harness with project name: cvdp_agentic_universal_shift_reg_3_1777960177
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 4 items
+
+../../src/test_runner.py::test_dig_stop[4-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1777960179
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_universal_shift_register.test_universal_shift_register (1/1)
+                                                            Cocotb-based test replicating the functionality of the original SV testbench.
+     0.00ns WARNING  ..er.test_universal_shift_register universal_shift_register contains no child object named en
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_universal_shift_register.py", line 143, in test_universal_shift_register
+                                                            await reset_register(dut)
+                                                          File "/src/test_universal_shift_register.py", line 47, in reset_register
+                                                            dut.en.value         = 1  # Keep enable high (unless testing disabled mode)
+                                                            ^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/handle.py", line 484, in __getattr__
+                                                            raise AttributeError(f"{self._path} contains no child object named {name}")
+                                                        AttributeError: universal_shift_register contains no child object named en
+     0.00ns WARNING  cocotb.regression                  test_universal_shift_register.test_universal_shift_register failed
+     0.00ns INFO     cocotb.regression                  *********************************************************************************************************************
+                                                        ** TEST                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************************
+                                                        ** test_universal_shift_register.test_universal_shift_register   FAIL           0.00           0.00          0.00  **
+                                                        *********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                 0.00           0.01          0.00  **
+                                                        *********************************************************************************************************************
+[DEBUG] Parameters: {'N': 4}
+FAILED
+../../src/test_runner.py::test_dig_stop[8-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1777960179
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_universal_shift_register.test_universal_shift_register (1/1)
+                                                            Cocotb-based test replicating the functionality of the original SV testbench.
+     0.00ns WARNING  ..er.test_universal_shift_register universal_shift_register contains no child object named en
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_universal_shift_register.py", line 143, in test_universal_shift_register
+                                                            await reset_register(dut)
+                                                          File "/src/test_universal_shift_register.py", line 47, in reset_register
+                                                            dut.en.value         = 1  # Keep enable high (unless testing disabled mode)
+                                                            ^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/handle.py", line 484, in __getattr__
+                                                            raise AttributeError(f"{self._path} contains no child object named {name}")
+                                                        AttributeError: universal_shift_register contains no child object named en
+     0.00ns WARNING  cocotb.regression                  test_universal_shift_register.test_universal_shift_register failed
+     0.00ns INFO     cocotb.regression                  *********************************************************************************************************************
+                                                        ** TEST                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************************
+                                                        ** test_universal_shift_register.test_universal_shift_register   FAIL           0.00           0.00          0.00  **
+                                                        *********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                 0.00           0.01          0.00  **
+                                                        *********************************************************************************************************************
+[DEBUG] Parameters: {'N': 8}
+FAILED
+../../src/test_runner.py::test_dig_stop[16-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1777960180
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_universal_shift_register.test_universal_shift_register (1/1)
+                                                            Cocotb-based test replicating the functionality of the original SV testbench.
+     0.00ns WARNING  ..er.test_universal_shift_register universal_shift_register contains no child object named en
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_universal_shift_register.py", line 143, in test_universal_shift_register
+                                                            await reset_register(dut)
+                                                          File "/src/test_universal_shift_register.py", line 47, in reset_register
+                                                            dut.en.value         = 1  # Keep enable high (unless testing disabled mode)
+                                                            ^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/handle.py", line 484, in __getattr__
+                                                            raise AttributeError(f"{self._path} contains no child object named {name}")
+                                                        AttributeError: universal_shift_register contains no child object named en
+     0.00ns WARNING  cocotb.regression                  test_universal_shift_register.test_universal_shift_register failed
+     0.00ns INFO     cocotb.regression                  *********************************************************************************************************************
+                                                        ** TEST                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************************
+                                                        ** test_universal_shift_register.test_universal_shift_register   FAIL           0.00           0.00          0.00  **
+                                                        *********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                 0.00           0.01          0.00  **
+                                                        *********************************************************************************************************************
+[DEBUG] Parameters: {'N': 16}
+FAILED
+../../src/test_runner.py::test_dig_stop[32-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1777960180
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_universal_shift_register.test_universal_shift_register (1/1)
+                                                            Cocotb-based test replicating the functionality of the original SV testbench.
+     0.00ns WARNING  ..er.test_universal_shift_register universal_shift_register contains no child object named en
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_universal_shift_register.py", line 143, in test_universal_shift_register
+                                                            await reset_register(dut)
+                                                          File "/src/test_universal_shift_register.py", line 47, in reset_register
+                                                            dut.en.value         = 1  # Keep enable high (unless testing disabled mode)
+                                                            ^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/handle.py", line 484, in __getattr__
+                                                            raise AttributeError(f"{self._path} contains no child object named {name}")
+                                                        AttributeError: universal_shift_register contains no child object named en
+     0.00ns WARNING  cocotb.regression                  test_universal_shift_register.test_universal_shift_register failed
+     0.00ns INFO     cocotb.regression                  *********************************************************************************************************************
+                                                        ** TEST                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************************
+                                                        ** test_universal_shift_register.test_universal_shift_register   FAIL           0.00           0.00          0.00  **
+                                                        *********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                 0.00           0.01          0.00  **
+                                                        *********************************************************************************************************************
+[DEBUG] Parameters: {'N': 32}
+FAILED
+
+=================================== FAILURES ===================================
+______________________________ test_dig_stop[4-0] ______________________________
+
+N = 4, test = 0
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("N", [4,8,16,32])
+    def test_dig_stop(N, test):
+>       runner(N=N)
+
+/src/test_runner.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 4
+
+    def runner(N: int = 8):
+        parameter = {"N": N}
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:26: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s universal_shift_register -g2012 -Puniversal_shift_register.N=4 -f /code/rundir/sim_build/cmds.f /code/rtl/universal_shift_register.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+______________________________ test_dig_stop[8-0] ______________________________
+
+N = 8, test = 0
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("N", [4,8,16,32])
+    def test_dig_stop(N, test):
+>       runner(N=N)
+
+/src/test_runner.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 8
+
+    def runner(N: int = 8):
+        parameter = {"N": N}
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:26: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s universal_shift_register -g2012 -Puniversal_shift_register.N=8 -f /code/rundir/sim_build/cmds.f /code/rtl/universal_shift_register.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_____________________________ test_dig_stop[16-0] ______________________________
+
+N = 16, test = 0
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("N", [4,8,16,32])
+    def test_dig_stop(N, test):
+>       runner(N=N)
+
+/src/test_runner.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 16
+
+    def runner(N: int = 8):
+        parameter = {"N": N}
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:26: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s universal_shift_register -g2012 -Puniversal_shift_register.N=16 -f /code/rundir/sim_build/cmds.f /code/rtl/universal_shift_register.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_____________________________ test_dig_stop[32-0] ______________________________
+
+N = 32, test = 0
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("N", [4,8,16,32])
+    def test_dig_stop(N, test):
+>       runner(N=N)
+
+/src/test_runner.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 32
+
+    def runner(N: int = 8):
+        parameter = {"N": N}
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:26: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s universal_shift_register -g2012 -Puniversal_shift_register.N=32 -f /code/rundir/sim_build/cmds.f /code/rtl/universal_shift_register.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_dig_stop[4-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_dig_stop[8-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_dig_stop[16-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_dig_stop[32-0] - SystemExit: 1
+============================== 4 failed in 2.41s ===============================
+Cleaning up Docker resources...

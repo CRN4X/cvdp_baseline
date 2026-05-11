@@ -1,0 +1,1519 @@
+
+[11_may_2026_00_45_20] [agent.py] Logging terminal output to: /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/run.log
+
+[11_may_2026_00_45_20] [agent.py] Step A: Loading dataset entries
+
+[11_may_2026_00_45_20] [agent.py] Selected dataset index 1: cvdp_agentic_starlight_phoenix_comet_6246
+
+[11_may_2026_00_45_20] [agent.py] Selected dataset difficulty: medium
+
+[11_may_2026_00_45_20] [agent.py] Resolved harness path: /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246
+
+[11_may_2026_00_45_20] [agent.py] Reset staged RTL from original source: /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rtl.orig -> /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl
+
+[11_may_2026_00_45_20] [agent.py] Fixed input token baseline (first Codex prompt): 481
+
+[11_may_2026_00_45_20] [agent.py] Run cycle 1/2: using max retries 8
+
+[11_may_2026_00_45_20] [agent.py] Step 1/2: Codex solve attempt 1/8
+
+[11_may_2026_00_45_20] [codex] Invoking codex exec
+OpenAI Codex v0.128.0 (research preview)
+--------
+workdir: /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main
+model: gpt-5.3-codex
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, /home/snuc/.codex/memories]
+reasoning effort: medium
+reasoning summaries: none
+session id: 019e15ff-6900-77f3-844a-e706338c0331
+--------
+user
+Work on this harness iteratively until it passes:
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246
+
+Rules:
+- Run ./my-agent/run_local_eval.sh "/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246"
+- If failing, read:
+  - /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/prompt.json
+  - /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim.log
+  - /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/agent_report.json
+- Edit ONLY files under:
+  my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/
+- Do NOT modify any file under:
+  /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246
+- Do not modify before/ originals.
+- Keep edits minimal, compile-safe first.
+- Use sim.log first-error lines as primary guidance.
+- Target dataset difficulty: medium.
+- In your final response, include a line exactly like: Iteration count: `<N>` which 
+  tells that how many times the codex was executed
+
+Attempt: 1/8
+
+
+[11_may_2026_00_45_24] [codex] Stream output started
+I’ll run the local eval first, then use the first error in `sim.log` to drive a minimal RTL fix under the allowed `my-agent/.../6246/rtl/` path and iterate until it passes.
+exec
+/bin/bash -lc './my-agent/run_local_eval.sh "/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246"' in /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main
+ exited 1 in 377ms:
+
+[11_may_2026_00_45_25] [agent.py] Harness mode detected (no index argument).
+
+[11_may_2026_00_45_25] [agent.py] Wrote no-op agent report: /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/agent_report.json
+
+[11_may_2026_00_45_25] [agent.py] Harness mode complete.
+Running local harness eval
+  HARNESS_PATH=/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246
+  RUNNER=test_runner.py
+  ENV_FILE=.env
+  TOPLEVEL=aes128_encrypt
+  MODULE=test_aes128_encrypt
+  SIM=icarus
+  VERILOG_SOURCES=/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
+============================= test session starts ==============================
+platform linux -- Python 3.12.7, pytest-9.0.3, pluggy-1.6.0 -- /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/agent_env/bin/python3
+cachedir: rundir/harness/.cache
+rootdir: /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246
+plugins: anyio-4.13.0
+collecting ... collected 1 item
+
+../src/test_runner.py::test_data FAILED
+
+=================================== FAILURES ===================================
+__________________________________ test_data ___________________________________
+
+    def test_data():
+        # Run the simulation with specified parameters
+>       runner()
+
+../src/test_runner.py:35: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../src/test_runner.py:18: in runner
+    sim_runner.build(
+../../../../../agent_env/lib/python3.12/site-packages/cocotb_tools/runner.py:389: in build
+    self._execute(cmds, cwd=self.build_dir)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = False, timeout = None, check = True
+popenargs = (['iverilog', '-o', '/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25...k/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build/sim.vvp', '-s', 'aes128_encrypt', '-g2012', ...],)
+kwargs = {'cwd': PosixPath('/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-H...BOX_NETWORK_DISABLED': '1', ...}, 'stderr': -2, 'stdout': <_io.TextIOWrapper name='sim.log' mode='w' encoding='UTF-8'>}
+process = <Popen: returncode: 40 args: ['iverilog', '-o', '/home/snuc/Study/agents_for...>
+stdout = None, stderr = None, retcode = 40
+
+    def run(*popenargs,
+            input=None, capture_output=False, timeout=None, check=False, **kwargs):
+        """Run command with arguments and return a CompletedProcess instance.
+    
+        The returned instance will have attributes args, returncode, stdout and
+        stderr. By default, stdout and stderr are not captured, and those attributes
+        will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+        or pass capture_output=True to capture both.
+    
+        If check is True and the exit code was non-zero, it raises a
+        CalledProcessError. The CalledProcessError object will have the return code
+        in the returncode attribute, and output & stderr attributes if those streams
+        were captured.
+    
+        If timeout is given, and the process takes too long, a TimeoutExpired
+        exception will be raised.
+    
+        There is an optional argument "input", allowing you to
+        pass bytes or a string to the subprocess's stdin.  If you use this argument
+        you may not also use the Popen constructor's "stdin" argument, as
+        it will be used internally.
+    
+        By default, all communication is in bytes, and therefore any "input" should
+        be bytes, and the stdout and stderr will be bytes. If in text mode, any
+        "input" should be a string, and stdout and stderr will be strings decoded
+        according to locale encoding, or by "encoding" if set. Text mode is
+        triggered by setting any of text, encoding, errors or universal_newlines.
+    
+        The other arguments are the same as for the Popen constructor.
+        """
+        if input is not None:
+            if kwargs.get('stdin') is not None:
+                raise ValueError('stdin and input arguments may not both be used.')
+            kwargs['stdin'] = PIPE
+    
+        if capture_output:
+            if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+                raise ValueError('stdout and stderr arguments may not be used '
+                                 'with capture_output.')
+            kwargs['stdout'] = PIPE
+            kwargs['stderr'] = PIPE
+    
+        with Popen(*popenargs, **kwargs) as process:
+            try:
+                stdout, stderr = process.communicate(input, timeout=timeout)
+            except TimeoutExpired as exc:
+                process.kill()
+                if _mswindows:
+                    # Windows accumulates the output in a single blocking
+                    # read() call run on child threads, with the timeout
+                    # being done in a join() on those threads.  communicate()
+                    # _after_ kill() is required to collect that and add it
+                    # to the exception.
+                    exc.stdout, exc.stderr = process.communicate()
+                else:
+                    # POSIX _communicate already populated the output so
+                    # far into the TimeoutExpired exception.
+                    process.wait()
+                raise
+            except:  # Including KeyboardInterrupt, communicate handled that.
+                process.kill()
+                # We don't call process.wait() as .__exit__ does that for us.
+                raise
+            retcode = process.poll()
+            if check and retcode:
+>               raise CalledProcessError(retcode, process.args,
+                                         output=stdout, stderr=stderr)
+E               subprocess.CalledProcessError: Command '['iverilog', '-o', '/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build/sim.vvp', '-s', 'aes128_encrypt', '-g2012', '-s', 'cocotb_iverilog_dump', '-f', '/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build/cmds.f', '/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv', '/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build/cocotb_iverilog_dump.v']' returned non-zero exit status 40.
+
+/usr/local/lib/python3.12/subprocess.py:571: CalledProcessError
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build/sim.vvp -s aes128_encrypt -g2012 -s cocotb_iverilog_dump -f /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build/cmds.f /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build/cocotb_iverilog_dump.v in directory /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build
+=========================== short test summary info ============================
+FAILED ../src/test_runner.py::test_data - subprocess.CalledProcessError: Comm...
+============================== 1 failed in 0.08s ===============================
+
+The first run failed at compile stage. I’m now reading `sim.log` first-error lines plus the prompt and report to make a targeted minimal fix in the RTL file.
+exec
+/bin/bash -lc 'cat work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/agent_report.json' in /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main
+ succeeded in 0ms:
+{
+  "agent": "my-hw-agent",
+  "mode": "harness_noop",
+  "status": "success",
+  "message": "No-op in harness mode; external Codex loop performs edits.",
+  "timestamp": "2026-05-11 00:45:25"
+}
+
+exec
+/bin/bash -lc "sed -n '1,220p' work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim.log" in /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main
+ succeeded in 0ms:
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187: error: Unresolved net/uwire SubWord cannot have multiple drivers.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd2)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Unresolved net/uwire SubWord cannot have multiple drivers.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd3)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187: error: Unresolved net/uwire SubWord cannot have multiple drivers.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd2)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Unresolved net/uwire SubWord cannot have multiple drivers.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd3)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187: error: Unresolved net/uwire SubWord cannot have multiple drivers.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd2)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Unresolved net/uwire SubWord cannot have multiple drivers.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd3)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187: error: Unresolved net/uwire SubWord cannot have multiple drivers.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd2)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Unresolved net/uwire SubWord cannot have multiple drivers.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd3)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187: error: Unresolved net/uwire SubWord cannot have multiple drivers.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd2)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Unresolved net/uwire SubWord cannot have multiple drivers.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd3)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187: error: Unresolved net/uwire SubWord cannot have multiple drivers.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd2)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Unresolved net/uwire SubWord cannot have multiple drivers.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd3)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187: error: Unresolved net/uwire SubWord cannot have multiple drivers.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd2)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Unresolved net/uwire SubWord cannot have multiple drivers.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd3)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187: error: Unresolved net/uwire SubWord cannot have multiple drivers.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd2)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Unresolved net/uwire SubWord cannot have multiple drivers.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd3)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187: error: Unresolved net/uwire SubWord cannot have multiple drivers.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd2)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Unresolved net/uwire SubWord cannot have multiple drivers.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd3)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187: error: Unresolved net/uwire SubWord cannot have multiple drivers.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:187:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd2)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Unresolved net/uwire SubWord cannot have multiple drivers.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd3)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:100: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:211: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+40 error(s) during elaboration.
+
+exec
+/bin/bash -lc 'cat work/cvdp_agentic_starlight_phoenix_comet/harness/6246/prompt.json' in /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main
+ succeeded in 0ms:
+{"prompt": "The `aes128_encrypt` module in `rtl` folder performs **AES-128 encryption** by first generating **11 round keys** (one for the initial state and 10 rounds) from the **128-bit cipher key** using a **recursive key expansion process**. It begins by treating the key as **four 32-bit words** (`W[0]` to `W[3]`) and deriving new words using the **previously generated ones**. Every **fourth word (`W[i]`)** undergoes the **key schedule core transformation**, which includes a **byte-wise left rotation (`RotWord`)**, substitution via the **S-box (`SubWord`)**, and XOR of the left-most byte of `SubWord` with a **round constant (`Rcon`)**. The transformed word is XORed with the word from **four positions earlier (`W[i-4]`)** to produce the next word. Each remaining word is generated by XORing the previous word with the word four positions earlier. The key expansion process does not run serially; instead, it **generates the first necessary round keys, allowing encryption to start in parallel** while the remaining keys continue to be derived. This process continues until all **44 words (`W[0]` to `W[43]`)** are generated and grouped into **11 round keys**.\n\n# AES-128 Encryption Overview\n\nThe encryption process begins by **loading the 128-bit plaintext block** into a **4\u00d74 state matrix**, which undergoes **11 transformations** (one for the initial round and 10 for encryption rounds). In the **initial round**, the state is XORed with the first round key.  \n\nEach of the **10 encryption rounds** consists of four main transformations:  \n\n- **SubBytes** \u2013 Replaces each byte using the **AES S-box** to introduce non-linearity.  \n- **ShiftRows** \u2013 Cyclically shifts the rows of the state matrix to introduce diffusion.  \n- **MixColumns** \u2013 Transforms each column of the state matrix by multiplying it with a fixed **GF(2\u2078) polynomial matrix** (over **Rijndael\u2019s finite field**) to diffuse data across bytes. This operation ensures that changes in one byte affect all four bytes of a column.  \n\n  The transformation is defined as a **matrix multiplication** where each column of the state is multiplied by the following constant matrix:\n\n     |  8'h02  |  8'h03  |  8'h01  |  8'h01  |\n     |:-------:|:-------:|:-------:|:-------:|\n     |  8'h01  |  8'h02  |  8'h03  |  8'h01  |\n     |  8'h01  |  8'h01  |  8'h02  |  8'h03  |\n     |  8'h03  |  8'h01  |  8'h01  |  8'h02  |\n\n  ## **Mathematical Basis in GF(2\u2078)**\n  - **Rijndael\u2019s finite field (GF(2\u2078))** is defined by the **irreducible polynomial**: $`x^8 + x^4 + x^3 + x + 1`$ **or** `0x11B` in hexadecimal. This polynomial is used for modular reduction when performing field operations.  \n  - **Addition in GF(2\u2078)** is simply **bitwise XOR**.  \n  - **Multiplication in GF(2\u2078)** follows standard polynomial multiplication, but results are reduced **modulo ($`x^8 + x^4 + x^3 + x + 1`$)** to ensure results stay within the field.  \n  - To implement multiplication by `{02}` (0x02) in hardware, a left shift (`x << 1`) is used, followed by XOR with `0x1B` if the most significant bit was set (to ensure modular reduction).  \n  - Multiplication by `{03}` (0x03) is computed as `{02} \u2295 {01}`, This is expressed as `{03} * x = ({02} * x) \u2295 x`.\n\n  This operation is **skipped in the final round** to maintain proper decryption symmetry.  \n\n- **AddRoundKey** \u2013 XORs the state matrix with the corresponding round key.  \n\nAfter **10 rounds**, the final state matrix is transformed into the **128-bit ciphertext output**, completing the AES-128 encryption process.\n\n\nThe key expansion and the encryption can happen simultaneously, by asserting both `i_start` and `i_update_key`. Also, if the stored expanded key is the one that should be used for the encryption, only an `i_start` signal may be asserted and the key will not be updated.\n\nDuring testing, the module failed to produce the expected output, leading to incorrect results. The `sbox_enc` module and the `Rcon` values were previously tested, and they have no errors.\nThe module and its testbench are available in the current working directory for debugging, and the expected output is available in the testbench. Could you help debug and fix the RTL to ensure correct functionality?\n"}
+I’ve isolated the concrete compile error to `SubWord` driving conflicts around lines ~187/192 in `aes128_encrypt.sv`. Next I’m inspecting that section and making the smallest compile-safe wiring fix.
+exec
+/bin/bash -lc "nl -ba my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv | sed -n '1,280p'" in /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main
+ succeeded in 0ms:
+     1	module aes128_encrypt #(
+     2	    parameter NBW_KEY  = 'd128,
+     3	    parameter NBW_DATA = 'd128
+     4	) (
+     5	    input  logic                clk,
+     6	    input  logic                rst_async_n,
+     7	    input  logic                i_update_key,
+     8	    input  logic [NBW_KEY-1:0]  i_key,
+     9	    input  logic                i_start,
+    10	    input  logic [NBW_DATA-1:0] i_data,
+    11	    output logic                o_done,
+    12	    output logic [NBW_DATA-1:0] o_data
+    13	);
+    14	
+    15	// ----------------------------------------
+    16	// - Internal Parameters
+    17	// ----------------------------------------
+    18	localparam NBW_BYTE   = 'd8;
+    19	localparam STEPS      = 'd10;
+    20	localparam NBW_WORD   = 'd32;
+    21	localparam NBW_EX_KEY = 'd1408;
+    22	
+    23	// ----------------------------------------
+    24	// - Wires/Registers creation
+    25	// ----------------------------------------
+    26	logic [NBW_BYTE-1:0]   Rcon   [STEPS];
+    27	logic [NBW_KEY-1:0]    valid_key;
+    28	logic [NBW_KEY-1:0]    step_key[STEPS];
+    29	logic [NBW_EX_KEY-1:0] expanded_key_nx;
+    30	logic [NBW_EX_KEY-1:0] expanded_key_ff;
+    31	logic [NBW_BYTE-1:0]   current_data_nx[4][4];
+    32	logic [NBW_BYTE-1:0]   current_data_ff[4][4];
+    33	logic [NBW_BYTE-1:0]   SubBytes[4][4];
+    34	logic [NBW_BYTE-1:0]   ShiftRows[4][4];
+    35	logic [NBW_BYTE-1:0]   xtimes02[4][4];
+    36	logic [NBW_BYTE-1:0]   xtimes03[4][4];
+    37	logic [NBW_BYTE-1:0]   MixColumns[4][4];
+    38	logic [3:0] round_ff;
+    39	
+    40	assign o_done = (round_ff == 4'd0);
+    41	
+    42	generate
+    43	    for(genvar i = 0; i < 4; i++) begin : out_row
+    44	        for(genvar j = 0; j < 4; j++) begin : out_col
+    45	            assign o_data[NBW_DATA-(4*i+j)*NBW_BYTE-1-:NBW_BYTE] = current_data_ff[i][j];
+    46	        end
+    47	    end
+    48	endgenerate
+    49	
+    50	always_ff @(posedge clk or negedge rst_async_n) begin : cypher_regs
+    51	    if(!rst_async_n) begin
+    52	        round_ff <= 4'd0;
+    53	        for(int i = 0; i < 4; i++) begin
+    54	            for(int j = 0; j < 4; j++) begin
+    55	                current_data_ff[i][j] <= 8'd0;
+    56	            end
+    57	        end
+    58	    end else begin
+    59	        if(i_start & o_done || (round_ff > 4'd0 && round_ff < 4'd11)) begin
+    60	            round_ff <= round_ff + 1'b1;
+    61	        end else begin
+    62	            round_ff <= 4'd0;
+    63	        end
+    64	
+    65	        for(int i = 0; i < 4; i++) begin
+    66	            for(int j = 0; j < 4; j++) begin
+    67	                current_data_ff[i][j] <= current_data_nx[i][j];
+    68	            end
+    69	        end
+    70	    end
+    71	end
+    72	
+    73	always_comb begin : next_data
+    74	    for(int i = 0; i < 4; i++) begin
+    75	        for(int j = 0; j < 4; j++) begin
+    76	            if(i_start & o_done) begin
+    77	                current_data_nx[i][j] = i_data[NBW_DATA-(4*j+i)*NBW_BYTE-1-:NBW_BYTE] ^ expanded_key_ff[NBW_EX_KEY-(4*j+i)*NBW_BYTE-1-:NBW_BYTE];
+    78	            end else begin
+    79	                if(round_ff > 4'd1) begin
+    80	                    current_data_nx[i][j] = ((round_ff < 4'd11) ? MixColumns[i][j] : ShiftRows[i][j]) ^ expanded_key_ff[NBW_EX_KEY-(round_ff-1)*NBW_KEY-(4*j+i)*NBW_BYTE-1-:NBW_BYTE];
+    81	                end else begin
+    82	                    current_data_nx[i][j] = current_data_ff[i][j];
+    83	                end
+    84	            end
+    85	        end
+    86	    end
+    87	end
+    88	
+    89	generate
+    90	    for(genvar i = 0; i < 4; i++) begin : row
+    91	        for(genvar j = 0; j < 4; j++) begin : col
+    92	            sbox_enc uu_sbox_enc0 (
+    93	                .i_data(current_data_ff[i][j]),
+    94	                .o_data(SubBytes[i][j])
+    95	            );
+    96	        end
+    97	    end
+    98	endgenerate
+    99	
+   100	always_comb begin : cypher_logic
+   101	    // Shift Rows logic
+   102	    // Line 0: No shift
+   103	    ShiftRows[0][0] = SubBytes[0][0];
+   104	    ShiftRows[0][1] = SubBytes[0][1];
+   105	    ShiftRows[0][2] = SubBytes[0][2];
+   106	    ShiftRows[0][3] = SubBytes[0][3];
+   107	
+   108	    // Line 1: Shift 1 left
+   109	    ShiftRows[1][0] = SubBytes[1][1];
+   110	    ShiftRows[1][1] = SubBytes[1][2];
+   111	    ShiftRows[1][2] = SubBytes[1][3];
+   112	    ShiftRows[1][3] = SubBytes[1][0];
+   113	
+   114	    // Line 2: Shift 2 left
+   115	    ShiftRows[2][0] = SubBytes[2][2];
+   116	    ShiftRows[2][1] = SubBytes[2][3];
+   117	    ShiftRows[2][2] = SubBytes[2][0];
+   118	    ShiftRows[2][3] = SubBytes[2][1];
+   119	
+   120	    // Line 3: Shift 3 left
+   121	    ShiftRows[3][0] = SubBytes[3][3];
+   122	    ShiftRows[3][1] = SubBytes[3][0];
+   123	    ShiftRows[3][2] = SubBytes[3][1];
+   124	    ShiftRows[3][3] = SubBytes[3][2];
+   125	
+   126	    // Mix Columns logic
+   127	    for(int i = 0; i < 4; i++) begin
+   128	        for(int j = 0; j < 4; j++) begin
+   129	            xtimes02[i][j] = ShiftRows[i][j][NBW_BYTE-1] ? ({ShiftRows[i][j][NBW_BYTE-2:0], 1'b0} ^ 8'h1B) : {ShiftRows[i][j][NBW_BYTE-2:0], 1'b0};
+   130	            xtimes03[i][j] = xtimes02[i][j] ^ ShiftRows[i][j];
+   131	        end
+   132	
+   133	        MixColumns[0][i] = xtimes02[0][i] ^ xtimes03[1][i] ^ ShiftRows[2][i] ^ ShiftRows[3][i];
+   134	        MixColumns[1][i] = xtimes02[1][i] ^ xtimes03[2][i] ^ ShiftRows[3][i] ^ ShiftRows[0][i];
+   135	        MixColumns[2][i] = xtimes02[2][i] ^ xtimes03[3][i] ^ ShiftRows[0][i] ^ ShiftRows[1][i];
+   136	        MixColumns[3][i] = xtimes02[3][i] ^ xtimes03[0][i] ^ ShiftRows[1][i] ^ ShiftRows[2][i];
+   137	    end
+   138	end
+   139	
+   140	// ****************************************
+   141	// - Key Expansion logic
+   142	// ****************************************
+   143	
+   144	// ----------------------------------------
+   145	// - Registers
+   146	// ----------------------------------------
+   147	always_ff @(posedge clk or negedge rst_async_n) begin : reset_regs
+   148	    if(~rst_async_n) begin
+   149	        expanded_key_ff <= {NBW_EX_KEY{1'b0}};
+   150	    end else begin
+   151	        expanded_key_ff <= expanded_key_nx;
+   152	    end
+   153	end
+   154	
+   155	// ----------------------------------------
+   156	// - Operation logic
+   157	// ----------------------------------------
+   158	assign Rcon[0] = 8'h01;
+   159	assign Rcon[1] = 8'h02;
+   160	assign Rcon[2] = 8'h04;
+   161	assign Rcon[3] = 8'h08;
+   162	assign Rcon[4] = 8'h10;
+   163	assign Rcon[5] = 8'h20;
+   164	assign Rcon[6] = 8'h40;
+   165	assign Rcon[7] = 8'h80;
+   166	assign Rcon[8] = 8'h1b;
+   167	assign Rcon[9] = 8'h36;
+   168	
+   169	generate
+   170	    for(genvar i = 0; i < STEPS; i++) begin : steps
+   171	        logic [NBW_WORD-1:0] RotWord;
+   172	        logic [NBW_WORD-1:0] SubWord;
+   173	        logic [NBW_WORD-1:0] RconXor;
+   174	
+   175	        sbox_enc uu_sbox_enc0 (
+   176	            .i_data(RotWord[NBW_WORD-1-:NBW_BYTE]),
+   177	            .o_data(SubWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE])
+   178	        );
+   179	
+   180	        sbox_enc uu_sbox_enc1 (
+   181	            .i_data(RotWord[NBW_WORD-NBW_BYTE-1-:NBW_BYTE]),
+   182	            .o_data(SubWord[NBW_WORD-2*NBW_BYTE-1-:NBW_BYTE])
+   183	        );
+   184	
+   185	        sbox_enc uu_sbox_enc2 (
+   186	            .i_data(RotWord[NBW_WORD-2*NBW_BYTE-1-:NBW_BYTE]),
+   187	            .o_data(SubWord[NBW_WORD-2*NBW_BYTE-1-:NBW_BYTE])
+   188	        );
+   189	
+   190	        sbox_enc uu_sbox_enc3 (
+   191	            .i_data(RotWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE]),
+   192	            .o_data(SubWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE])
+   193	        );
+   194	
+   195	        always_comb begin : main_operation
+   196	            RotWord = {expanded_key_nx[NBW_EX_KEY-(i+1)*NBW_KEY+NBW_WORD-NBW_BYTE-1-:(NBW_WORD-NBW_BYTE)], expanded_key_nx[NBW_EX_KEY-(i+1)*NBW_KEY+NBW_WORD-1-:NBW_BYTE]};
+   197	            RconXor = {SubWord[NBW_WORD-1-:NBW_BYTE] ^ Rcon[i], SubWord[NBW_WORD-NBW_BYTE-1-:(NBW_WORD-NBW_BYTE)]};
+   198	
+   199	            step_key[i][NBW_KEY-1-:NBW_WORD]            = expanded_key_nx[NBW_EX_KEY-(4*i  )*NBW_WORD-1-:NBW_WORD] ^ RconXor;
+   200	            step_key[i][NBW_KEY-NBW_WORD-1-:NBW_WORD]   = expanded_key_nx[NBW_EX_KEY-(4*i+1)*NBW_WORD-1-:NBW_WORD] ^ step_key[i][NBW_KEY-1-:NBW_WORD];
+   201	            step_key[i][NBW_KEY-2*NBW_WORD-1-:NBW_WORD] = expanded_key_nx[NBW_EX_KEY-(4*i+2)*NBW_WORD-1-:NBW_WORD] ^ step_key[i][NBW_KEY-NBW_WORD-1-:NBW_WORD];
+   202	            step_key[i][NBW_KEY-3*NBW_WORD-1-:NBW_WORD] = expanded_key_nx[NBW_EX_KEY-(4*i+3)*NBW_WORD-1-:NBW_WORD] ^ step_key[i][NBW_KEY-2*NBW_WORD-1-:NBW_WORD];
+   203	        end
+   204	    end
+   205	endgenerate
+   206	
+   207	assign expanded_key_nx = {valid_key  , step_key[0], step_key[1], step_key[2],
+   208	                          step_key[3], step_key[4], step_key[5], step_key[6],
+   209	                          step_key[7], step_key[8], step_key[9]};
+   210	
+   211	always_comb begin : input_data
+   212	    if (i_update_key & o_done) begin
+   213	        valid_key = i_key;
+   214	    end else begin
+   215	        valid_key = expanded_key_ff[NBW_EX_KEY-1-:NBW_KEY];
+   216	    end
+   217	end
+   218	
+   219	// ----------------------------------------
+   220	// - Output assignment
+   221	// ----------------------------------------
+   222	
+   223	endmodule : aes128_encrypt
+   224	
+   225	module sbox_enc (
+   226	    input  logic [7:0] i_data,
+   227	    output logic [7:0] o_data
+   228	);
+   229	
+   230	always_comb begin
+   231	    case (i_data)
+   232	        8'h00: o_data = 8'h63;
+   233	        8'h01: o_data = 8'h7C;
+   234	        8'h02: o_data = 8'h77;
+   235	        8'h03: o_data = 8'h7B;
+   236	        8'h04: o_data = 8'hF2;
+   237	        8'h05: o_data = 8'h6B;
+   238	        8'h06: o_data = 8'h6F;
+   239	        8'h07: o_data = 8'hC5;
+   240	        8'h08: o_data = 8'h30;
+   241	        8'h09: o_data = 8'h01;
+   242	        8'h0A: o_data = 8'h67;
+   243	        8'h0B: o_data = 8'h2B;
+   244	        8'h0C: o_data = 8'hFE;
+   245	        8'h0D: o_data = 8'hD7;
+   246	        8'h0E: o_data = 8'hAB;
+   247	        8'h0F: o_data = 8'h76;
+   248	        8'h10: o_data = 8'hCA;
+   249	        8'h11: o_data = 8'h82;
+   250	        8'h12: o_data = 8'hC9;
+   251	        8'h13: o_data = 8'h7D;
+   252	        8'h14: o_data = 8'hFA;
+   253	        8'h15: o_data = 8'h59;
+   254	        8'h16: o_data = 8'h47;
+   255	        8'h17: o_data = 8'hF0;
+   256	        8'h18: o_data = 8'hAD;
+   257	        8'h19: o_data = 8'hD4;
+   258	        8'h1A: o_data = 8'hA2;
+   259	        8'h1B: o_data = 8'hAF;
+   260	        8'h1C: o_data = 8'h9C;
+   261	        8'h1D: o_data = 8'hA4;
+   262	        8'h1E: o_data = 8'h72;
+   263	        8'h1F: o_data = 8'hC0;
+   264	        8'h20: o_data = 8'hB7;
+   265	        8'h21: o_data = 8'hFD;
+   266	        8'h22: o_data = 8'h93;
+   267	        8'h23: o_data = 8'h26;
+   268	        8'h24: o_data = 8'h36;
+   269	        8'h25: o_data = 8'h3F;
+   270	        8'h26: o_data = 8'hF7;
+   271	        8'h27: o_data = 8'hCC;
+   272	        8'h28: o_data = 8'h34;
+   273	        8'h29: o_data = 8'hA5;
+   274	        8'h2A: o_data = 8'hE5;
+   275	        8'h2B: o_data = 8'hF1;
+   276	        8'h2C: o_data = 8'h71;
+   277	        8'h2D: o_data = 8'hD8;
+   278	        8'h2E: o_data = 8'h31;
+   279	        8'h2F: o_data = 8'h15;
+   280	        8'h30: o_data = 8'h04;
+
+I found a direct wiring bug: two S-box instances drive the same `SubWord` slices. I’m applying a minimal index fix so each byte is driven once, then re-running eval.
+apply patch
+patch: completed
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
+diff --git a/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv b/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
+index a23de4256e2395cf138b482d18fe366cf7097f4f..5cc0b3798c660a8ea6485c8529cfd2cdd0534015
+--- a/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
++++ b/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
+@@ -174,12 +174,12 @@
+ 
+         sbox_enc uu_sbox_enc0 (
+             .i_data(RotWord[NBW_WORD-1-:NBW_BYTE]),
+-            .o_data(SubWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE])
++            .o_data(SubWord[NBW_WORD-1-:NBW_BYTE])
+         );
+ 
+         sbox_enc uu_sbox_enc1 (
+             .i_data(RotWord[NBW_WORD-NBW_BYTE-1-:NBW_BYTE]),
+-            .o_data(SubWord[NBW_WORD-2*NBW_BYTE-1-:NBW_BYTE])
++            .o_data(SubWord[NBW_WORD-NBW_BYTE-1-:NBW_BYTE])
+         );
+ 
+         sbox_enc uu_sbox_enc2 (
+@@ -189,7 +189,7 @@
+ 
+         sbox_enc uu_sbox_enc3 (
+             .i_data(RotWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE]),
+-            .o_data(SubWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE])
++            .o_data(SubWord[NBW_WORD-4*NBW_BYTE-1-:NBW_BYTE])
+         );
+ 
+         always_comb begin : main_operation
+
+diff --git a/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv b/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
+index a23de4256e2395cf138b482d18fe366cf7097f4f..5cc0b3798c660a8ea6485c8529cfd2cdd0534015
+--- a/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
++++ b/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
+@@ -174,12 +174,12 @@
+ 
+         sbox_enc uu_sbox_enc0 (
+             .i_data(RotWord[NBW_WORD-1-:NBW_BYTE]),
+-            .o_data(SubWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE])
++            .o_data(SubWord[NBW_WORD-1-:NBW_BYTE])
+         );
+ 
+         sbox_enc uu_sbox_enc1 (
+             .i_data(RotWord[NBW_WORD-NBW_BYTE-1-:NBW_BYTE]),
+-            .o_data(SubWord[NBW_WORD-2*NBW_BYTE-1-:NBW_BYTE])
++            .o_data(SubWord[NBW_WORD-NBW_BYTE-1-:NBW_BYTE])
+         );
+ 
+         sbox_enc uu_sbox_enc2 (
+@@ -189,7 +189,7 @@
+ 
+         sbox_enc uu_sbox_enc3 (
+             .i_data(RotWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE]),
+-            .o_data(SubWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE])
++            .o_data(SubWord[NBW_WORD-4*NBW_BYTE-1-:NBW_BYTE])
+         );
+ 
+         always_comb begin : main_operation
+
+exec
+/bin/bash -lc './my-agent/run_local_eval.sh "/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246"' in /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main
+diff --git a/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv b/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
+index a23de4256e2395cf138b482d18fe366cf7097f4f..5cc0b3798c660a8ea6485c8529cfd2cdd0534015
+--- a/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
++++ b/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
+@@ -174,12 +174,12 @@
+ 
+         sbox_enc uu_sbox_enc0 (
+             .i_data(RotWord[NBW_WORD-1-:NBW_BYTE]),
+-            .o_data(SubWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE])
++            .o_data(SubWord[NBW_WORD-1-:NBW_BYTE])
+         );
+ 
+         sbox_enc uu_sbox_enc1 (
+             .i_data(RotWord[NBW_WORD-NBW_BYTE-1-:NBW_BYTE]),
+-            .o_data(SubWord[NBW_WORD-2*NBW_BYTE-1-:NBW_BYTE])
++            .o_data(SubWord[NBW_WORD-NBW_BYTE-1-:NBW_BYTE])
+         );
+ 
+         sbox_enc uu_sbox_enc2 (
+@@ -189,7 +189,7 @@
+ 
+         sbox_enc uu_sbox_enc3 (
+             .i_data(RotWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE]),
+-            .o_data(SubWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE])
++            .o_data(SubWord[NBW_WORD-4*NBW_BYTE-1-:NBW_BYTE])
+         );
+ 
+         always_comb begin : main_operation
+
+ exited 1 in 353ms:
+
+[11_may_2026_00_45_45] [agent.py] Harness mode detected (no index argument).
+
+[11_may_2026_00_45_45] [agent.py] Wrote no-op agent report: /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/agent_report.json
+
+[11_may_2026_00_45_45] [agent.py] Harness mode complete.
+Running local harness eval
+  HARNESS_PATH=/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246
+  RUNNER=test_runner.py
+  ENV_FILE=.env
+  TOPLEVEL=aes128_encrypt
+  MODULE=test_aes128_encrypt
+  SIM=icarus
+  VERILOG_SOURCES=/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
+============================= test session starts ==============================
+platform linux -- Python 3.12.7, pytest-9.0.3, pluggy-1.6.0 -- /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/agent_env/bin/python3
+cachedir: rundir/harness/.cache
+rootdir: /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246
+plugins: anyio-4.13.0
+collecting ... collected 1 item
+
+../src/test_runner.py::test_data FAILED
+
+=================================== FAILURES ===================================
+__________________________________ test_data ___________________________________
+
+    def test_data():
+        # Run the simulation with specified parameters
+>       runner()
+
+../src/test_runner.py:35: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../src/test_runner.py:18: in runner
+    sim_runner.build(
+../../../../../agent_env/lib/python3.12/site-packages/cocotb_tools/runner.py:389: in build
+    self._execute(cmds, cwd=self.build_dir)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = False, timeout = None, check = True
+popenargs = (['iverilog', '-o', '/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25...k/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build/sim.vvp', '-s', 'aes128_encrypt', '-g2012', ...],)
+kwargs = {'cwd': PosixPath('/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-H...BOX_NETWORK_DISABLED': '1', ...}, 'stderr': -2, 'stdout': <_io.TextIOWrapper name='sim.log' mode='w' encoding='UTF-8'>}
+process = <Popen: returncode: 10 args: ['iverilog', '-o', '/home/snuc/Study/agents_for...>
+stdout = None, stderr = None, retcode = 10
+
+    def run(*popenargs,
+            input=None, capture_output=False, timeout=None, check=False, **kwargs):
+        """Run command with arguments and return a CompletedProcess instance.
+    
+        The returned instance will have attributes args, returncode, stdout and
+        stderr. By default, stdout and stderr are not captured, and those attributes
+        will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+        or pass capture_output=True to capture both.
+    
+        If check is True and the exit code was non-zero, it raises a
+        CalledProcessError. The CalledProcessError object will have the return code
+        in the returncode attribute, and output & stderr attributes if those streams
+        were captured.
+    
+        If timeout is given, and the process takes too long, a TimeoutExpired
+        exception will be raised.
+    
+        There is an optional argument "input", allowing you to
+        pass bytes or a string to the subprocess's stdin.  If you use this argument
+        you may not also use the Popen constructor's "stdin" argument, as
+        it will be used internally.
+    
+        By default, all communication is in bytes, and therefore any "input" should
+        be bytes, and the stdout and stderr will be bytes. If in text mode, any
+        "input" should be a string, and stdout and stderr will be strings decoded
+        according to locale encoding, or by "encoding" if set. Text mode is
+        triggered by setting any of text, encoding, errors or universal_newlines.
+    
+        The other arguments are the same as for the Popen constructor.
+        """
+        if input is not None:
+            if kwargs.get('stdin') is not None:
+                raise ValueError('stdin and input arguments may not both be used.')
+            kwargs['stdin'] = PIPE
+    
+        if capture_output:
+            if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+                raise ValueError('stdout and stderr arguments may not be used '
+                                 'with capture_output.')
+            kwargs['stdout'] = PIPE
+            kwargs['stderr'] = PIPE
+    
+        with Popen(*popenargs, **kwargs) as process:
+            try:
+                stdout, stderr = process.communicate(input, timeout=timeout)
+            except TimeoutExpired as exc:
+                process.kill()
+                if _mswindows:
+                    # Windows accumulates the output in a single blocking
+                    # read() call run on child threads, with the timeout
+                    # being done in a join() on those threads.  communicate()
+                    # _after_ kill() is required to collect that and add it
+                    # to the exception.
+                    exc.stdout, exc.stderr = process.communicate()
+                else:
+                    # POSIX _communicate already populated the output so
+                    # far into the TimeoutExpired exception.
+                    process.wait()
+                raise
+            except:  # Including KeyboardInterrupt, communicate handled that.
+                process.kill()
+                # We don't call process.wait() as .__exit__ does that for us.
+                raise
+            retcode = process.poll()
+            if check and retcode:
+>               raise CalledProcessError(retcode, process.args,
+                                         output=stdout, stderr=stderr)
+E               subprocess.CalledProcessError: Command '['iverilog', '-o', '/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build/sim.vvp', '-s', 'aes128_encrypt', '-g2012', '-s', 'cocotb_iverilog_dump', '-f', '/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build/cmds.f', '/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv', '/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build/cocotb_iverilog_dump.v']' returned non-zero exit status 10.
+
+/usr/local/lib/python3.12/subprocess.py:571: CalledProcessError
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build/sim.vvp -s aes128_encrypt -g2012 -s cocotb_iverilog_dump -f /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build/cmds.f /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build/cocotb_iverilog_dump.v in directory /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build
+=========================== short test summary info ============================
+FAILED ../src/test_runner.py::test_data - subprocess.CalledProcessError: Comm...
+============================== 1 failed in 0.07s ===============================
+
+exec
+/bin/bash -lc "sed -n '1,120p' work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim.log" in /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main
+ succeeded in 0ms:
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd4)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd4)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd4)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd4)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd4)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd4)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd4)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd4)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd4)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192: error: Output port expression must support continuous assignment.
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:192:      : Port 2 (o_data) of sbox_enc is connected to SubWord[((NBW_WORD)-(('sd4)*(NBW_BYTE)))-('sd1)-:NBW_BYTE]
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv:195: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+
+diff --git a/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv b/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
+index a23de4256e2395cf138b482d18fe366cf7097f4f..5cc0b3798c660a8ea6485c8529cfd2cdd0534015
+--- a/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
++++ b/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
+@@ -174,12 +174,12 @@
+ 
+         sbox_enc uu_sbox_enc0 (
+             .i_data(RotWord[NBW_WORD-1-:NBW_BYTE]),
+-            .o_data(SubWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE])
++            .o_data(SubWord[NBW_WORD-1-:NBW_BYTE])
+         );
+ 
+         sbox_enc uu_sbox_enc1 (
+             .i_data(RotWord[NBW_WORD-NBW_BYTE-1-:NBW_BYTE]),
+-            .o_data(SubWord[NBW_WORD-2*NBW_BYTE-1-:NBW_BYTE])
++            .o_data(SubWord[NBW_WORD-NBW_BYTE-1-:NBW_BYTE])
+         );
+ 
+         sbox_enc uu_sbox_enc2 (
+@@ -189,7 +189,7 @@
+ 
+         sbox_enc uu_sbox_enc3 (
+             .i_data(RotWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE]),
+-            .o_data(SubWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE])
++            .o_data(SubWord[NBW_WORD-4*NBW_BYTE-1-:NBW_BYTE])
+         );
+ 
+         always_comb begin : main_operation
+
+The remaining compile error is a bad part-select bound on the 4th `SubWord` byte (`-1` index). I’m fixing that slice to `[NBW_BYTE-1:0]` and re-running.
+apply patch
+patch: completed
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
+diff --git a/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv b/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
+index a23de4256e2395cf138b482d18fe366cf7097f4f..b1cff0bdeba11ec271a68619c15ff9dd5c2f97fa
+--- a/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
++++ b/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
+@@ -174,12 +174,12 @@
+ 
+         sbox_enc uu_sbox_enc0 (
+             .i_data(RotWord[NBW_WORD-1-:NBW_BYTE]),
+-            .o_data(SubWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE])
++            .o_data(SubWord[NBW_WORD-1-:NBW_BYTE])
+         );
+ 
+         sbox_enc uu_sbox_enc1 (
+             .i_data(RotWord[NBW_WORD-NBW_BYTE-1-:NBW_BYTE]),
+-            .o_data(SubWord[NBW_WORD-2*NBW_BYTE-1-:NBW_BYTE])
++            .o_data(SubWord[NBW_WORD-NBW_BYTE-1-:NBW_BYTE])
+         );
+ 
+         sbox_enc uu_sbox_enc2 (
+@@ -189,7 +189,7 @@
+ 
+         sbox_enc uu_sbox_enc3 (
+             .i_data(RotWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE]),
+-            .o_data(SubWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE])
++            .o_data(SubWord[NBW_BYTE-1:0])
+         );
+ 
+         always_comb begin : main_operation
+
+diff --git a/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv b/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
+index a23de4256e2395cf138b482d18fe366cf7097f4f..b1cff0bdeba11ec271a68619c15ff9dd5c2f97fa
+--- a/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
++++ b/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
+@@ -174,12 +174,12 @@
+ 
+         sbox_enc uu_sbox_enc0 (
+             .i_data(RotWord[NBW_WORD-1-:NBW_BYTE]),
+-            .o_data(SubWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE])
++            .o_data(SubWord[NBW_WORD-1-:NBW_BYTE])
+         );
+ 
+         sbox_enc uu_sbox_enc1 (
+             .i_data(RotWord[NBW_WORD-NBW_BYTE-1-:NBW_BYTE]),
+-            .o_data(SubWord[NBW_WORD-2*NBW_BYTE-1-:NBW_BYTE])
++            .o_data(SubWord[NBW_WORD-NBW_BYTE-1-:NBW_BYTE])
+         );
+ 
+         sbox_enc uu_sbox_enc2 (
+@@ -189,7 +189,7 @@
+ 
+         sbox_enc uu_sbox_enc3 (
+             .i_data(RotWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE]),
+-            .o_data(SubWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE])
++            .o_data(SubWord[NBW_BYTE-1:0])
+         );
+ 
+         always_comb begin : main_operation
+
+exec
+/bin/bash -lc './my-agent/run_local_eval.sh "/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246"' in /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main
+diff --git a/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv b/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
+index a23de4256e2395cf138b482d18fe366cf7097f4f..b1cff0bdeba11ec271a68619c15ff9dd5c2f97fa
+--- a/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
++++ b/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
+@@ -174,12 +174,12 @@
+ 
+         sbox_enc uu_sbox_enc0 (
+             .i_data(RotWord[NBW_WORD-1-:NBW_BYTE]),
+-            .o_data(SubWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE])
++            .o_data(SubWord[NBW_WORD-1-:NBW_BYTE])
+         );
+ 
+         sbox_enc uu_sbox_enc1 (
+             .i_data(RotWord[NBW_WORD-NBW_BYTE-1-:NBW_BYTE]),
+-            .o_data(SubWord[NBW_WORD-2*NBW_BYTE-1-:NBW_BYTE])
++            .o_data(SubWord[NBW_WORD-NBW_BYTE-1-:NBW_BYTE])
+         );
+ 
+         sbox_enc uu_sbox_enc2 (
+@@ -189,7 +189,7 @@
+ 
+         sbox_enc uu_sbox_enc3 (
+             .i_data(RotWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE]),
+-            .o_data(SubWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE])
++            .o_data(SubWord[NBW_BYTE-1:0])
+         );
+ 
+         always_comb begin : main_operation
+
+ exited 1 in 624ms:
+
+[11_may_2026_00_45_55] [agent.py] Harness mode detected (no index argument).
+
+[11_may_2026_00_45_55] [agent.py] Wrote no-op agent report: /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/agent_report.json
+
+[11_may_2026_00_45_55] [agent.py] Harness mode complete.
+Running local harness eval
+  HARNESS_PATH=/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246
+  RUNNER=test_runner.py
+  ENV_FILE=.env
+  TOPLEVEL=aes128_encrypt
+  MODULE=test_aes128_encrypt
+  SIM=icarus
+  VERILOG_SOURCES=/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
+============================= test session starts ==============================
+platform linux -- Python 3.12.7, pytest-9.0.3, pluggy-1.6.0 -- /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/agent_env/bin/python3
+cachedir: rundir/harness/.cache
+rootdir: /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246
+plugins: anyio-4.13.0
+collecting ... collected 1 item
+
+../src/test_runner.py::test_data      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/agent_env/bin/python3
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns WARNING  gpi                                vpi_iterate returned NULL for type vpiInstance for object NULL
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778485555
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/agent_env/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_aes128_encrypt.test_aes128_encrypt (1/1)
+                                                            Test the aes128_encrypt module with edge cases and random data.
+     0.00ns WARNING  py.warnings                        /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/test_aes128_encrypt.py:21: DeprecationWarning: The 'units' argument has been renamed to 'unit'.
+                                                          cocotb.start_soon(Clock(dut.clk, 10, units='ns').start())
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create cypher_logic via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create cypher_regs via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create input_data via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create next_data via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create reset_regs via any registered implementation
+   140.00ns WARNING  ..s128_encrypt.test_aes128_encrypt [ERROR] DUT o_data does not match model o_data: 0x38877199f2c9c0df2c7433bd225e8e5c != 0xc3593877ad892854518836f9e6bfeb52
+                                                        assert 75140031949190845211366298858773450332 == 259662718895264058552622229830353546066
+                                                        Traceback (most recent call last):
+                                                          File "/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/test_aes128_encrypt.py", line 76, in test_aes128_encrypt
+                                                            compare_values(dut, model)
+                                                          File "/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/test_aes128_encrypt.py", line 16, in compare_values
+                                                            assert dut_data == model_data,  f"[ERROR] DUT o_data does not match model o_data: {hex(dut_data)} != {hex(model_data)}"
+                                                        AssertionError: [ERROR] DUT o_data does not match model o_data: 0x38877199f2c9c0df2c7433bd225e8e5c != 0xc3593877ad892854518836f9e6bfeb52
+                                                        assert 75140031949190845211366298858773450332 == 259662718895264058552622229830353546066
+   140.00ns WARNING  cocotb.regression                  test_aes128_encrypt.test_aes128_encrypt failed
+   140.00ns INFO     cocotb.regression                  *************************************************************************************************
+                                                        ** TEST                                     STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************
+                                                        ** test_aes128_encrypt.test_aes128_encrypt   FAIL         140.00           0.07       2036.35  **
+                                                        *************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                           140.00           0.07       1919.87  **
+                                                        *************************************************************************************************
+FST info: dumpfile /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build/aes128_encrypt.fst opened for output.
+FAILED
+
+=================================== FAILURES ===================================
+__________________________________ test_data ___________________________________
+
+    def test_data():
+        # Run the simulation with specified parameters
+>       runner()
+
+../src/test_runner.py:35: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def runner():
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            always=True,
+            clean=True,
+            waves=wave,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+../src/test_runner.py:30: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build/sim.vvp -s aes128_encrypt -g2012 -s cocotb_iverilog_dump -f /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build/cmds.f /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build/cocotb_iverilog_dump.v in directory /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/agent_env/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build/sim.vvp -fst in directory /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_starlight_phoenix_comet/harness/6246/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+=========================== short test summary info ============================
+FAILED ../src/test_runner.py::test_data - SystemExit: 1
+============================== 1 failed in 0.34s ===============================
+
+Compile is fixed; now it’s a functional AES mismatch. I’m checking the testbench timing/protocol and then targeting the smallest RTL correction in datapath/key-expansion math.
+exec
+/bin/bash -lc "sed -n '1,220p' work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/test_aes128_encrypt.py" in /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main
+ succeeded in 0ms:
+import cocotb
+from cocotb.clock import Clock
+from cocotb.triggers import RisingEdge, Timer
+import harness_library as hrs_lb
+import random
+
+def compare_values(dut, model, debug=0):
+    dut_data  = dut.o_data.value.to_unsigned()
+
+    model_data = model.data
+
+    if debug == 1:
+        print("\nOUTPUTS")
+        print(f"DUT o_data  = {hex(dut_data)} \nMODEL o_data  = {hex(model_data)}")
+    
+    assert dut_data == model_data,  f"[ERROR] DUT o_data does not match model o_data: {hex(dut_data)} != {hex(model_data)}"
+
+@cocotb.test()
+async def test_aes128_encrypt(dut):
+    """Test the aes128_encrypt module with edge cases and random data."""
+    cocotb.start_soon(Clock(dut.clk, 10, units='ns').start())
+
+    model = hrs_lb.aes128_encrypt()
+
+    resets = 4
+    runs = 1000
+
+    data_min = 0
+    data_max = 2**128 - 1
+    
+    await hrs_lb.dut_init(dut)
+
+    for i in range(resets):
+        # Reset DUT
+        # Set all inputs to 0
+        dut.i_start.value      = 0
+        dut.i_update_key.value = 0
+        dut.i_key.value        = 0
+        dut.i_data.value       = 0
+        dut.rst_async_n.value  = 0
+        await RisingEdge(dut.clk)
+        dut.rst_async_n.value  = 1
+        await RisingEdge(dut.clk)
+
+        model.reset()
+
+        compare_values(dut, model)
+
+        for j in range(runs):
+            key = random.randint(data_min, data_max)
+            data = random.randint(data_min, data_max)
+            if j == 0:
+                update_key = 1
+            else:
+                update_key = random.randint(0,1)
+
+            dut.i_update_key.value = update_key
+            dut.i_key.value        = key
+            dut.i_data.value       = data
+            dut.i_start.value      = 1
+
+            if update_key:
+                model.update_key(key)
+            
+            model.update(data)
+
+            await RisingEdge(dut.clk)
+            dut.i_start.value = 0
+            dut.i_key.value   = 0
+            dut.i_update_key.value = 0
+            dut.i_data.value       = 0
+            await RisingEdge(dut.clk)
+            while dut.o_done.value == 0:
+                await RisingEdge(dut.clk)
+
+            compare_values(dut, model)
+
+exec
+/bin/bash -lc 'rg -n "class|def|aes|mix|shift|sub" work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src -S' in /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main
+ succeeded in 0ms:
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/test_runner.py:15:def runner():
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/test_runner.py:33:def test_data():
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/test_aes128_encrypt.py:7:def compare_values(dut, model, debug=0):
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/test_aes128_encrypt.py:19:async def test_aes128_encrypt(dut):
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/test_aes128_encrypt.py:20:    """Test the aes128_encrypt module with edge cases and random data."""
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/test_aes128_encrypt.py:23:    model = hrs_lb.aes128_encrypt()
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/harness_library.py:5:async def dut_init(dut):
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/harness_library.py:11:class aes128_encrypt:
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/harness_library.py:12:    # AES S-Box
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/harness_library.py:32:    # AES Rcon (Round constants)
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/harness_library.py:35:    def __init__(self):
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/harness_library.py:39:    def reset(self):
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/harness_library.py:43:    def sub_word(self, word):
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/harness_library.py:49:    def rot_word(self, word):
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/harness_library.py:52:    def update_key(self, key):
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/harness_library.py:61:                temp = self.sub_word(self.rot_word(temp)) ^ (self.RCON[i // 4] << 24)
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/harness_library.py:64:    def update(self, data):
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/harness_library.py:75:            self.sub_bytes(state)
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/harness_library.py:76:            self.shift_rows(state)
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/harness_library.py:77:            self.mix_columns(state)
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/harness_library.py:80:        # Final round (no MixColumns)
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/harness_library.py:81:        self.sub_bytes(state)
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/harness_library.py:82:        self.shift_rows(state)
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/harness_library.py:93:    def add_round_key(self, state, round):
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/harness_library.py:99:    def sub_bytes(self, state):
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/harness_library.py:104:    def shift_rows(self, state):
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/harness_library.py:109:    def mix_columns(self, state):
+work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/harness_library.py:119:    def xtime(self, x):
+
+diff --git a/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv b/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
+index a23de4256e2395cf138b482d18fe366cf7097f4f..b1cff0bdeba11ec271a68619c15ff9dd5c2f97fa
+--- a/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
++++ b/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv
+@@ -174,12 +174,12 @@
+ 
+         sbox_enc uu_sbox_enc0 (
+             .i_data(RotWord[NBW_WORD-1-:NBW_BYTE]),
+-            .o_data(SubWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE])
++            .o_data(SubWord[NBW_WORD-1-:NBW_BYTE])
+         );
+ 
+         sbox_enc uu_sbox_enc1 (
+             .i_data(RotWord[NBW_WORD-NBW_BYTE-1-:NBW_BYTE]),
+-            .o_data(SubWord[NBW_WORD-2*NBW_BYTE-1-:NBW_BYTE])
++            .o_data(SubWord[NBW_WORD-NBW_BYTE-1-:NBW_BYTE])
+         );
+ 
+         sbox_enc uu_sbox_enc2 (
+@@ -189,7 +189,7 @@
+ 
+         sbox_enc uu_sbox_enc3 (
+             .i_data(RotWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE]),
+-            .o_data(SubWord[NBW_WORD-3*NBW_BYTE-1-:NBW_BYTE])
++            .o_data(SubWord[NBW_BYTE-1:0])
+         );
+ 
+         always_comb begin : main_operation
+
+exec
+/bin/bash -lc "sed -n '1,260p' work/cvdp_agentic_starlight_phoenix_comet/harness/6246/src/harness_library.py" in /home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main
+ succeeded in 0ms:
+import cocotb
+from cocotb.triggers import FallingEdge, RisingEdge, Timer
+from collections import deque
+
+async def dut_init(dut):
+    # iterate all the input signals and initialize with 0
+    for signal in dut:
+        if signal._type == "GPI_NET":
+            signal.value = 0
+
+class aes128_encrypt:
+    # AES S-Box
+    S_BOX = [
+        0x63, 0x7c, 0x77, 0x7b, 0xf2, 0x6b, 0x6f, 0xc5, 0x30, 0x01, 0x67, 0x2b, 0xfe, 0xd7, 0xab, 0x76,
+        0xca, 0x82, 0xc9, 0x7d, 0xfa, 0x59, 0x47, 0xf0, 0xad, 0xd4, 0xa2, 0xaf, 0x9c, 0xa4, 0x72, 0xc0,
+        0xb7, 0xfd, 0x93, 0x26, 0x36, 0x3f, 0xf7, 0xcc, 0x34, 0xa5, 0xe5, 0xf1, 0x71, 0xd8, 0x31, 0x15,
+        0x04, 0xc7, 0x23, 0xc3, 0x18, 0x96, 0x05, 0x9a, 0x07, 0x12, 0x80, 0xe2, 0xeb, 0x27, 0xb2, 0x75,
+        0x09, 0x83, 0x2c, 0x1a, 0x1b, 0x6e, 0x5a, 0xa0, 0x52, 0x3b, 0xd6, 0xb3, 0x29, 0xe3, 0x2f, 0x84,
+        0x53, 0xd1, 0x00, 0xed, 0x20, 0xfc, 0xb1, 0x5b, 0x6a, 0xcb, 0xbe, 0x39, 0x4a, 0x4c, 0x58, 0xcf,
+        0xd0, 0xef, 0xaa, 0xfb, 0x43, 0x4d, 0x33, 0x85, 0x45, 0xf9, 0x02, 0x7f, 0x50, 0x3c, 0x9f, 0xa8,
+        0x51, 0xa3, 0x40, 0x8f, 0x92, 0x9d, 0x38, 0xf5, 0xbc, 0xb6, 0xda, 0x21, 0x10, 0xff, 0xf3, 0xd2,
+        0xcd, 0x0c, 0x13, 0xec, 0x5f, 0x97, 0x44, 0x17, 0xc4, 0xa7, 0x7e, 0x3d, 0x64, 0x5d, 0x19, 0x73,
+        0x60, 0x81, 0x4f, 0xdc, 0x22, 0x2a, 0x90, 0x88, 0x46, 0xee, 0xb8, 0x14, 0xde, 0x5e, 0x0b, 0xdb,
+        0xe0, 0x32, 0x3a, 0x0a, 0x49, 0x06, 0x24, 0x5c, 0xc2, 0xd3, 0xac, 0x62, 0x91, 0x95, 0xe4, 0x79,
+        0xe7, 0xc8, 0x37, 0x6d, 0x8d, 0xd5, 0x4e, 0xa9, 0x6c, 0x56, 0xf4, 0xea, 0x65, 0x7a, 0xae, 0x08,
+        0xba, 0x78, 0x25, 0x2e, 0x1c, 0xa6, 0xb4, 0xc6, 0xe8, 0xdd, 0x74, 0x1f, 0x4b, 0xbd, 0x8b, 0x8a,
+        0x70, 0x3e, 0xb5, 0x66, 0x48, 0x03, 0xf6, 0x0e, 0x61, 0x35, 0x57, 0xb9, 0x86, 0xc1, 0x1d, 0x9e,
+        0xe1, 0xf8, 0x98, 0x11, 0x69, 0xd9, 0x8e, 0x94, 0x9b, 0x1e, 0x87, 0xe9, 0xce, 0x55, 0x28, 0xdf,
+        0x8c, 0xa1, 0x89, 0x0d, 0xbf, 0xe6, 0x42, 0x68, 0x41, 0x99, 0x2d, 0x0f, 0xb0, 0x54, 0xbb, 0x16
+    ]
+    
+    # AES Rcon (Round constants)
+    RCON = [0x00, 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x1B, 0x36]
+
+    def __init__(self):
+        self.expanded_key = [0] * 44
+        self.data = 0
+    
+    def reset(self):
+        self.expanded_key = [0] * 44
+        self.data = 0
+
+    def sub_word(self, word):
+        return (self.S_BOX[(word >> 24) & 0xFF] << 24) |\
+               (self.S_BOX[(word >> 16) & 0xFF] << 16) |\
+               (self.S_BOX[(word >> 8) & 0xFF] << 8) |\
+               (self.S_BOX[word & 0xFF])
+
+    def rot_word(self, word):
+        return ((word << 8) & 0xFFFFFFFF) | (word >> 24)
+
+    def update_key(self, key):
+        assert 0 <= key < (1 << 128), "Key must be a 128-bit integer."
+        
+        for i in range(4):
+            self.expanded_key[i] = (key >> (96 - i * 32)) & 0xFFFFFFFF
+        
+        for i in range(4, 44):
+            temp = self.expanded_key[i - 1]
+            if i % 4 == 0:
+                temp = self.sub_word(self.rot_word(temp)) ^ (self.RCON[i // 4] << 24)
+            self.expanded_key[i] = self.expanded_key[i - 4] ^ temp
+
+    def update(self, data):
+        assert 0 <= data < (1 << 128), "Data must be a 128-bit integer."
+        
+        # Convert data to 4x4 state matrix (column-major order)
+        state = [[(data >> (120 - 8 * (i + 4 * j))) & 0xFF for j in range(4)] for i in range(4)]
+
+        # Initial AddRoundKey
+        self.add_round_key(state, 0)
+
+        # 9 main rounds
+        for round in range(1, 10):
+            self.sub_bytes(state)
+            self.shift_rows(state)
+            self.mix_columns(state)
+            self.add_round_key(state, round)
+
+        # Final round (no MixColumns)
+        self.sub_bytes(state)
+        self.shift_rows(state)
+        self.add_round_key(state, 10)
+
+        # Convert state matrix back to 128-bit integer
+        encrypted_data = 0
+        for j in range(4):
+            for i in range(4):
+                encrypted_data = (encrypted_data << 8) | state[i][j]
+        
+        self.data = encrypted_data
+
+    def add_round_key(self, state, round):
+        for j in range(4):
+            word = self.expanded_key[round * 4 + j]
+            for i in range(4):
+                state[i][j] ^= (word >> (24 - 8 * i)) & 0xFF
+
+    def sub_bytes(self, state):
+        for i in range(4):
+            for j in range(4):
+                state[i][j] = self.S_BOX[state[i][j]]
+
+    def shift_rows(self, state):
+        state[1][0], state[1][1], state[1][2], state[1][3] = state[1][1], state[1][2], state[1][3], state[1][0]
+        state[2][0], state[2][1], state[2][2], state[2][3] = state[2][2], state[2][3], state[2][0], state[2][1]
+        state[3][0], state[3][1], state[3][2], state[3][3] = state[3][3], state[3][0], state[3][1], state[3][2]
+
+    def mix_columns(self, state):
+        for j in range(4):
+            a = state[0][j], state[1][j], state[2][j], state[3][j]
+            t = a[0] ^ a[1] ^ a[2] ^ a[3]
+            u = a[0]
+            state[0][j] ^= t ^ self.xtime(a[0] ^ a[1])
+            state[1][j] ^= t ^ self.xtime(a[1] ^ a[2])
+            state[2][j] ^= t ^ self.xtime(a[2] ^ a[3])
+            state[3][j] ^= t ^ self.xtime(a[3] ^ u)
+
+    def xtime(self, x):
+        return ((x << 1) ^ 0x1B) & 0xFF if x & 0x80 else x << 1
+
+diff --git a/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv b/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_starlight_phoenix_comet/6246/rtl/aes128_encrypt.sv

@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778523991" />
+    <testcase name="test_bst_operations" classname="test_bst_operations" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_binary_search_tree_algorithms/harness/14/src/test_bst_operations.py" lineno="8" time="0.02253866195678711" sim_time_ns="3905.0" ratio_time="173257.84500814523" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,246 @@
+{
+  "source_csv": "/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/batch_reports/20260511_094542/local_eval_summary_run_20260511_094542.csv",
+  "count": 30,
+  "results": [
+    {
+      "problem": "cvdp_agentic_64b66b_codec",
+      "issue_id": "1",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_64b66b_codec/harness/1",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": "                                                          Actual dec_sync_error: 1, Expected dec_sync_error: 1"
+    },
+    {
+      "problem": "cvdp_agentic_AES_encryption_decryption",
+      "issue_id": "3",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_AES_encryption_decryption/harness/3",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_AES_encryption_decryption",
+      "issue_id": "5",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_AES_encryption_decryption/harness/5",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_AES_encryption_decryption",
+      "issue_id": "9",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_AES_encryption_decryption/harness/9",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_AES_encryption_decryption",
+      "issue_id": "12",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_AES_encryption_decryption/harness/12",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_AES_encryption_decryption",
+      "issue_id": "18",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_AES_encryption_decryption/harness/18",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_DES",
+      "issue_id": "1",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_DES/harness/1",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_DES",
+      "issue_id": "3",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_DES/harness/3",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_DES",
+      "issue_id": "5",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_DES/harness/5",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_DES",
+      "issue_id": "7",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_DES/harness/7",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_Min_Hamming_Distance_Finder",
+      "issue_id": "1",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_Min_Hamming_Distance_Finder/harness/1",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_PCIe_endpoint",
+      "issue_id": "1",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_PCIe_endpoint/harness/1",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_arithmetic_progression_generator",
+      "issue_id": "1",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_arithmetic_progression_generator/harness/1",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_async_fifo_compute_ram_application",
+      "issue_id": "1",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_async_fifo_compute_ram_application/harness/1",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_async_fifo_compute_ram_application",
+      "issue_id": "6",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_async_fifo_compute_ram_application/harness/6",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_async_filo",
+      "issue_id": "1",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_async_filo/harness/1",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_axi4lite_to_pcie_config",
+      "issue_id": "3",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_axi4lite_to_pcie_config/harness/3",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_axis_broadcaster",
+      "issue_id": "1",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_axis_broadcaster/harness/1",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_axis_to_uart",
+      "issue_id": "1",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_axis_to_uart/harness/1",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_axis_to_uart",
+      "issue_id": "4",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_axis_to_uart/harness/4",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": "10698999.00ns ERROR    cocotb.uart_rx_to_axis             Frame 0: Expected parity error, but received none."
+    },
+    {
+      "problem": "cvdp_agentic_barrel_shifter",
+      "issue_id": "1",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_barrel_shifter/harness/1",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_barrel_shifter",
+      "issue_id": "2",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_barrel_shifter/harness/2",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_bcd_adder",
+      "issue_id": "4",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_bcd_adder/harness/4",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": "   185.00ns INFO     cocotb.bcd_top                     TESTS FAILED : 0"
+    },
+    {
+      "problem": "cvdp_agentic_binary_search_tree_algorithms",
+      "issue_id": "1",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_binary_search_tree_algorithms/harness/1",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_binary_search_tree_algorithms",
+      "issue_id": "14",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_binary_search_tree_algorithms/harness/14",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_binary_to_gray",
+      "issue_id": "3",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_binary_to_gray/harness/3",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_byte_enable_ram",
+      "issue_id": "2",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_byte_enable_ram/harness/2",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_cache_controller",
+      "issue_id": "1",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_cache_controller/harness/1",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_caesar_cipher",
+      "issue_id": "1",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_caesar_cipher/harness/1",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    },
+    {
+      "problem": "cvdp_agentic_cellular_automata",
+      "issue_id": "2",
+      "harness_path": "baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_cellular_automata/harness/2",
+      "status": "PASS",
+      "exit_code": 0,
+      "first_error": ""
+    }
+  ]
+}

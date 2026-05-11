@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777959909" />
+    <testcase name="test_elevator_control_system" classname="elevator_control" file="/src/elevator_control.py" lineno="193" time="0.0039806365966796875" sim_time_ns="0.0" ratio_time="0.0">
+      <failure error_type="AttributeError" error_msg="elevator_control_system contains no child object named overload" />
+    </testcase>
+  </testsuite>
+</testsuites>

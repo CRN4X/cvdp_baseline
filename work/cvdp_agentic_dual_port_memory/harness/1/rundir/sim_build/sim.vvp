@@ -1,0 +1,118 @@
+#! /usr/local/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0x556a6a192540 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -9;
+S_0x556a6a1926d0 .scope module, "dual_port_memory" "dual_port_memory" 3 1;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "we_a";
+    .port_info 2 /INPUT 1 "we_b";
+    .port_info 3 /INPUT 5 "addr_a";
+    .port_info 4 /INPUT 5 "addr_b";
+    .port_info 5 /INPUT 4 "data_in_a";
+    .port_info 6 /INPUT 4 "data_in_b";
+    .port_info 7 /OUTPUT 4 "data_out_a";
+    .port_info 8 /OUTPUT 4 "data_out_b";
+P_0x556a6a1b8f60 .param/l "ADDR_WIDTH" 0 3 3, +C4<00000000000000000000000000000101>;
+P_0x556a6a1b8fa0 .param/l "DATA_WIDTH" 0 3 2, +C4<00000000000000000000000000000100>;
+o0x7f17d8794018 .functor BUFZ 5, c4<zzzzz>; HiZ drive
+v0x556a6a1bab50_0 .net "addr_a", 4 0, o0x7f17d8794018;  0 drivers
+o0x7f17d8794048 .functor BUFZ 5, c4<zzzzz>; HiZ drive
+v0x556a6a1e0990_0 .net "addr_b", 4 0, o0x7f17d8794048;  0 drivers
+o0x7f17d8794078 .functor BUFZ 1, c4<z>; HiZ drive
+v0x556a6a1e0a70_0 .net "clk", 0 0, o0x7f17d8794078;  0 drivers
+o0x7f17d87940a8 .functor BUFZ 4, c4<zzzz>; HiZ drive
+v0x556a6a1e0b40_0 .net "data_in_a", 3 0, o0x7f17d87940a8;  0 drivers
+o0x7f17d87940d8 .functor BUFZ 4, c4<zzzz>; HiZ drive
+v0x556a6a1e0c20_0 .net "data_in_b", 3 0, o0x7f17d87940d8;  0 drivers
+v0x556a6a1e0d00_0 .var "data_out_a", 3 0;
+v0x556a6a1e0de0_0 .var "data_out_b", 3 0;
+v0x556a6a1e0ec0 .array "ram", 0 31, 4 0;
+o0x7f17d8794168 .functor BUFZ 1, c4<z>; HiZ drive
+v0x556a6a1e0f80_0 .net "we_a", 0 0, o0x7f17d8794168;  0 drivers
+o0x7f17d8794198 .functor BUFZ 1, c4<z>; HiZ drive
+v0x556a6a1e1040_0 .net "we_b", 0 0, o0x7f17d8794198;  0 drivers
+E_0x556a6a1ce1a0/0 .event negedge, v0x556a6a1e0a70_0;
+E_0x556a6a1ce1a0/1 .event posedge, v0x556a6a1e0a70_0;
+E_0x556a6a1ce1a0 .event/or E_0x556a6a1ce1a0/0, E_0x556a6a1ce1a0/1;
+    .scope S_0x556a6a1926d0;
+T_0 ;
+    %wait E_0x556a6a1ce1a0;
+    %load/vec4 v0x556a6a1e0f80_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %load/vec4 v0x556a6a1e0b40_0;
+    %pad/u 5;
+    %pushi/vec4 10, 0, 5;
+    %xor;
+    %load/vec4 v0x556a6a1bab50_0;
+    %pad/u 7;
+    %ix/vec4 3;
+    %ix/load 4, 0, 0; Constant delay
+    %assign/vec4/a/d v0x556a6a1e0ec0, 0, 4;
+    %load/vec4 v0x556a6a1bab50_0;
+    %pad/u 7;
+    %ix/vec4 4;
+    %load/vec4a v0x556a6a1e0ec0, 4;
+    %ix/load 4, 1, 0;
+    %flag_set/imm 4, 0;
+    %shiftr 4;
+    %pad/u 4;
+    %assign/vec4 v0x556a6a1e0d00_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0x556a6a1bab50_0;
+    %pad/u 7;
+    %ix/vec4 4;
+    %load/vec4a v0x556a6a1e0ec0, 4;
+    %ix/load 4, 1, 0;
+    %flag_set/imm 4, 0;
+    %shiftl 4;
+    %pad/u 4;
+    %assign/vec4 v0x556a6a1e0d00_0, 0;
+T_0.1 ;
+    %load/vec4 v0x556a6a1e1040_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.2, 8;
+    %load/vec4 v0x556a6a1e0c20_0;
+    %pad/u 5;
+    %pushi/vec4 12, 0, 5;
+    %xor;
+    %load/vec4 v0x556a6a1e0990_0;
+    %pad/u 7;
+    %ix/vec4 3;
+    %ix/load 4, 0, 0; Constant delay
+    %assign/vec4/a/d v0x556a6a1e0ec0, 0, 4;
+    %load/vec4 v0x556a6a1e0990_0;
+    %pad/u 7;
+    %ix/vec4 4;
+    %load/vec4a v0x556a6a1e0ec0, 4;
+    %addi 1, 0, 5;
+    %pad/u 4;
+    %assign/vec4 v0x556a6a1e0de0_0, 0;
+    %jmp T_0.3;
+T_0.2 ;
+    %load/vec4 v0x556a6a1e0990_0;
+    %pad/u 7;
+    %ix/vec4 4;
+    %load/vec4a v0x556a6a1e0ec0, 4;
+    %subi 1, 0, 5;
+    %pad/u 4;
+    %assign/vec4 v0x556a6a1e0de0_0, 0;
+T_0.3 ;
+    %jmp T_0;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/code/rtl/dual_port_memory.sv";

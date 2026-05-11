@@ -1,0 +1,5 @@
+[
+  "src/test_runner.py::test_binary_to_gray[4]",
+  "src/test_runner.py::test_binary_to_gray[5]",
+  "src/test_runner.py::test_runner"
+]

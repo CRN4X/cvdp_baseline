@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778491288" />
+    <testcase name="tb_fifo_buffer_test" classname="test_fifo_buffer" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_crimson_river_butterfly/harness/1181/src/test_fifo_buffer.py" lineno="44" time="0.0052220821380615234" sim_time_ns="350.0" ratio_time="67023.0744646852" />
+  </testsuite>
+</testsuites>

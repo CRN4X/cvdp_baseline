@@ -1,0 +1,11 @@
+[
+  "src/test_runner.py::test_bst[10-16]",
+  "src/test_runner.py::test_bst[10-32]",
+  "src/test_runner.py::test_bst[10-6]",
+  "src/test_runner.py::test_bst[15-16]",
+  "src/test_runner.py::test_bst[15-32]",
+  "src/test_runner.py::test_bst[15-6]",
+  "src/test_runner.py::test_bst[5-16]",
+  "src/test_runner.py::test_bst[5-32]",
+  "src/test_runner.py::test_bst[5-6]"
+]

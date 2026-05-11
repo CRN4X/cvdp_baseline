@@ -1,0 +1,162 @@
+Running harness with project name: cvdp_agentic_dynamic_equalizer_4_1777959898
+#1 [internal] load local bake definitions
+#1 reading from stdin 768B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 180B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/nvidia/cvdp-sim:v1.0.0
+#3 DONE 0.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/1] FROM docker.io/nvidia/cvdp-sim:v1.0.0@sha256:d66eb392a77bc2374e17be33b6d8f720f1a7fcb846efe4abf4a6440e74fb4739
+#5 resolve docker.io/nvidia/cvdp-sim:v1.0.0@sha256:d66eb392a77bc2374e17be33b6d8f720f1a7fcb846efe4abf4a6440e74fb4739 0.0s done
+#5 CACHED
+
+#6 exporting to image
+#6 exporting layers done
+#6 exporting manifest sha256:540e719f549104509a017a2c0a9ffd3f88476ffd836fdb7ccd86cf701a826ca6 0.0s done
+#6 exporting config sha256:b5c55382d60ec4d157667ebd8cea180ac1ccd94fd91db5d0dd2d7929db997a5e done
+#6 exporting attestation manifest sha256:cd90d77cd05d230def56513335b620407f84c6ea6e7f7527b025927933fdb3e6 0.0s done
+#6 exporting manifest list sha256:ad058abd3b3f4efdd4dd19ac27305cf4a0e1b327d1dffda5adf21c2837c82702 0.0s done
+#6 naming to docker.io/library/cvdp_agentic_dynamic_equalizer_4_1777959898-direct:latest done
+#6 unpacking to docker.io/library/cvdp_agentic_dynamic_equalizer_4_1777959898-direct:latest 0.1s done
+#6 DONE 0.2s
+
+#7 resolving provenance for metadata file
+#7 DONE 0.0s
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_cvdp_agentic_dynamic_equalizer[7-16-16-15] FAILED [100%]
+
+=================================== FAILURES ===================================
+_______________ test_cvdp_agentic_dynamic_equalizer[7-16-16-15] ________________
+
+TAP_NUM = 7, DATA_WIDTH = 16, COEFF_WIDTH = 16, MU = 15
+
+    @pytest.mark.parametrize("TAP_NUM, DATA_WIDTH, COEFF_WIDTH, MU", [(7, 16, 16, 15)])
+    def test_cvdp_agentic_dynamic_equalizer(TAP_NUM, DATA_WIDTH, COEFF_WIDTH, MU):
+        try:
+>           runner(TAP_NUM, DATA_WIDTH, COEFF_WIDTH, MU)
+
+/src/test_runner.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+TAP_NUM = 7, DATA_WIDTH = 16, COEFF_WIDTH = 16, MU = 15
+
+    def runner(TAP_NUM, DATA_WIDTH, COEFF_WIDTH, MU):
+        # Initialize the simulator runner
+        runner = get_runner(sim)
+    
+        # Build the simulation with the specified TAP_NUM, DATA_WIDTH, COEFF_WIDTH, and MU parameters
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters={
+                "TAP_NUM": TAP_NUM,
+                "DATA_WIDTH": DATA_WIDTH,
+                "COEFF_WIDTH": COEFF_WIDTH,
+                "MU": MU},
+            # Simulator Arguments
+            always=True,
+            clean=True,
+            waves=True,        # Disable waveform generation for faster runs
+            verbose=True,      # Set to True for detailed simulator logs
+            timescale=("1ns", "1ps"),
+            log_file=f"sim_{toplevel}.log"
+        )
+    
+        # Run the simulation
+>       runner.test(
+            hdl_toplevel=toplevel,
+            test_module=module,
+            waves=True
+        )
+E       SystemExit: 1
+
+/src/test_runner.py:42: SystemExit
+----------------------------- Captured stdout call -----------------------------
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1777959901
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_dynamic_equalizer_harness.test_equalizer_learns_identity (1/2)
+                                                            Test if output equals input after 3 cycles when input == desired
+     0.00ns INFO     cocotb.dynamic_equalizer           Test if output equals input after 3 cycles when input == desired
+    60.00ns WARNING  py.warnings                        /src/test_dynamic_equalizer_harness.py:57: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          out_real = dut.data_out_real.value.signed_integer
+    60.00ns WARNING  py.warnings                        /src/test_dynamic_equalizer_harness.py:58: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          out_imag = dut.data_out_imag.value.signed_integer
+    70.00ns WARNING  ..y.test_equalizer_learns_identity Can't convert LogicArray to int: it contains non-0/1 values
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_dynamic_equalizer_harness.py", line 57, in test_equalizer_learns_identity
+                                                            out_real = dut.data_out_real.value.signed_integer
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/_deprecation.py", line 32, in wrapper
+                                                            return f(*args, **kwargs)
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 599, in signed_integer
+                                                            return self.to_signed()
+                                                                   ^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 669, in to_signed
+                                                            value = self._get_int()
+                                                                    ^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 304, in _get_int
+                                                            raise ValueError(
+                                                        ValueError: Can't convert LogicArray to int: it contains non-0/1 values
+    70.00ns WARNING  cocotb.regression                  test_dynamic_equalizer_harness.test_equalizer_learns_identity failed
+    70.00ns INFO     cocotb.regression                  running test_dynamic_equalizer_harness.test_equalizer_data_quadrant (2/2)
+                                                            Test if output data quadrant is the desired
+    70.00ns INFO     cocotb.dynamic_equalizer           Test if output data quadrant is the desired
+   140.00ns WARNING  py.warnings                        /src/test_dynamic_equalizer_harness.py:130: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          out_real = dut.data_out_real.value.signed_integer
+   140.00ns WARNING  py.warnings                        /src/test_dynamic_equalizer_harness.py:131: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          out_imag = dut.data_out_imag.value.signed_integer
+   150.00ns WARNING  ..ant.test_equalizer_data_quadrant Can't convert LogicArray to int: it contains non-0/1 values
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_dynamic_equalizer_harness.py", line 130, in test_equalizer_data_quadrant
+                                                            out_real = dut.data_out_real.value.signed_integer
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/_deprecation.py", line 32, in wrapper
+                                                            return f(*args, **kwargs)
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 599, in signed_integer
+                                                            return self.to_signed()
+                                                                   ^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 669, in to_signed
+                                                            value = self._get_int()
+                                                                    ^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 304, in _get_int
+                                                            raise ValueError(
+                                                        ValueError: Can't convert LogicArray to int: it contains non-0/1 values
+   150.00ns WARNING  cocotb.regression                  test_dynamic_equalizer_harness.test_equalizer_data_quadrant failed
+   150.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_dynamic_equalizer_harness.test_equalizer_learns_identity   FAIL          70.00           0.01       9928.02  **
+                                                        ** test_dynamic_equalizer_harness.test_equalizer_data_quadrant     FAIL          80.00           0.00      24010.33  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=2 PASS=0 FAIL=2 SKIP=0                                                 150.00           0.02       7936.09  **
+                                                        ***********************************************************************************************************************
+FST info: dumpfile /code/rundir/sim_build/dynamic_equalizer.fst opened for output.
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s dynamic_equalizer -g2012 -Pdynamic_equalizer.TAP_NUM=7 -Pdynamic_equalizer.DATA_WIDTH=16 -Pdynamic_equalizer.COEFF_WIDTH=16 -Pdynamic_equalizer.MU=15 -s cocotb_iverilog_dump -f /code/rundir/sim_build/cmds.f /code/rtl/dynamic_equalizer.sv /code/rtl/error_calc.sv /code/rtl/coeff_update.sv /code/rundir/sim_build/cocotb_iverilog_dump.v in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 2 of 2 tests.
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_cvdp_agentic_dynamic_equalizer[7-16-16-15]
+============================== 1 failed in 0.70s ===============================
+Cleaning up Docker resources...
+Untagged: cvdp_agentic_dynamic_equalizer_4_1777959898-direct:latest
+Deleted: sha256:ad058abd3b3f4efdd4dd19ac27305cf4a0e1b327d1dffda5adf21c2837c82702

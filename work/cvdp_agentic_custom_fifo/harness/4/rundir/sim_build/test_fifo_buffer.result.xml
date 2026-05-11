@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777959868" />
+    <testcase name="tb_fifo_buffer_test" classname="test_fifo_buffer" file="/src/test_fifo_buffer.py" lineno="44" time="0.010645389556884766" sim_time_ns="100.0" ratio_time="9393.737961926092">
+      <failure error_type="AssertionError" error_msg="Test 2: out_addr_o should be 0x00000004&#10;assert (0 != 'X' and 0 == 4)&#10; +  where 0 = safe_int(LogicArrayObject(fifo_buffer.out_addr_o))&#10; +    where LogicArrayObject(fifo_buffer.out_addr_o) = HierarchyObject(fifo_buffer).out_addr_o&#10; +  and   0 = int(LogicArray('00000000000000000000000000000000', Range(31, 'downto', 0)))&#10; +    where LogicArray('00000000000000000000000000000000', Range(31, 'downto', 0)) = LogicArrayObject(fifo_buffer.out_addr_o).value&#10; +      where LogicArrayObject(fifo_buffer.out_addr_o) = HierarchyObject(fifo_buffer).out_addr_o" />
+    </testcase>
+  </testsuite>
+</testsuites>

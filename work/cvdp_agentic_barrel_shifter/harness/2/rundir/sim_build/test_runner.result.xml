@@ -1,0 +1,7 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778523468" />
+    <testcase name="logic_shift" classname="test_barrel_shifter" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_barrel_shifter/harness/2/src/test_barrel_shifter.py" lineno="31" time="0.0004565715789794922" sim_time_ns="100.0" ratio_time="219023.70757180155" />
+    <testcase name="arithmatic_shift" classname="test_barrel_shifter" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_barrel_shifter/harness/2/src/test_barrel_shifter.py" lineno="53" time="0.0003631114959716797" sim_time_ns="150.0" ratio_time="413096.2573867367" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778490311" />
+    <testcase name="test_des_enc" classname="test_des_enc" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_ivory_cloud_ocean/harness/3516/src/test_des_enc.py" lineno="17" time="2.7438910007476807" sim_time_ns="40715.0" ratio_time="14838.417411225739" />
+  </testsuite>
+</testsuites>

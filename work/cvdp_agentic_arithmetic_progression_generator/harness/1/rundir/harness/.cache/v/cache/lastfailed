@@ -1,0 +1,7 @@
+{
+  "src/test_runner.py::test_arithmetic_progression_generator[0-0-17]": true,
+  "src/test_runner.py::test_arithmetic_progression_generator[1-0-17]": true,
+  "src/test_runner.py::test_arithmetic_progression_generator[2-0-17]": true,
+  "src/test_runner.py::test_arithmetic_progression_generator[3-0-17]": true,
+  "src/test_runner.py::test_arithmetic_progression_generator[4-0-17]": true
+}

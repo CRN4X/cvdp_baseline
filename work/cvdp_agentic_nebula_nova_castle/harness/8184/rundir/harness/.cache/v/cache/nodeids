@@ -1,0 +1,18 @@
+[
+  "src/test_runner.py::test_direct_cache[3-3-16-256-0]",
+  "src/test_runner.py::test_direct_cache[3-3-16-64-0]",
+  "src/test_runner.py::test_direct_cache[3-3-8-256-0]",
+  "src/test_runner.py::test_direct_cache[3-3-8-64-0]",
+  "src/test_runner.py::test_direct_cache[3-5-16-256-0]",
+  "src/test_runner.py::test_direct_cache[3-5-16-64-0]",
+  "src/test_runner.py::test_direct_cache[3-5-8-256-0]",
+  "src/test_runner.py::test_direct_cache[3-5-8-64-0]",
+  "src/test_runner.py::test_direct_cache[6-3-16-256-0]",
+  "src/test_runner.py::test_direct_cache[6-3-16-64-0]",
+  "src/test_runner.py::test_direct_cache[6-3-8-256-0]",
+  "src/test_runner.py::test_direct_cache[6-3-8-64-0]",
+  "src/test_runner.py::test_direct_cache[6-5-16-256-0]",
+  "src/test_runner.py::test_direct_cache[6-5-16-64-0]",
+  "src/test_runner.py::test_direct_cache[6-5-8-256-0]",
+  "src/test_runner.py::test_direct_cache[6-5-8-64-0]"
+]

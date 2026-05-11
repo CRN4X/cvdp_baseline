@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778495385" />
+    <testcase name="test_basic" classname="test_signed_comparator" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_echo_obsidian_lunar/harness/1/src/test_signed_comparator.py" lineno="6" time="0.0008473396301269531" sim_time_ns="80.0" ratio_time="94413.14575126617" />
+    <testcase name="test_random" classname="test_signed_comparator" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_echo_obsidian_lunar/harness/1/src/test_signed_comparator.py" lineno="38" time="0.0009160041809082031" sim_time_ns="230.0" ratio_time="251090.55700156168" />
+    <testcase name="test_edge_cases" classname="test_signed_comparator" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_echo_obsidian_lunar/harness/1/src/test_signed_comparator.py" lineno="61" time="0.0005011558532714844" sim_time_ns="130.0" ratio_time="259400.34253092294" />
+  </testsuite>
+</testsuites>

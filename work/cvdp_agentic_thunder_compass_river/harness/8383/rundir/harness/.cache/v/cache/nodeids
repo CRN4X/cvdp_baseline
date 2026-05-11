@@ -1,0 +1,4 @@
+[
+  "src/test_runner.py::test_runner",
+  "src/test_runner.py::test_sort[8]"
+]

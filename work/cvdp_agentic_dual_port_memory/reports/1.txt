@@ -1,0 +1,101 @@
+Running harness with project name: cvdp_agentic_dual_port_memory_1_1777959891
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_runner      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1777959893
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_dual_port_memory.test_cvdp_true_dp_ram_ports_a_and_b (1/2)
+                                                            Test the cvdp_true_dp_ram for both Port A and Port B ensuring RAW behavior 
+Wrote Data = 9 to Port A at Addr = 26
+Wrote Data = 10 to Port B at Addr = 29
+Reading from Port A at Addr = 26: Expected = 9, Got = 0110
+    50.00ns WARNING  ..t_cvdp_true_dp_ram_ports_a_and_b Port A failed to read 9 at address 26, got 0110
+                                                        assert LogicArray('0110', Range(3, 'downto', 0)) == 9
+                                                         +  where LogicArray('0110', Range(3, 'downto', 0)) = LogicArrayObject(dual_port_memory.data_out_a).value
+                                                         +    where LogicArrayObject(dual_port_memory.data_out_a) = HierarchyObject(dual_port_memory).data_out_a
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_dual_port_memory.py", line 84, in test_cvdp_true_dp_ram_ports_a_and_b
+                                                            await read_from_port_a(dut, addr_a, data_a)
+                                                          File "/src/test_dual_port_memory.py", line 35, in read_from_port_a
+                                                            assert dut.data_out_a.value == expected_data, f"Port A failed to read {expected_data} at address {addr}, got {dut.data_out_a.value}"
+                                                        AssertionError: Port A failed to read 9 at address 26, got 0110
+                                                        assert LogicArray('0110', Range(3, 'downto', 0)) == 9
+                                                         +  where LogicArray('0110', Range(3, 'downto', 0)) = LogicArrayObject(dual_port_memory.data_out_a).value
+                                                         +    where LogicArrayObject(dual_port_memory.data_out_a) = HierarchyObject(dual_port_memory).data_out_a
+    50.00ns WARNING  cocotb.regression                  test_dual_port_memory.test_cvdp_true_dp_ram_ports_a_and_b failed
+    50.00ns INFO     cocotb.regression                  running test_dual_port_memory.test_true_dp_ram (2/2)
+Wrote Data = 10 to Port A at Addr = 1
+Reading from Port B at Addr = 1: Expected = 10, Got = 1111
+   111.00ns WARNING  ..est_true_dp_ram.test_true_dp_ram Port B failed to read 10 at address 1, got 1111
+                                                        assert LogicArray('1111', Range(3, 'downto', 0)) == 10
+                                                         +  where LogicArray('1111', Range(3, 'downto', 0)) = LogicArrayObject(dual_port_memory.data_out_b).value
+                                                         +    where LogicArrayObject(dual_port_memory.data_out_b) = HierarchyObject(dual_port_memory).data_out_b
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_dual_port_memory.py", line 126, in test_true_dp_ram
+                                                            await read_from_port_b(dut, addr_a, test_data_a)
+                                                          File "/src/test_dual_port_memory.py", line 54, in read_from_port_b
+                                                            assert dut.data_out_b.value == expected_data, f"Port B failed to read {expected_data} at address {addr}, got {dut.data_out_b.value}"
+                                                        AssertionError: Port B failed to read 10 at address 1, got 1111
+                                                        assert LogicArray('1111', Range(3, 'downto', 0)) == 10
+                                                         +  where LogicArray('1111', Range(3, 'downto', 0)) = LogicArrayObject(dual_port_memory.data_out_b).value
+                                                         +    where LogicArrayObject(dual_port_memory.data_out_b) = HierarchyObject(dual_port_memory).data_out_b
+   111.00ns WARNING  cocotb.regression                  test_dual_port_memory.test_true_dp_ram failed
+   111.00ns INFO     cocotb.regression                  *******************************************************************************************************************
+                                                        ** TEST                                                       STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *******************************************************************************************************************
+                                                        ** test_dual_port_memory.test_cvdp_true_dp_ram_ports_a_and_b   FAIL          50.00           0.00      17857.22  **
+                                                        ** test_dual_port_memory.test_true_dp_ram                      FAIL          60.00           0.00      47144.67  **
+                                                        *******************************************************************************************************************
+                                                        ** TESTS=2 PASS=0 FAIL=2 SKIP=0                                             111.00           0.01       9776.93  **
+                                                        *******************************************************************************************************************
+FAILED
+
+=================================== FAILURES ===================================
+_________________________________ test_runner __________________________________
+
+    def test_runner():
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="build.log")
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:27: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s dual_port_memory -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/dual_port_memory.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 2 of 2 tests.
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-xc9cop1h'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/lastfailed: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-x9xa8ri3'
+    config.cache.set("cache/lastfailed", self.lastfailed)
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-x1n1u9rc'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_runner - SystemExit: 1
+======================== 1 failed, 3 warnings in 0.62s =========================
+Cleaning up Docker resources...

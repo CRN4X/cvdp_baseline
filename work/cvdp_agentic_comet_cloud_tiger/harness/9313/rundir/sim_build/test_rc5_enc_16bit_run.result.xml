@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778495080" />
+    <testcase name="test_rc5_enc_16bit" classname="test_rc5_enc_16bit" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_comet_cloud_tiger/harness/9313/src/test_rc5_enc_16bit.py" lineno="31" time="0.0034236907958984375" sim_time_ns="890.0" ratio_time="259953.3816155989" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778521659" />
+    <testcase name="run_test" classname="test_pcie_ep" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_PCIe_endpoint/harness/1/src/test_pcie_ep.py" lineno="89" time="0.0027463436126708984" sim_time_ns="550.0" ratio_time="200266.27311398558" />
+  </testsuite>
+</testsuites>

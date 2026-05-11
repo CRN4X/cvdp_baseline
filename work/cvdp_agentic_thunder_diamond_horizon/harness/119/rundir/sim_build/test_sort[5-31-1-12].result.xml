@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778495041" />
+    <testcase name="test_scrambler_descrambler_sequential" classname="test_scrambler_descrambler" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_thunder_diamond_horizon/harness/119/src/test_scrambler_descrambler.py" lineno="50" time="0.0017986297607421875" sim_time_ns="220.0" ratio_time="122315.33404029692" />
+    <testcase name="test_bypass_mode" classname="test_scrambler_descrambler" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_thunder_diamond_horizon/harness/119/src/test_scrambler_descrambler.py" lineno="214" time="0.0016624927520751953" sim_time_ns="280.0" ratio_time="168421.78689229887" />
+    <testcase name="test_bit_count" classname="test_scrambler_descrambler" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_thunder_diamond_horizon/harness/119/src/test_scrambler_descrambler.py" lineno="259" time="0.0020406246185302734" sim_time_ns="369.99999999999994" ratio_time="181317.03236359384" />
+  </testsuite>
+</testsuites>

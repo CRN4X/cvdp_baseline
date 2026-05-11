@@ -1,0 +1,5 @@
+[
+  "src/test_runner.py::test_data",
+  "src/test_runner_dec_top.py::test_data",
+  "src/test_runner_enc_top.py::test_data"
+]

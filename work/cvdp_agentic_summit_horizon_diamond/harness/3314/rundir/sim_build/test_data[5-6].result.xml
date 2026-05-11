@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778493367" />
+    <testcase name="test_event_storage" classname="test_event_storage" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_summit_horizon_diamond/harness/3314/src/test_event_storage.py" lineno="26" time="0.03812074661254883" sim_time_ns="7750.0" ratio_time="203301.369691663" />
+  </testsuite>
+</testsuites>

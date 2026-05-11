@@ -1,0 +1,585 @@
+Running harness with project name: cvdp_agentic_monte_carlo_6_1777959957
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_runner 
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s monte_carlo_dsp_monitor_top -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/monte_carlo_dsp_monitor_top.sv /code/rtl/cross_domain_sync.sv /code/rtl/dsp_input_stage.sv /code/rtl/dsp_output_stage.sv /code/rtl/lfsr_generator.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1777959959
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_monte_carlo_dsp_monitor_top.monte_carlo_simulation (1/1)
+                                                            Monte Carlo Test with display logging and CSV tracing
+    78.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 0] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+    91.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 1] IN: valid=1 data=0x68B7 | OUT: valid=0 data=--
+   104.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 2] IN: valid=1 data=0x1CBC | OUT: valid=0 data=--
+   117.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 3] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+   130.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 4] IN: valid=1 data=0x3FCE | OUT: valid=0 data=--
+   143.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 5] IN: valid=1 data=0x7926 | OUT: valid=1 data=0x2C6A
+   156.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 6] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+   169.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 7] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x8EB1
+   182.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 8] IN: valid=1 data=0x4F04 | OUT: valid=1 data=0x8AED
+   195.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 9] IN: valid=1 data=0x710C | OUT: valid=0 data=--
+   208.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 10] IN: valid=1 data=0x5F23 | OUT: valid=0 data=--
+   221.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 11] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+   234.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 12] IN: valid=1 data=0x040E | OUT: valid=1 data=0x6A5B
+   247.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 13] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x24C5
+   260.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 14] IN: valid=1 data=0xAFE6 | OUT: valid=0 data=--
+   273.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 15] IN: valid=1 data=0xA3A2 | OUT: valid=1 data=0x4B28
+   286.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 16] IN: valid=1 data=0xF47E | OUT: valid=0 data=--
+   299.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 17] IN: valid=1 data=0x628A | OUT: valid=1 data=0xEC7B
+   312.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 18] IN: valid=1 data=0x1DBB | OUT: valid=1 data=0x8AA2
+   325.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 19] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xE56F
+   338.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 20] IN: valid=1 data=0xDBBF | OUT: valid=1 data=0x8CF0
+   351.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 21] IN: valid=1 data=0x561F | OUT: valid=1 data=0x25E6
+   364.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 22] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+   377.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 23] IN: valid=1 data=0x59E6 | OUT: valid=1 data=0xC927
+   390.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 24] IN: valid=1 data=0xDC79 | OUT: valid=1 data=0xD590
+   403.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 25] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x3BC6
+   416.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 26] IN: valid=1 data=0x4C7D | OUT: valid=1 data=0x8DAD
+   429.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 27] IN: valid=1 data=0xDAD2 | OUT: valid=1 data=0x62B6
+   442.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 28] IN: valid=1 data=0xEBAE | OUT: valid=0 data=--
+   455.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 29] IN: valid=1 data=0x0430 | OUT: valid=1 data=0x4FBB
+   468.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 30] IN: valid=1 data=0xE56B | OUT: valid=1 data=0xDE41
+   481.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 31] IN: valid=1 data=0x03DF | OUT: valid=1 data=0xCB83
+   494.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 32] IN: valid=1 data=0xC121 | OUT: valid=1 data=0x1DA8
+   507.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 33] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x07A2
+   520.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 34] IN: valid=1 data=0xE49A | OUT: valid=1 data=0x9851
+   533.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 35] IN: valid=1 data=0x0BE8 | OUT: valid=1 data=0x6D20
+   546.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 36] IN: valid=1 data=0x1863 | OUT: valid=0 data=--
+   559.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 37] IN: valid=1 data=0xCEC6 | OUT: valid=1 data=0x571F
+   572.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 38] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x685F
+   585.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 39] IN: valid=1 data=0x369A | OUT: valid=1 data=0x998B
+   598.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 40] IN: valid=1 data=0x295F | OUT: valid=1 data=0x2F2F
+   611.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 41] IN: valid=1 data=0xFB1B | OUT: valid=0 data=--
+   624.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 42] IN: valid=1 data=0xE2B7 | OUT: valid=1 data=0x50B3
+   637.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 43] IN: valid=1 data=0xA2F5 | OUT: valid=1 data=0x6322
+   650.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 44] IN: valid=1 data=0x3244 | OUT: valid=1 data=0x5157
+   663.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 45] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x46E8
+   676.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 46] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xAEDC
+   689.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 47] IN: valid=1 data=0xE3A5 | OUT: valid=1 data=0x7A61
+   702.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 48] IN: valid=1 data=0xEE02 | OUT: valid=0 data=--
+   715.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 49] IN: valid=1 data=0x42B4 | OUT: valid=0 data=--
+   728.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 50] IN: valid=1 data=0xDA25 | OUT: valid=1 data=0x125F
+   741.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 51] IN: valid=1 data=0xDF32 | OUT: valid=1 data=0xDE5D
+   754.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 52] IN: valid=1 data=0xFFD6 | OUT: valid=1 data=0xF0ED
+   767.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 53] IN: valid=1 data=0x6F9A | OUT: valid=1 data=0xEB15
+   780.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 54] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x11F7
+   793.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 55] IN: valid=1 data=0x7467 | OUT: valid=1 data=0xDA46
+   806.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 56] IN: valid=1 data=0xB453 | OUT: valid=1 data=0x7AF4
+   819.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 57] IN: valid=1 data=0x1949 | OUT: valid=0 data=--
+   832.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 58] IN: valid=1 data=0x71D1 | OUT: valid=1 data=0x966B
+   845.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 59] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xAA4C
+   858.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 60] IN: valid=1 data=0xDFEF | OUT: valid=1 data=0xC3F5
+   871.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 61] IN: valid=1 data=0xBCC5 | OUT: valid=1 data=0x5B1E
+   884.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 62] IN: valid=1 data=0xE74F | OUT: valid=0 data=--
+   897.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 63] IN: valid=1 data=0x2B52 | OUT: valid=1 data=0x7C14
+   910.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 64] IN: valid=1 data=0x3795 | OUT: valid=1 data=0xDF3C
+   923.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 65] IN: valid=1 data=0xC426 | OUT: valid=1 data=0x5E89
+   936.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 66] IN: valid=1 data=0xBE0E | OUT: valid=1 data=0xAC7D
+   949.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 67] IN: valid=1 data=0x506E | OUT: valid=1 data=0x839D
+   962.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 68] IN: valid=1 data=0xF553 | OUT: valid=1 data=0x7ACC
+   975.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 69] IN: valid=1 data=0x08DF | OUT: valid=1 data=0x9241
+   988.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 70] IN: valid=1 data=0x29A5 | OUT: valid=1 data=0xC7AB
+  1001.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 71] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xF68F
+  1014.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 72] IN: valid=1 data=0x6529 | OUT: valid=1 data=0xEE38
+  1027.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 73] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x64A8
+  1040.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 74] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x9BCF
+  1053.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 75] IN: valid=1 data=0x2619 | OUT: valid=1 data=0x4D70
+  1066.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 76] IN: valid=1 data=0xD7C0 | OUT: valid=0 data=--
+  1079.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 77] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  1092.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 78] IN: valid=1 data=0x5280 | OUT: valid=1 data=0x9588
+  1105.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 79] IN: valid=1 data=0x0AD8 | OUT: valid=1 data=0x06A9
+  1118.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 80] IN: valid=1 data=0x7DF2 | OUT: valid=0 data=--
+  1131.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 81] IN: valid=1 data=0xD3FE | OUT: valid=0 data=--
+  1144.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 82] IN: valid=1 data=0xF336 | OUT: valid=1 data=0xCBB6
+  1157.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 83] IN: valid=1 data=0x264D | OUT: valid=1 data=0x4D23
+  1170.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 84] IN: valid=1 data=0x6A21 | OUT: valid=1 data=0xB058
+  1183.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 85] IN: valid=1 data=0x3349 | OUT: valid=1 data=0x41D8
+  1196.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 86] IN: valid=1 data=0x18BE | OUT: valid=1 data=0xF2B7
+  1209.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 87] IN: valid=1 data=0x6E4F | OUT: valid=1 data=0xB279
+  1222.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 88] IN: valid=1 data=0xC04C | OUT: valid=1 data=0x1E90
+  1235.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 89] IN: valid=1 data=0xDED0 | OUT: valid=1 data=0x8343
+  1248.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 90] IN: valid=1 data=0x44A9 | OUT: valid=1 data=0x2CB0
+  1261.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 91] IN: valid=1 data=0x4C2D | OUT: valid=1 data=0x9D7C
+  1274.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 92] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x4A92
+  1287.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 93] IN: valid=1 data=0xBAC6 | OUT: valid=1 data=0x7989
+  1300.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 94] IN: valid=1 data=0x1A31 | OUT: valid=1 data=0xC18E
+  1313.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 95] IN: valid=1 data=0xE20A | OUT: valid=1 data=0x6832
+  1326.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 96] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x0412
+  1339.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 97] IN: valid=1 data=0xE5E4 | OUT: valid=1 data=0x5831
+  1352.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 98] IN: valid=1 data=0xB3B2 | OUT: valid=1 data=0x15FE
+  1365.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 99] IN: valid=1 data=0x4D07 | OUT: valid=0 data=--
+  1378.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 100] IN: valid=1 data=0x9883 | OUT: valid=1 data=0xCC2F
+  1391.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 101] IN: valid=1 data=0xC178 | OUT: valid=1 data=0xF5C7
+  1404.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 102] IN: valid=1 data=0xBA1A | OUT: valid=1 data=0xB200
+  1417.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 103] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xB0D6
+  1430.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 104] IN: valid=1 data=0x0652 | OUT: valid=1 data=0x91EF
+  1443.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 105] IN: valid=1 data=0x713C | OUT: valid=1 data=0xED37
+  1456.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 106] IN: valid=1 data=0x77C3 | OUT: valid=0 data=--
+  1469.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 107] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xACE6
+  1482.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 108] IN: valid=1 data=0x8729 | OUT: valid=1 data=0xFA26
+  1495.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 109] IN: valid=1 data=0x5A00 | OUT: valid=1 data=0x1F36
+  1508.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 110] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  1521.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 111] IN: valid=1 data=0x8C1B | OUT: valid=1 data=0x0F3E
+  1534.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 112] IN: valid=1 data=0xC37E | OUT: valid=1 data=0x450D
+  1547.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 113] IN: valid=1 data=0x2532 | OUT: valid=0 data=--
+  1560.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 114] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x2FC0
+  1573.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 115] IN: valid=1 data=0xC02E | OUT: valid=1 data=0xC5E3
+  1586.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 116] IN: valid=1 data=0xE252 | OUT: valid=1 data=0x096E
+  1599.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 117] IN: valid=1 data=0x814A | OUT: valid=0 data=--
+  1612.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 118] IN: valid=1 data=0xC80E | OUT: valid=1 data=0xE741
+  1625.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 119] IN: valid=1 data=0x2E14 | OUT: valid=1 data=0x32A7
+  1638.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 120] IN: valid=1 data=0x794A | OUT: valid=1 data=0xF768
+  1651.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 121] IN: valid=1 data=0x589D | OUT: valid=1 data=0x6B99
+  1664.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 122] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x1F35
+  1677.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 123] IN: valid=1 data=0x75E9 | OUT: valid=1 data=0x8A11
+  1690.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 124] IN: valid=1 data=0xD314 | OUT: valid=1 data=0x661E
+  1703.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 125] IN: valid=1 data=0xB47A | OUT: valid=0 data=--
+  1716.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 126] IN: valid=1 data=0x094B | OUT: valid=1 data=0xC944
+  1729.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 127] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xDE40
+  1742.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 128] IN: valid=1 data=0xA614 | OUT: valid=1 data=0x60C3
+  1755.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 129] IN: valid=1 data=0xDD05 | OUT: valid=1 data=0x41C5
+  1768.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 130] IN: valid=1 data=0x9380 | OUT: valid=1 data=0xAA73
+  1781.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 131] IN: valid=1 data=0x304A | OUT: valid=1 data=0x4F3A
+  1794.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 132] IN: valid=1 data=0x27FC | OUT: valid=1 data=0x68C2
+  1807.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 133] IN: valid=1 data=0x2F8A | OUT: valid=1 data=0x487A
+  1820.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 134] IN: valid=1 data=0x62C2 | OUT: valid=1 data=0x9A33
+  1833.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 135] IN: valid=1 data=0x4D72 | OUT: valid=1 data=0xAE1A
+  1846.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 136] IN: valid=1 data=0x25CE | OUT: valid=1 data=0x2F84
+  1859.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 137] IN: valid=1 data=0x0DBE | OUT: valid=1 data=0xEC1E
+  1872.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 138] IN: valid=1 data=0xAB0C | OUT: valid=1 data=0xA8A2
+  1885.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 139] IN: valid=1 data=0x8EB9 | OUT: valid=1 data=0xD801
+  1898.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 140] IN: valid=1 data=0xB469 | OUT: valid=1 data=0x63A2
+  1911.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 141] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x334B
+  1924.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 142] IN: valid=1 data=0x7267 | OUT: valid=1 data=0x1E57
+  1937.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 143] IN: valid=1 data=0x8FBC | OUT: valid=1 data=0xC6CD
+  1950.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 144] IN: valid=1 data=0x4499 | OUT: valid=1 data=0xAF8D
+  1963.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 145] IN: valid=1 data=0x9F87 | OUT: valid=1 data=0x83A0
+  1976.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 146] IN: valid=1 data=0xCCA1 | OUT: valid=1 data=0x459C
+  1989.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 147] IN: valid=1 data=0xAC78 | OUT: valid=1 data=0x81EF
+  2002.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 148] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xDEA8
+  2015.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 149] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xB1B9
+  2028.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 150] IN: valid=1 data=0x9FA6 | OUT: valid=1 data=0xF9AA
+  2041.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 151] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x63B4
+  2054.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 152] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  2067.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 153] IN: valid=1 data=0xD01C | OUT: valid=1 data=0x11E6
+  2080.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 154] IN: valid=1 data=0x8A58 | OUT: valid=0 data=--
+  2093.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 155] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  2106.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 156] IN: valid=1 data=0x6FC8 | OUT: valid=1 data=0x0D44
+  2119.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 157] IN: valid=1 data=0xE884 | OUT: valid=1 data=0x1D41
+  2132.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 158] IN: valid=1 data=0x6558 | OUT: valid=1 data=0x4FB3
+  2145.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 159] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x018F
+  2158.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 160] IN: valid=1 data=0x5ACD | OUT: valid=1 data=0x82ED
+  2171.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 161] IN: valid=1 data=0xB78A | OUT: valid=1 data=0xD8E0
+  2184.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 162] IN: valid=1 data=0x56F8 | OUT: valid=0 data=--
+  2197.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 163] IN: valid=1 data=0x6576 | OUT: valid=1 data=0x3201
+  2210.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 164] IN: valid=1 data=0x9FB4 | OUT: valid=1 data=0xB544
+  2223.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 165] IN: valid=1 data=0xB27F | OUT: valid=1 data=0x46B6
+  2236.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 166] IN: valid=1 data=0xA5B3 | OUT: valid=1 data=0x55F2
+  2249.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 167] IN: valid=1 data=0x4171 | OUT: valid=1 data=0xD0F9
+  2262.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 168] IN: valid=1 data=0x5243 | OUT: valid=1 data=0x3150
+  2275.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 169] IN: valid=1 data=0x087B | OUT: valid=1 data=0xF85D
+  2288.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 170] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x6E5E
+  2301.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 171] IN: valid=1 data=0x65E2 | OUT: valid=1 data=0xA80E
+  2314.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 172] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x7A2A
+  2327.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 173] IN: valid=1 data=0xC9AE | OUT: valid=0 data=--
+  2340.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 174] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x751C
+  2353.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 175] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  2366.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 176] IN: valid=1 data=0x51FC | OUT: valid=1 data=0x3A39
+  2379.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 177] IN: valid=1 data=0x7A72 | OUT: valid=0 data=--
+  2392.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 178] IN: valid=1 data=0x0FBD | OUT: valid=0 data=--
+  2405.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 179] IN: valid=1 data=0xEEDA | OUT: valid=0 data=--
+  2418.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 180] IN: valid=1 data=0xBB7C | OUT: valid=1 data=0xF757
+  2431.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 181] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x8D7F
+  2444.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 182] IN: valid=1 data=0x981D | OUT: valid=1 data=0x872A
+  2457.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 183] IN: valid=1 data=0xF085 | OUT: valid=1 data=0x65C3
+  2470.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 184] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  2483.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 185] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x5EAA
+  2496.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 186] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xA894
+  2509.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 187] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  2522.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 188] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  2535.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 189] IN: valid=1 data=0x69B8 | OUT: valid=0 data=--
+  2548.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 190] IN: valid=1 data=0xCF11 | OUT: valid=0 data=--
+  2561.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 191] IN: valid=1 data=0x2B56 | OUT: valid=0 data=--
+  2574.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 192] IN: valid=1 data=0xC931 | OUT: valid=1 data=0x364C
+  2587.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 193] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xA039
+  2600.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 194] IN: valid=1 data=0xEF25 | OUT: valid=1 data=0xFABB
+  2613.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 195] IN: valid=1 data=0x445C | OUT: valid=1 data=0x2594
+  2626.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 196] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  2639.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 197] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xF17C
+  2652.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 198] IN: valid=1 data=0xCB25 | OUT: valid=1 data=0x3CBB
+  2665.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 199] IN: valid=1 data=0xF3A7 | OUT: valid=0 data=--
+  2678.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 200] IN: valid=1 data=0xD4C5 | OUT: valid=0 data=--
+  2691.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 201] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xA643
+  2704.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 202] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x34D4
+  2717.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 203] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xC19D
+  2730.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 204] IN: valid=1 data=0xFC53 | OUT: valid=0 data=--
+  2743.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 205] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  2756.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 206] IN: valid=1 data=0x4D00 | OUT: valid=0 data=--
+  2769.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 207] IN: valid=1 data=0xDE66 | OUT: valid=0 data=--
+  2782.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 208] IN: valid=1 data=0xC2AD | OUT: valid=0 data=--
+  2795.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 209] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xA021
+  2808.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 210] IN: valid=1 data=0x6A49 | OUT: valid=1 data=0x3336
+  2821.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 211] IN: valid=1 data=0x6B5F | OUT: valid=1 data=0xDBDD
+  2834.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 212] IN: valid=1 data=0xEECF | OUT: valid=0 data=--
+  2847.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 213] IN: valid=1 data=0x52AA | OUT: valid=1 data=0x453F
+  2860.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 214] IN: valid=1 data=0x1EFE | OUT: valid=1 data=0x95B9
+  2873.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 215] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x95A8
+  2886.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 216] IN: valid=1 data=0xA95C | OUT: valid=1 data=0xBD70
+  2899.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 217] IN: valid=1 data=0xE5F0 | OUT: valid=1 data=0x4425
+  2912.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 218] IN: valid=1 data=0xA785 | OUT: valid=0 data=--
+  2925.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 219] IN: valid=1 data=0x0733 | OUT: valid=1 data=0xCAB0
+  2938.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 220] IN: valid=1 data=0x420D | OUT: valid=1 data=0x4014
+  2951.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 221] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xC7C4
+  2964.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 222] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xA199
+  2977.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 223] IN: valid=1 data=0x4BC6 | OUT: valid=1 data=0x0ACB
+  2990.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 224] IN: valid=1 data=0xD45A | OUT: valid=0 data=--
+  3003.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 225] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  3016.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 226] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xD281
+  3029.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 227] IN: valid=1 data=0xB391 | OUT: valid=1 data=0xC41B
+  3042.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 228] IN: valid=1 data=0x8879 | OUT: valid=1 data=0x609B
+  3055.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 229] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  3068.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 230] IN: valid=1 data=0xADA7 | OUT: valid=1 data=0x88D8
+  3081.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 231] IN: valid=1 data=0xA842 | OUT: valid=1 data=0xCD5A
+  3094.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 232] IN: valid=1 data=0xB20D | OUT: valid=0 data=--
+  3107.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 233] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x775F
+  3120.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 234] IN: valid=1 data=0x28EC | OUT: valid=1 data=0x9D92
+  3133.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 235] IN: valid=1 data=0x05C8 | OUT: valid=1 data=0xB203
+  3146.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 236] IN: valid=1 data=0x2E97 | OUT: valid=0 data=--
+  3159.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 237] IN: valid=1 data=0x1F77 | OUT: valid=1 data=0xB855
+  3172.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 238] IN: valid=1 data=0x5A5A | OUT: valid=1 data=0x1D01
+  3185.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 239] IN: valid=1 data=0x2C19 | OUT: valid=1 data=0x7B0D
+  3198.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 240] IN: valid=1 data=0x6581 | OUT: valid=1 data=0x8767
+  3211.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 241] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x1D7A
+  3224.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 242] IN: valid=1 data=0xD03D | OUT: valid=1 data=0x19F2
+  3237.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 243] IN: valid=1 data=0xC228 | OUT: valid=1 data=0xDD0A
+  3250.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 244] IN: valid=1 data=0xFEB5 | OUT: valid=0 data=--
+  3263.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 245] IN: valid=1 data=0xD756 | OUT: valid=1 data=0x9014
+  3276.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 246] IN: valid=1 data=0xBA73 | OUT: valid=1 data=0x2984
+  3289.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 247] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x571C
+  3302.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 248] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x4DC3
+  3315.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 249] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xD5C3
+  3328.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 250] IN: valid=1 data=0xF3D5 | OUT: valid=0 data=--
+  3341.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 251] IN: valid=1 data=0xE274 | OUT: valid=0 data=--
+  3354.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 252] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  3367.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 253] IN: valid=1 data=0x218C | OUT: valid=1 data=0x8487
+  3380.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 254] IN: valid=1 data=0xA9C3 | OUT: valid=1 data=0x0840
+  3393.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 255] IN: valid=1 data=0xB6AD | OUT: valid=0 data=--
+  3406.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 256] IN: valid=1 data=0x4E32 | OUT: valid=0 data=--
+  3419.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 257] IN: valid=1 data=0x333D | OUT: valid=1 data=0xA662
+  3432.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 258] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xA8C7
+  3445.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 259] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x83A1
+  3458.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 260] IN: valid=1 data=0x7430 | OUT: valid=1 data=0xF83D
+  3471.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 261] IN: valid=1 data=0x6D53 | OUT: valid=0 data=--
+  3484.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 262] IN: valid=1 data=0x4AE4 | OUT: valid=0 data=--
+  3497.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 263] IN: valid=1 data=0xF2F0 | OUT: valid=0 data=--
+  3510.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 264] IN: valid=1 data=0xF823 | OUT: valid=1 data=0xECBE
+  3523.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 265] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x9810
+  3536.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 266] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x109C
+  3549.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 267] IN: valid=1 data=0xD349 | OUT: valid=1 data=0x85FD
+  3562.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 268] IN: valid=1 data=0x741E | OUT: valid=0 data=--
+  3575.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 269] IN: valid=1 data=0xCEAD | OUT: valid=0 data=--
+  3588.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 270] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  3601.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 271] IN: valid=1 data=0x6A5F | OUT: valid=1 data=0x0E9D
+  3614.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 272] IN: valid=1 data=0x987F | OUT: valid=1 data=0x93F9
+  3627.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 273] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  3640.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 274] IN: valid=1 data=0xB7E9 | OUT: valid=1 data=0xE4B8
+  3653.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 275] IN: valid=1 data=0xDAA9 | OUT: valid=1 data=0x1433
+  3666.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 276] IN: valid=1 data=0xA96D | OUT: valid=0 data=--
+  3679.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 277] IN: valid=1 data=0x9F84 | OUT: valid=0 data=--
+  3692.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 278] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x6114
+  3705.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 279] IN: valid=1 data=0xD896 | OUT: valid=1 data=0x960A
+  3718.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 280] IN: valid=1 data=0x7154 | OUT: valid=1 data=0x0A00
+  3731.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 281] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  3744.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 282] IN: valid=1 data=0xD7F5 | OUT: valid=1 data=0xFE5B
+  3757.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 283] IN: valid=1 data=0x0A13 | OUT: valid=1 data=0xAEF5
+  3770.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 284] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xB6C2
+  3783.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 285] IN: valid=1 data=0x3066 | OUT: valid=1 data=0xFE78
+  3796.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 286] IN: valid=1 data=0x4321 | OUT: valid=1 data=0x932C
+  3809.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 287] IN: valid=1 data=0xE6F9 | OUT: valid=0 data=--
+  3822.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 288] IN: valid=1 data=0x96C7 | OUT: valid=1 data=0x6F79
+  3835.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 289] IN: valid=1 data=0xD4D0 | OUT: valid=1 data=0x4EC9
+  3848.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 290] IN: valid=1 data=0x6C61 | OUT: valid=1 data=0x3F0A
+  3861.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 291] IN: valid=1 data=0xE92A | OUT: valid=1 data=0x1B7F
+  3874.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 292] IN: valid=1 data=0x4A92 | OUT: valid=1 data=0x1DF5
+  3887.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 293] IN: valid=1 data=0x549F | OUT: valid=1 data=0x0C48
+  3900.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 294] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x6750
+  3913.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 295] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x174A
+  3926.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 296] IN: valid=1 data=0xA3B6 | OUT: valid=1 data=0x1659
+  3939.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 297] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  3952.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 298] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  3965.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 299] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xE7A9
+  3978.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 300] IN: valid=1 data=0x918C | OUT: valid=0 data=--
+  3991.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 301] IN: valid=1 data=0xB1C1 | OUT: valid=0 data=--
+  4004.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 302] IN: valid=1 data=0x3F67 | OUT: valid=0 data=--
+  4017.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 303] IN: valid=1 data=0xCA14 | OUT: valid=1 data=0xF69C
+  4030.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 304] IN: valid=1 data=0x84EE | OUT: valid=1 data=0x034E
+  4043.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 305] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x6BAC
+  4056.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 306] IN: valid=1 data=0x83C1 | OUT: valid=1 data=0x051B
+  4069.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 307] IN: valid=1 data=0xCCA2 | OUT: valid=1 data=0x5CE6
+  4082.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 308] IN: valid=1 data=0xDE5F | OUT: valid=0 data=--
+  4095.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 309] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x5582
+  4108.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 310] IN: valid=1 data=0x0F49 | OUT: valid=1 data=0xF902
+  4121.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 311] IN: valid=1 data=0x4E92 | OUT: valid=1 data=0x7E38
+  4134.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 312] IN: valid=1 data=0xA649 | OUT: valid=1 data=0xA719
+  4147.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 313] IN: valid=1 data=0xA289 | OUT: valid=1 data=0x2CD2
+  4160.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 314] IN: valid=1 data=0x8626 | OUT: valid=1 data=0x09C8
+  4173.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 315] IN: valid=1 data=0x9D9F | OUT: valid=1 data=0xCDFE
+  4186.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 316] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x9928
+  4199.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 317] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x3AAF
+  4212.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 318] IN: valid=1 data=0x675E | OUT: valid=1 data=0x2DFB
+  4225.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 319] IN: valid=1 data=0xE39A | OUT: valid=1 data=0xA463
+  4238.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 320] IN: valid=1 data=0x0D48 | OUT: valid=0 data=--
+  4251.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 321] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x95C7
+  4264.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 322] IN: valid=1 data=0x7228 | OUT: valid=1 data=0x8407
+  4277.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 323] IN: valid=1 data=0x7464 | OUT: valid=1 data=0x0675
+  4290.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 324] IN: valid=1 data=0xD163 | OUT: valid=0 data=--
+  4303.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 325] IN: valid=1 data=0x5C8F | OUT: valid=1 data=0xB892
+  4316.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 326] IN: valid=1 data=0x0219 | OUT: valid=1 data=0xD420
+  4329.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 327] IN: valid=1 data=0xFF75 | OUT: valid=1 data=0x3E39
+  4342.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 328] IN: valid=1 data=0xC3D0 | OUT: valid=1 data=0xF02A
+  4355.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 329] IN: valid=1 data=0x83F2 | OUT: valid=1 data=0xFBB2
+  4368.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 330] IN: valid=1 data=0x4C64 | OUT: valid=1 data=0xDADF
+  4381.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 331] IN: valid=1 data=0xF053 | OUT: valid=1 data=0x1409
+  4394.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 332] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x7EE9
+  4407.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 333] IN: valid=1 data=0x68A2 | OUT: valid=1 data=0x5684
+  4420.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 334] IN: valid=1 data=0x9894 | OUT: valid=1 data=0x291E
+  4433.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 335] IN: valid=1 data=0x586D | OUT: valid=0 data=--
+  4446.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 336] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xBB41
+  4459.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 337] IN: valid=1 data=0x745C | OUT: valid=1 data=0x9CA6
+  4472.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 338] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x7A81
+  4485.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 339] IN: valid=1 data=0x50DD | OUT: valid=0 data=--
+  4498.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 340] IN: valid=1 data=0xBBD6 | OUT: valid=0 data=--
+  4511.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 341] IN: valid=1 data=0x1613 | OUT: valid=0 data=--
+  4524.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 342] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xEB52
+  4537.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 343] IN: valid=1 data=0x761A | OUT: valid=1 data=0xBD03
+  4550.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 344] IN: valid=1 data=0x7362 | OUT: valid=1 data=0x8D87
+  4563.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 345] IN: valid=1 data=0x8D93 | OUT: valid=0 data=--
+  4576.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 346] IN: valid=1 data=0x1991 | OUT: valid=1 data=0x68FA
+  4589.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 347] IN: valid=1 data=0x8D6C | OUT: valid=1 data=0xDCBF
+  4602.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 348] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x2350
+  4615.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 349] IN: valid=1 data=0x3406 | OUT: valid=1 data=0xFD8D
+  4628.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 350] IN: valid=1 data=0xE058 | OUT: valid=1 data=0x9386
+  4641.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 351] IN: valid=1 data=0x92ED | OUT: valid=0 data=--
+  4654.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 352] IN: valid=1 data=0x2708 | OUT: valid=1 data=0xDBAE
+  4667.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 353] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x09D1
+  4680.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 354] IN: valid=1 data=0x2E41 | OUT: valid=1 data=0xB1D8
+  4693.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 355] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x4358
+  4706.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 356] IN: valid=1 data=0x5577 | OUT: valid=0 data=--
+  4719.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 357] IN: valid=1 data=0xDB00 | OUT: valid=1 data=0x6B05
+  4732.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 358] IN: valid=1 data=0x4F08 | OUT: valid=0 data=--
+  4745.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 359] IN: valid=1 data=0x8A60 | OUT: valid=1 data=0xDC67
+  4758.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 360] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x9338
+  4771.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 361] IN: valid=1 data=0x7F99 | OUT: valid=1 data=0xAD9B
+  4784.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 362] IN: valid=1 data=0xD8B4 | OUT: valid=1 data=0x3636
+  4797.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 363] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  4810.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 364] IN: valid=1 data=0xE15E | OUT: valid=1 data=0x5427
+  4823.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 365] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xD57E
+  4836.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 366] IN: valid=1 data=0x6889 | OUT: valid=0 data=--
+  4849.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 367] IN: valid=1 data=0x609B | OUT: valid=1 data=0x945D
+  4862.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 368] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x63E4
+  4875.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 369] IN: valid=1 data=0x15FE | OUT: valid=1 data=0xE42B
+  4888.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 370] IN: valid=1 data=0xF33C | OUT: valid=1 data=0x3267
+  4901.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 371] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  4914.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 372] IN: valid=1 data=0x5A04 | OUT: valid=1 data=0xEBCB
+  4927.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 373] IN: valid=1 data=0xCBAE | OUT: valid=1 data=0xC312
+  4940.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 374] IN: valid=1 data=0x6331 | OUT: valid=0 data=--
+  4953.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 375] IN: valid=1 data=0xFB04 | OUT: valid=0 data=--
+  4966.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 376] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x8FB9
+  4979.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 377] IN: valid=1 data=0xE132 | OUT: valid=1 data=0x696B
+  4992.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 378] IN: valid=1 data=0xBE0E | OUT: valid=1 data=0xD062
+  5005.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 379] IN: valid=1 data=0x6C09 | OUT: valid=0 data=--
+  5018.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 380] IN: valid=1 data=0x97D3 | OUT: valid=1 data=0x161D
+  5031.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 381] IN: valid=1 data=0x78B6 | OUT: valid=1 data=0x7B7A
+  5044.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 382] IN: valid=1 data=0xE1F0 | OUT: valid=1 data=0x5350
+  5057.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 383] IN: valid=1 data=0xFD99 | OUT: valid=1 data=0x64B2
+  5070.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 384] IN: valid=1 data=0x10B5 | OUT: valid=1 data=0xECD2
+  5083.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 385] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xB753
+  5096.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 386] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x99A5
+  5109.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 387] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x934E
+  5122.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 388] IN: valid=1 data=0xE600 | OUT: valid=0 data=--
+  5135.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 389] IN: valid=1 data=0xA9BF | OUT: valid=0 data=--
+  5148.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 390] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  5161.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 391] IN: valid=1 data=0x1294 | OUT: valid=1 data=0x83F3
+  5174.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 392] IN: valid=1 data=0x32BA | OUT: valid=1 data=0x19DC
+  5187.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 393] IN: valid=1 data=0xAFE8 | OUT: valid=0 data=--
+  5200.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 394] IN: valid=1 data=0x5393 | OUT: valid=1 data=0xBD15
+  5213.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 395] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x665C
+  5226.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 396] IN: valid=1 data=0xC4BF | OUT: valid=1 data=0xE0A3
+  5239.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 397] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x9689
+  5252.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 398] IN: valid=1 data=0x774F | OUT: valid=0 data=--
+  5265.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 399] IN: valid=1 data=0xE7BC | OUT: valid=1 data=0x597D
+  5278.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 400] IN: valid=1 data=0xCD0C | OUT: valid=0 data=--
+  5291.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 401] IN: valid=1 data=0xAADA | OUT: valid=1 data=0xFEDE
+  5304.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 402] IN: valid=1 data=0xCCD0 | OUT: valid=1 data=0xC237
+  5317.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 403] IN: valid=1 data=0x6679 | OUT: valid=1 data=0xAE5E
+  5330.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 404] IN: valid=1 data=0x9326 | OUT: valid=1 data=0x7478
+  5343.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 405] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x95C8
+  5356.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 406] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xD09D
+  5369.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 407] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xD747
+  5382.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 408] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  5395.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 409] IN: valid=1 data=0x9097 | OUT: valid=0 data=--
+  5408.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 410] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  5421.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 411] IN: valid=1 data=0x3B7A | OUT: valid=0 data=--
+  5434.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 412] IN: valid=1 data=0x12E8 | OUT: valid=1 data=0x7366
+  5447.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 413] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  5460.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 414] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x3ADC
+  5473.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 415] IN: valid=1 data=0xDAE3 | OUT: valid=1 data=0xD8D3
+  5486.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 416] IN: valid=1 data=0x8208 | OUT: valid=0 data=--
+  5499.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 417] IN: valid=1 data=0xD0D0 | OUT: valid=0 data=--
+  5512.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 418] IN: valid=1 data=0x1904 | OUT: valid=1 data=0xBE56
+  5525.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 419] IN: valid=1 data=0xEF18 | OUT: valid=1 data=0xAE0C
+  5538.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 420] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x4ADA
+  5551.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 421] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xC543
+  5564.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 422] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x22FB
+  5577.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 423] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  5590.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 424] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  5603.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 425] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  5616.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 426] IN: valid=1 data=0x928F | OUT: valid=0 data=--
+  5629.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 427] IN: valid=1 data=0xB013 | OUT: valid=0 data=--
+  5642.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 428] IN: valid=1 data=0x91A3 | OUT: valid=0 data=--
+  5655.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 429] IN: valid=1 data=0xB345 | OUT: valid=1 data=0x8C71
+  5668.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 430] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x1161
+  5681.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 431] IN: valid=1 data=0xCB21 | OUT: valid=1 data=0xDBFB
+  5694.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 432] IN: valid=1 data=0xDE52 | OUT: valid=1 data=0x67C3
+  5707.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 433] IN: valid=1 data=0xFCA2 | OUT: valid=0 data=--
+  5720.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 434] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x1A92
+  5733.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 435] IN: valid=1 data=0x8C62 | OUT: valid=1 data=0xE47C
+  5746.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 436] IN: valid=1 data=0x7C9F | OUT: valid=1 data=0xE90D
+  5759.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 437] IN: valid=1 data=0x229D | OUT: valid=0 data=--
+  5772.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 438] IN: valid=1 data=0xFA2C | OUT: valid=0 data=--
+  5785.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 439] IN: valid=1 data=0x57AE | OUT: valid=1 data=0x182F
+  5798.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 440] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xBEBB
+  5811.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 441] IN: valid=1 data=0x01F1 | OUT: valid=1 data=0x6F3B
+  5824.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 442] IN: valid=1 data=0xFE1F | OUT: valid=1 data=0x46D9
+  5837.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 443] IN: valid=1 data=0x13BA | OUT: valid=0 data=--
+  5850.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 444] IN: valid=1 data=0x2A62 | OUT: valid=1 data=0xB597
+  5863.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 445] IN: valid=1 data=0x4C1A | OUT: valid=1 data=0x84D7
+  5876.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 446] IN: valid=1 data=0xE450 | OUT: valid=1 data=0x0BBD
+  5889.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 447] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x7764
+  5902.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 448] IN: valid=1 data=0xA61D | OUT: valid=1 data=0x22C1
+  5915.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 449] IN: valid=1 data=0x9E1B | OUT: valid=1 data=0x5924
+  5928.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 450] IN: valid=1 data=0x8FEE | OUT: valid=0 data=--
+  5941.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 451] IN: valid=1 data=0x77CC | OUT: valid=1 data=0x30BB
+  5954.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 452] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xD96A
+  5967.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 453] IN: valid=1 data=0xB3AB | OUT: valid=1 data=0x58F2
+  5980.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 454] IN: valid=1 data=0xC0AB | OUT: valid=1 data=0x8239
+  5993.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 455] IN: valid=1 data=0x970E | OUT: valid=0 data=--
+  6006.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 456] IN: valid=1 data=0xF77B | OUT: valid=1 data=0xB78D
+  6019.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 457] IN: valid=1 data=0xE9D2 | OUT: valid=1 data=0xDEC3
+  6032.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 458] IN: valid=1 data=0x5EFC | OUT: valid=1 data=0x13B2
+  6045.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 459] IN: valid=1 data=0xE579 | OUT: valid=1 data=0x1619
+  6058.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 460] IN: valid=1 data=0xE8E9 | OUT: valid=1 data=0x9520
+  6071.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 461] IN: valid=1 data=0x3A73 | OUT: valid=1 data=0xD4AA
+  6084.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 462] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xC09A
+  6097.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 463] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x4BED
+  6110.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 464] IN: valid=1 data=0xA781 | OUT: valid=1 data=0xFCA3
+  6123.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 465] IN: valid=1 data=0x4FF8 | OUT: valid=0 data=--
+  6136.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 466] IN: valid=1 data=0x6C13 | OUT: valid=0 data=--
+  6149.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 467] IN: valid=1 data=0xD4B0 | OUT: valid=1 data=0x1833
+  6162.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 468] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x26E3
+  6175.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 469] IN: valid=1 data=0x1A8A | OUT: valid=1 data=0x892D
+  6188.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 470] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xF1FA
+  6201.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 471] IN: valid=1 data=0x76D4 | OUT: valid=0 data=--
+  6214.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 472] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xF18A
+  6227.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 473] IN: valid=1 data=0x5D63 | OUT: valid=1 data=0xE940
+  6240.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 474] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xFD1F
+  6253.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 475] IN: valid=1 data=0x5F3C | OUT: valid=0 data=--
+  6266.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 476] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x8856
+  6279.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 477] IN: valid=1 data=0x8B66 | OUT: valid=0 data=--
+  6292.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 478] IN: valid=1 data=0xDDD9 | OUT: valid=1 data=0x416E
+  6305.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 479] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  6318.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 480] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  6331.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 481] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x0D86
+  6344.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 482] IN: valid=1 data=0x6644 | OUT: valid=0 data=--
+  6357.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 483] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  6370.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 484] IN: valid=1 data=0xB8E2 | OUT: valid=0 data=--
+  6383.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 485] IN: valid=0 data=0x0000 | OUT: valid=1 data=0x96B1
+  6396.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 486] IN: valid=1 data=0xAA51 | OUT: valid=0 data=--
+  6409.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 487] IN: valid=0 data=0x0000 | OUT: valid=0 data=--
+  6422.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 488] IN: valid=1 data=0x15E4 | OUT: valid=0 data=--
+  6435.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 489] IN: valid=1 data=0xD6A0 | OUT: valid=1 data=0xC22E
+  6448.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 490] IN: valid=1 data=0x525B | OUT: valid=0 data=--
+  6461.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 491] IN: valid=1 data=0xCD45 | OUT: valid=1 data=0x703A
+  6474.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 492] IN: valid=1 data=0xB737 | OUT: valid=1 data=0x499F
+  6487.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 493] IN: valid=1 data=0x6E5D | OUT: valid=1 data=0x9E6B
+  6500.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 494] IN: valid=1 data=0xBC0B | OUT: valid=1 data=0x0338
+  6513.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 495] IN: valid=1 data=0x80B0 | OUT: valid=1 data=0xF09D
+  6526.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 496] IN: valid=1 data=0x3371 | OUT: valid=1 data=0xF510
+  6539.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 497] IN: valid=1 data=0x0126 | OUT: valid=1 data=0xF4BF
+  6552.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 498] IN: valid=1 data=0x3FB8 | OUT: valid=1 data=0xF378
+  6565.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Cycle 499] IN: valid=0 data=0x0000 | OUT: valid=1 data=0xF48C
+  6578.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Drain 500] OUT: valid=1 data=0x7062
+  6591.00ns INFO     cocotb.monte_carlo_dsp_monitor_top [Drain 501] OUT: valid=1 data=0x2AAB
+  7215.00ns INFO     cocotb.monte_carlo_dsp_monitor_top  Monte Carlo Simulation Complete
+  7215.00ns INFO     cocotb.monte_carlo_dsp_monitor_top Stimuli logged to: monte_carlo_log.csv
+  7215.00ns INFO     cocotb.monte_carlo_dsp_monitor_top Total input attempts: 500
+  7215.00ns INFO     cocotb.monte_carlo_dsp_monitor_top Total successful domain transfers: 549
+  7215.00ns WARNING  ..imulation.monte_carlo_simulation  Transfers exceed input attempts — possible sync bug
+                                                        assert 549 <= 500
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_monte_carlo_dsp_monitor_top.py", line 105, in monte_carlo_simulation
+                                                            assert total_transfers <= NUM_SAMPLES, " Transfers exceed input attempts — possible sync bug"
+                                                        AssertionError:  Transfers exceed input attempts — possible sync bug
+                                                        assert 549 <= 500
+  7215.00ns WARNING  cocotb.regression                  test_monte_carlo_dsp_monitor_top.monte_carlo_simulation failed
+  7215.00ns INFO     cocotb.regression                  *****************************************************************************************************************
+                                                        ** TEST                                                     STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *****************************************************************************************************************
+                                                        ** test_monte_carlo_dsp_monitor_top.monte_carlo_simulation   FAIL        7215.00           0.23      32012.00  **
+                                                        *****************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                          7215.00           0.23      31061.87  **
+                                                        *****************************************************************************************************************
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+FAILED
+
+=================================== FAILURES ===================================
+_________________________________ test_runner __________________________________
+
+    def test_runner():
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="build.log")
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:27: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s monte_carlo_dsp_monitor_top -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/monte_carlo_dsp_monitor_top.sv /code/rtl/cross_domain_sync.sv /code/rtl/dsp_input_stage.sv /code/rtl/dsp_output_stage.sv /code/rtl/lfsr_generator.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-jzfyiw6_'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/lastfailed: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-vu9dbtuc'
+    config.cache.set("cache/lastfailed", self.lastfailed)
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-ao84wki3'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_runner - SystemExit: 1
+======================== 1 failed, 3 warnings in 0.84s =========================
+Cleaning up Docker resources...

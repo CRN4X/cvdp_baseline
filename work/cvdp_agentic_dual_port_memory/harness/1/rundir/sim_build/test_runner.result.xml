@@ -1,0 +1,11 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777959893" />
+    <testcase name="test_cvdp_true_dp_ram_ports_a_and_b" classname="test_dual_port_memory" file="/src/test_dual_port_memory.py" lineno="56" time="0.00279998779296875" sim_time_ns="50.0" ratio_time="17857.22070844687">
+      <failure error_type="AssertionError" error_msg="Port A failed to read 9 at address 26, got 0110&#10;assert LogicArray('0110', Range(3, 'downto', 0)) == 9&#10; +  where LogicArray('0110', Range(3, 'downto', 0)) = LogicArrayObject(dual_port_memory.data_out_a).value&#10; +    where LogicArrayObject(dual_port_memory.data_out_a) = HierarchyObject(dual_port_memory).data_out_a" />
+    </testcase>
+    <testcase name="test_true_dp_ram" classname="test_dual_port_memory" file="/src/test_dual_port_memory.py" lineno="107" time="0.0012726783752441406" sim_time_ns="60.0" ratio_time="47144.66841513675">
+      <failure error_type="AssertionError" error_msg="Port B failed to read 10 at address 1, got 1111&#10;assert LogicArray('1111', Range(3, 'downto', 0)) == 10&#10; +  where LogicArray('1111', Range(3, 'downto', 0)) = LogicArrayObject(dual_port_memory.data_out_b).value&#10; +    where LogicArrayObject(dual_port_memory.data_out_b) = HierarchyObject(dual_port_memory).data_out_b" />
+    </testcase>
+  </testsuite>
+</testsuites>

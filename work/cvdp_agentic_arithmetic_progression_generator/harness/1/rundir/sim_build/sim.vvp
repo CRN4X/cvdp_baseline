@@ -1,0 +1,77 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
+S_0x55ff4848edc0 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -9;
+S_0x55ff4848ef50 .scope module, "arithmetic_progression_generator" "arithmetic_progression_generator" 3 1;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "resetn";
+    .port_info 2 /INPUT 1 "enable";
+    .port_info 3 /INPUT 24 "start_val";
+    .port_info 4 /INPUT 24 "step_size";
+    .port_info 5 /OUTPUT 25 "out_val";
+    .port_info 6 /OUTPUT 1 "done";
+P_0x55ff484b69c0 .param/l "COUNTER_WIDTH" 1 3 18, +C4<00000000000000000000000000000001>;
+P_0x55ff484b6a00 .param/l "DATA_WIDTH" 0 3 2, +C4<00000000000000000000000000011000>;
+P_0x55ff484b6a40 .param/l "SEQUENCE_LENGTH" 0 3 3, +C4<00000000000000000000000000000000>;
+P_0x55ff484b6a80 .param/l "WIDTH_OUT_VAL" 1 3 17, +C4<000000000000000000000000000011001>;
+L_0x55ff484de310 .functor BUFZ 25, v0x55ff484ddc10_0, C4<0000000000000000000000000>, C4<0000000000000000000000000>, C4<0000000000000000000000000>;
+o0x7fdd02080018 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55ff484b6cc0_0 .net "clk", 0 0, o0x7fdd02080018;  0 drivers
+v0x55ff484ddb30_0 .var "counter", 0 0;
+v0x55ff484ddc10_0 .var "current_val", 24 0;
+v0x55ff484ddd00_0 .var "done", 0 0;
+o0x7fdd020800d8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55ff484dddc0_0 .net "enable", 0 0, o0x7fdd020800d8;  0 drivers
+v0x55ff484dded0_0 .net "out_val", 24 0, L_0x55ff484de310;  1 drivers
+o0x7fdd02080138 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55ff484ddfb0_0 .net "resetn", 0 0, o0x7fdd02080138;  0 drivers
+o0x7fdd02080168 .functor BUFZ 24, C4<zzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0x55ff484de070_0 .net "start_val", 23 0, o0x7fdd02080168;  0 drivers
+o0x7fdd02080198 .functor BUFZ 24, C4<zzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0x55ff484de150_0 .net "step_size", 23 0, o0x7fdd02080198;  0 drivers
+E_0x55ff484c8200/0 .event negedge, v0x55ff484ddfb0_0;
+E_0x55ff484c8200/1 .event posedge, v0x55ff484b6cc0_0;
+E_0x55ff484c8200 .event/or E_0x55ff484c8200/0, E_0x55ff484c8200/1;
+    .scope S_0x55ff4848ef50;
+T_0 ;
+    %wait E_0x55ff484c8200;
+    %load/vec4 v0x55ff484ddfb0_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 25;
+    %assign/vec4 v0x55ff484ddc10_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x55ff484ddb30_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x55ff484ddd00_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0x55ff484dddc0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.2, 8;
+    %load/vec4 v0x55ff484ddc10_0;
+    %assign/vec4 v0x55ff484ddc10_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x55ff484ddb30_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x55ff484ddd00_0, 0;
+T_0.2 ;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_arithmetic_progression_generator/1/rtl/arithmetic_progression_generator.sv";

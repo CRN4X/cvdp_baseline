@@ -1,0 +1,178 @@
+Running harness with project name: cvdp_agentic_rgb_color_space_conversion_4_1777960132
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_runner      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1777960134
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_rgb_color_space_conversion.test_rgb_to_hsv_hsl_cmyk_predefined (1/8)
+                                                            Test predefined RGB inputs and compare HSV outputs with expected values.
+  2660.00ns WARNING  ..t_rgb_to_hsv_hsl_cmyk_predefined rgb_color_space_conversion contains no child object named cmyk_channel_c
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_rgb_color_space_conversion.py", line 270, in test_rgb_to_hsv_hsl_cmyk_predefined
+                                                            await compare_rgb_to_hsv(dut, r, g, b)
+                                                          File "/src/test_rgb_color_space_conversion.py", line 115, in compare_rgb_to_hsv
+                                                            c_out, m_out, y_out, k_out, h_out, s_out, v_out, hsl_h_out, hsl_s_out, hsl_l_out = await apply_rgb_input(dut, r, g, b)
+                                                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/test_rgb_color_space_conversion.py", line 74, in apply_rgb_input
+                                                            c_out = int(dut.cmyk_channel_c.value)
+                                                                        ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/handle.py", line 484, in __getattr__
+                                                            raise AttributeError(f"{self._path} contains no child object named {name}")
+                                                        AttributeError: rgb_color_space_conversion contains no child object named cmyk_channel_c. Did you mean: 'hsl_channel_h'?
+  2660.00ns WARNING  cocotb.regression                  test_rgb_color_space_conversion.test_rgb_to_hsv_hsl_cmyk_predefined failed
+  2660.00ns INFO     cocotb.regression                  running test_rgb_color_space_conversion.test_rgb_to_hsv_hsl_cmyk_random (2/8)
+                                                            Test random RGB inputs and compare HSV outputs with expected values.
+  5331.00ns WARNING  ...test_rgb_to_hsv_hsl_cmyk_random rgb_color_space_conversion contains no child object named cmyk_channel_c
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_rgb_color_space_conversion.py", line 290, in test_rgb_to_hsv_hsl_cmyk_random
+                                                            await compare_rgb_to_hsv(dut, random_r, random_g, random_b)
+                                                          File "/src/test_rgb_color_space_conversion.py", line 115, in compare_rgb_to_hsv
+                                                            c_out, m_out, y_out, k_out, h_out, s_out, v_out, hsl_h_out, hsl_s_out, hsl_l_out = await apply_rgb_input(dut, r, g, b)
+                                                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/test_rgb_color_space_conversion.py", line 74, in apply_rgb_input
+                                                            c_out = int(dut.cmyk_channel_c.value)
+                                                                        ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/handle.py", line 484, in __getattr__
+                                                            raise AttributeError(f"{self._path} contains no child object named {name}")
+                                                        AttributeError: rgb_color_space_conversion contains no child object named cmyk_channel_c. Did you mean: 'hsl_channel_h'?
+  5331.00ns WARNING  cocotb.regression                  test_rgb_color_space_conversion.test_rgb_to_hsv_hsl_cmyk_random failed
+  5331.00ns INFO     cocotb.regression                  running test_rgb_color_space_conversion.test_rgb_to_hsv_hsl_cmyk_random_r_max (3/8)
+                                                            Test random RGB inputs where R is the maximum value.
+  8002.00ns WARNING  ..rgb_to_hsv_hsl_cmyk_random_r_max rgb_color_space_conversion contains no child object named cmyk_channel_c
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_rgb_color_space_conversion.py", line 310, in test_rgb_to_hsv_hsl_cmyk_random_r_max
+                                                            await compare_rgb_to_hsv(dut, random_r, random_g, random_b)
+                                                          File "/src/test_rgb_color_space_conversion.py", line 115, in compare_rgb_to_hsv
+                                                            c_out, m_out, y_out, k_out, h_out, s_out, v_out, hsl_h_out, hsl_s_out, hsl_l_out = await apply_rgb_input(dut, r, g, b)
+                                                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/test_rgb_color_space_conversion.py", line 74, in apply_rgb_input
+                                                            c_out = int(dut.cmyk_channel_c.value)
+                                                                        ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/handle.py", line 484, in __getattr__
+                                                            raise AttributeError(f"{self._path} contains no child object named {name}")
+                                                        AttributeError: rgb_color_space_conversion contains no child object named cmyk_channel_c. Did you mean: 'hsl_channel_h'?
+  8002.00ns WARNING  cocotb.regression                  test_rgb_color_space_conversion.test_rgb_to_hsv_hsl_cmyk_random_r_max failed
+  8002.00ns INFO     cocotb.regression                  running test_rgb_color_space_conversion.test_rgb_to_hsv_hsl_cmyk_random_g_max (4/8)
+                                                            Test random RGB inputs where G is the maximum value.
+ 10673.00ns WARNING  ..rgb_to_hsv_hsl_cmyk_random_g_max rgb_color_space_conversion contains no child object named cmyk_channel_c
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_rgb_color_space_conversion.py", line 330, in test_rgb_to_hsv_hsl_cmyk_random_g_max
+                                                            await compare_rgb_to_hsv(dut, random_r, random_g, random_b)
+                                                          File "/src/test_rgb_color_space_conversion.py", line 115, in compare_rgb_to_hsv
+                                                            c_out, m_out, y_out, k_out, h_out, s_out, v_out, hsl_h_out, hsl_s_out, hsl_l_out = await apply_rgb_input(dut, r, g, b)
+                                                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/test_rgb_color_space_conversion.py", line 74, in apply_rgb_input
+                                                            c_out = int(dut.cmyk_channel_c.value)
+                                                                        ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/handle.py", line 484, in __getattr__
+                                                            raise AttributeError(f"{self._path} contains no child object named {name}")
+                                                        AttributeError: rgb_color_space_conversion contains no child object named cmyk_channel_c. Did you mean: 'hsl_channel_h'?
+ 10673.00ns WARNING  cocotb.regression                  test_rgb_color_space_conversion.test_rgb_to_hsv_hsl_cmyk_random_g_max failed
+ 10673.00ns INFO     cocotb.regression                  running test_rgb_color_space_conversion.test_rgb_to_hsv_hsl_cmyk_random_b_max (5/8)
+                                                            Test random RGB inputs where B is the maximum value.
+ 13344.00ns WARNING  ..rgb_to_hsv_hsl_cmyk_random_b_max rgb_color_space_conversion contains no child object named cmyk_channel_c
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_rgb_color_space_conversion.py", line 350, in test_rgb_to_hsv_hsl_cmyk_random_b_max
+                                                            await compare_rgb_to_hsv(dut, random_r, random_g, random_b)
+                                                          File "/src/test_rgb_color_space_conversion.py", line 115, in compare_rgb_to_hsv
+                                                            c_out, m_out, y_out, k_out, h_out, s_out, v_out, hsl_h_out, hsl_s_out, hsl_l_out = await apply_rgb_input(dut, r, g, b)
+                                                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/test_rgb_color_space_conversion.py", line 74, in apply_rgb_input
+                                                            c_out = int(dut.cmyk_channel_c.value)
+                                                                        ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/handle.py", line 484, in __getattr__
+                                                            raise AttributeError(f"{self._path} contains no child object named {name}")
+                                                        AttributeError: rgb_color_space_conversion contains no child object named cmyk_channel_c. Did you mean: 'hsl_channel_h'?
+ 13344.00ns WARNING  cocotb.regression                  test_rgb_color_space_conversion.test_rgb_to_hsv_hsl_cmyk_random_b_max failed
+ 13344.00ns INFO     cocotb.regression                  running test_rgb_color_space_conversion.test_rgb_to_hsv_hsl_cmyk_max_min_same (6/8)
+                                                            Test RGB inputs where max and min values are the same (grayscale colors).
+ 16015.00ns WARNING  ..rgb_to_hsv_hsl_cmyk_max_min_same rgb_color_space_conversion contains no child object named cmyk_channel_c
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_rgb_color_space_conversion.py", line 370, in test_rgb_to_hsv_hsl_cmyk_max_min_same
+                                                            await compare_rgb_to_hsv(dut, r, g, b)
+                                                          File "/src/test_rgb_color_space_conversion.py", line 115, in compare_rgb_to_hsv
+                                                            c_out, m_out, y_out, k_out, h_out, s_out, v_out, hsl_h_out, hsl_s_out, hsl_l_out = await apply_rgb_input(dut, r, g, b)
+                                                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/test_rgb_color_space_conversion.py", line 74, in apply_rgb_input
+                                                            c_out = int(dut.cmyk_channel_c.value)
+                                                                        ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/handle.py", line 484, in __getattr__
+                                                            raise AttributeError(f"{self._path} contains no child object named {name}")
+                                                        AttributeError: rgb_color_space_conversion contains no child object named cmyk_channel_c. Did you mean: 'hsl_channel_h'?
+ 16015.00ns WARNING  cocotb.regression                  test_rgb_color_space_conversion.test_rgb_to_hsv_hsl_cmyk_max_min_same failed
+ 16015.00ns INFO     cocotb.regression                  running test_rgb_color_space_conversion.test_reset_outputs_zero (7/8)
+                                                            Verify that outputs are 0 after reset.
+ 18596.00ns WARNING  ..uts_zero.test_reset_outputs_zero rgb_color_space_conversion contains no child object named cmyk_channel_c
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_rgb_color_space_conversion.py", line 387, in test_reset_outputs_zero
+                                                            c_out = int(dut.cmyk_channel_c.value)
+                                                                        ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/handle.py", line 484, in __getattr__
+                                                            raise AttributeError(f"{self._path} contains no child object named {name}")
+                                                        AttributeError: rgb_color_space_conversion contains no child object named cmyk_channel_c. Did you mean: 'hsl_channel_h'?
+ 18596.00ns WARNING  cocotb.regression                  test_rgb_color_space_conversion.test_reset_outputs_zero failed
+ 18596.00ns INFO     cocotb.regression                  running test_rgb_color_space_conversion.test_rgb_to_hsv_hsl_cmyk_color_table (8/8)
+ 21267.00ns WARNING  .._rgb_to_hsv_hsl_cmyk_color_table rgb_color_space_conversion contains no child object named cmyk_channel_c
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_rgb_color_space_conversion.py", line 433, in test_rgb_to_hsv_hsl_cmyk_color_table
+                                                            await compare_rgb_to_hsv(dut, r, g, b)
+                                                          File "/src/test_rgb_color_space_conversion.py", line 115, in compare_rgb_to_hsv
+                                                            c_out, m_out, y_out, k_out, h_out, s_out, v_out, hsl_h_out, hsl_s_out, hsl_l_out = await apply_rgb_input(dut, r, g, b)
+                                                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/test_rgb_color_space_conversion.py", line 74, in apply_rgb_input
+                                                            c_out = int(dut.cmyk_channel_c.value)
+                                                                        ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/handle.py", line 484, in __getattr__
+                                                            raise AttributeError(f"{self._path} contains no child object named {name}")
+                                                        AttributeError: rgb_color_space_conversion contains no child object named cmyk_channel_c. Did you mean: 'hsl_channel_h'?
+ 21267.00ns WARNING  cocotb.regression                  test_rgb_color_space_conversion.test_rgb_to_hsv_hsl_cmyk_color_table failed
+ 21267.00ns INFO     cocotb.regression                  *******************************************************************************************************************************
+                                                        ** TEST                                                                   STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *******************************************************************************************************************************
+                                                        ** test_rgb_color_space_conversion.test_rgb_to_hsv_hsl_cmyk_predefined     FAIL        2660.00           0.03     103197.13  **
+                                                        ** test_rgb_color_space_conversion.test_rgb_to_hsv_hsl_cmyk_random         FAIL        2670.00           0.02     115142.83  **
+                                                        ** test_rgb_color_space_conversion.test_rgb_to_hsv_hsl_cmyk_random_r_max   FAIL        2670.00           0.02     109552.56  **
+                                                        ** test_rgb_color_space_conversion.test_rgb_to_hsv_hsl_cmyk_random_g_max   FAIL        2670.00           0.02     113575.71  **
+                                                        ** test_rgb_color_space_conversion.test_rgb_to_hsv_hsl_cmyk_random_b_max   FAIL        2670.00           0.02     113887.56  **
+                                                        ** test_rgb_color_space_conversion.test_rgb_to_hsv_hsl_cmyk_max_min_same   FAIL        2670.00           0.02     111193.99  **
+                                                        ** test_rgb_color_space_conversion.test_reset_outputs_zero                 FAIL        2580.00           0.02     107356.34  **
+                                                        ** test_rgb_color_space_conversion.test_rgb_to_hsv_hsl_cmyk_color_table    FAIL        2670.00           0.03     104668.45  **
+                                                        *******************************************************************************************************************************
+                                                        ** TESTS=8 PASS=0 FAIL=8 SKIP=0                                                       21267.00           0.21     102977.88  **
+                                                        *******************************************************************************************************************************
+FAILED
+
+=================================== FAILURES ===================================
+_________________________________ test_runner __________________________________
+
+    def test_runner():
+        runner = get_runner(sim)
+    
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+>       runner.test(hdl_toplevel=toplevel, test_module=module,waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:26: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s rgb_color_space_conversion -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/rgb_color_space_conversion.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 8 of 8 tests.
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_runner - SystemExit: 1
+============================== 1 failed in 0.86s ===============================
+Cleaning up Docker resources...

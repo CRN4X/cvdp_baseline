@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778495372" />
+    <testcase name="test_csr_apb_interface" classname="test_csr_apb_interface" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_amber_eagle_lambda/harness/1/src/test_csr_apb_interface.py" lineno="40" time="0.0025773048400878906" sim_time_ns="450.0" ratio_time="174600.99907493062" />
+  </testsuite>
+</testsuites>

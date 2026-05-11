@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778523228" />
+    <testcase name="axis_to_uart_tx_test" classname="test_axis_to_uart_tx" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_axis_to_uart/harness/1/src/test_axis_to_uart_tx.py" lineno="7" time="2.714015245437622" sim_time_ns="1037570.0" ratio_time="382300.7264768318" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777959967" />
+    <testcase name="test_nmea_decoder" classname="test_nmea_decoder" file="/src/test_nmea_decoder.py" lineno="7" time="0.0034148693084716797" sim_time_ns="0.0" ratio_time="0.0">
+      <failure error_type="AttributeError" error_msg="nmea_decoder contains no child object named watchdog_timeout_en" />
+    </testcase>
+  </testsuite>
+</testsuites>

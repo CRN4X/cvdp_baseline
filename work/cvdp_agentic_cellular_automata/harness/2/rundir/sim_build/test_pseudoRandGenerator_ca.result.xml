@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778524194" />
+    <testcase name="run_test" classname="test_pseudoRandGenerator_ca" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_cellular_automata/harness/2/src/test_pseudoRandGenerator_ca.py" lineno="11" time="4.999341011047363" sim_time_ns="655375.0" ratio_time="131092.27767255245" />
+  </testsuite>
+</testsuites>

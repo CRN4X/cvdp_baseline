@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778524030" />
+    <testcase name="test_binary_to_gray" classname="test_binary_to_gray" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_binary_to_gray/harness/3/src/test_binary_to_gray.py" lineno="7" time="0.001676797866821289" sim_time_ns="480.0" ratio_time="286259.9061566899" />
+  </testsuite>
+</testsuites>

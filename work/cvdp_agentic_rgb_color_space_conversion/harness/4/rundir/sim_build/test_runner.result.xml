@@ -1,0 +1,29 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777960134" />
+    <testcase name="test_rgb_to_hsv_hsl_cmyk_predefined" classname="test_rgb_color_space_conversion" file="/src/test_rgb_color_space_conversion.py" lineno="242" time="0.025775909423828125" sim_time_ns="2660.0" ratio_time="103197.13482314636">
+      <failure error_type="AttributeError" error_msg="rgb_color_space_conversion contains no child object named cmyk_channel_c" />
+    </testcase>
+    <testcase name="test_rgb_to_hsv_hsl_cmyk_random" classname="test_rgb_color_space_conversion" file="/src/test_rgb_color_space_conversion.py" lineno="275" time="0.02318859100341797" sim_time_ns="2670.0" ratio_time="115142.8303516348">
+      <failure error_type="AttributeError" error_msg="rgb_color_space_conversion contains no child object named cmyk_channel_c" />
+    </testcase>
+    <testcase name="test_rgb_to_hsv_hsl_cmyk_random_r_max" classname="test_rgb_color_space_conversion" file="/src/test_rgb_color_space_conversion.py" lineno="295" time="0.024371862411499023" sim_time_ns="2670.0" ratio_time="109552.56331745302">
+      <failure error_type="AttributeError" error_msg="rgb_color_space_conversion contains no child object named cmyk_channel_c" />
+    </testcase>
+    <testcase name="test_rgb_to_hsv_hsl_cmyk_random_g_max" classname="test_rgb_color_space_conversion" file="/src/test_rgb_color_space_conversion.py" lineno="315" time="0.023508548736572266" sim_time_ns="2670.0" ratio_time="113575.70515811039">
+      <failure error_type="AttributeError" error_msg="rgb_color_space_conversion contains no child object named cmyk_channel_c" />
+    </testcase>
+    <testcase name="test_rgb_to_hsv_hsl_cmyk_random_b_max" classname="test_rgb_color_space_conversion" file="/src/test_rgb_color_space_conversion.py" lineno="335" time="0.023444175720214844" sim_time_ns="2670.0" ratio_time="113887.5613228654">
+      <failure error_type="AttributeError" error_msg="rgb_color_space_conversion contains no child object named cmyk_channel_c" />
+    </testcase>
+    <testcase name="test_rgb_to_hsv_hsl_cmyk_max_min_same" classname="test_rgb_color_space_conversion" file="/src/test_rgb_color_space_conversion.py" lineno="354" time="0.024012088775634766" sim_time_ns="2670.0" ratio_time="111193.99169926724">
+      <failure error_type="AttributeError" error_msg="rgb_color_space_conversion contains no child object named cmyk_channel_c" />
+    </testcase>
+    <testcase name="test_reset_outputs_zero" classname="test_rgb_color_space_conversion" file="/src/test_rgb_color_space_conversion.py" lineno="374" time="0.024032115936279297" sim_time_ns="2580.0" ratio_time="107356.3396099129">
+      <failure error_type="AttributeError" error_msg="rgb_color_space_conversion contains no child object named cmyk_channel_c" />
+    </testcase>
+    <testcase name="test_rgb_to_hsv_hsl_cmyk_color_table" classname="test_rgb_color_space_conversion" file="/src/test_rgb_color_space_conversion.py" lineno="408" time="0.025509119033813477" sim_time_ns="2670.0" ratio_time="104668.45195480078">
+      <failure error_type="AttributeError" error_msg="rgb_color_space_conversion contains no child object named cmyk_channel_c" />
+    </testcase>
+  </testsuite>
+</testsuites>

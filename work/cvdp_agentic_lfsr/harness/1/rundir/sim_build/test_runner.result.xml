@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777959937" />
+    <testcase name="lfsr_8bit_test" classname="test_lfsr_8bit" file="/src/test_lfsr_8bit.py" lineno="10" time="0.002596139907836914" sim_time_ns="10.0" ratio_time="3851.87253191294">
+      <failure error_type="AssertionError" error_msg="Error: LFSR did not initialize correctly, got 00000001, expected 170&#10;assert LogicArray('00000001', Range(7, 'downto', 0)) == 170&#10; +  where LogicArray('00000001', Range(7, 'downto', 0)) = LogicArrayObject(lfsr_8bit.lfsr_out).value&#10; +    where LogicArrayObject(lfsr_8bit.lfsr_out) = HierarchyObject(lfsr_8bit).lfsr_out" />
+    </testcase>
+  </testsuite>
+</testsuites>

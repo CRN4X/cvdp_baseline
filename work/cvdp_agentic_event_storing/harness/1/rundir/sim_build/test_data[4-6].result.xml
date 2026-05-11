@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777959925" />
+    <testcase name="test_event_storage" classname="test_event_storage" file="/src/test_event_storage.py" lineno="26" time="0.002836942672729492" sim_time_ns="10.0" ratio_time="3524.9214219682326">
+      <failure error_type="ValueError" error_msg="Int value (45968) out of range for assignment of 4-bit signal ('i_event')" />
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,7 @@
+{
+  "agent": "my-hw-agent",
+  "mode": "harness_noop",
+  "status": "success",
+  "message": "No-op in harness mode; external Codex loop performs edits.",
+  "timestamp": "2026-05-11 10:49:38"
+}

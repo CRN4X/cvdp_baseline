@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778523169" />
+    <testcase name="test_axis_broadcast" classname="test_axis_broadcast" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_axis_broadcaster/harness/1/src/test_axis_broadcast.py" lineno="8" time="0.0007965564727783203" sim_time_ns="38.0" ratio_time="47705.34331038611" />
+  </testsuite>
+</testsuites>

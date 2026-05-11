@@ -1,0 +1,6 @@
+[
+  "src/test_runner.py::test_elevator_control_system[10]",
+  "src/test_runner.py::test_elevator_control_system[5]",
+  "src/test_runner.py::test_elevator_control_system[8]",
+  "src/test_runner.py::test_runner"
+]

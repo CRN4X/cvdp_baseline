@@ -1,0 +1,499 @@
+Running harness with project name: cvdp_agentic_sorter_9_1777960143
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 6 items
+
+../../src/test_runner.py::test_runner [DEBUG] Running simulation with WIDTH=4
+[DEBUG] Parameters: {'WIDTH': 4}
+
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s sorting_engine -g2012 -Psorting_engine.WIDTH=4 -f /code/rundir/sim_build/cmds.f /code/rtl/sorting_engine.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1777960145
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_sorting_engine.test_sorting_engine (1/1)
+                                                            Cocotb Testbench for the sorting_engine module.
+     0.00ns INFO     cocotb.sorting_engine              ***** Starting Test: Already Sorted *****
+   230.00ns ERROR    cocotb.sorting_engine              Test Already Sorted FAILED: Expected latency 17 cycles, got 20 cycles
+   230.00ns WARNING  ..rting_engine.test_sorting_engine Latency check failed for test Already Sorted: expected 17, got 20
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_sorting_engine.py", line 106, in test_sorting_engine
+                                                            await run_test(dut, "Already Sorted", test_in, expected, width)
+                                                          File "/src/test_sorting_engine.py", line 62, in run_test
+                                                            assert False, f"Latency check failed for test {test_name}: expected {expected_latency}, got {latency}"
+                                                        AssertionError: Latency check failed for test Already Sorted: expected 17, got 20
+                                                        assert False
+   230.00ns WARNING  cocotb.regression                  test_sorting_engine.test_sorting_engine failed
+   230.00ns INFO     cocotb.regression                  *************************************************************************************************
+                                                        ** TEST                                     STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************
+                                                        ** test_sorting_engine.test_sorting_engine   FAIL         230.00           0.00      56437.72  **
+                                                        *************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                           230.00           0.01      20935.57  **
+                                                        *************************************************************************************************
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+FAILED
+../../src/test_runner.py::test_sort[1] [DEBUG] Running simulation with WIDTH=1
+[DEBUG] Parameters: {'WIDTH': 1}
+
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s sorting_engine -g2012 -Psorting_engine.WIDTH=1 -f /code/rundir/sim_build/cmds.f /code/rtl/sorting_engine.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1777960145
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_sorting_engine.test_sorting_engine (1/1)
+                                                            Cocotb Testbench for the sorting_engine module.
+     0.00ns INFO     cocotb.sorting_engine              ***** Starting Test: Already Sorted *****
+   230.00ns ERROR    cocotb.sorting_engine              Test Already Sorted FAILED: Expected latency 17 cycles, got 20 cycles
+   230.00ns WARNING  ..rting_engine.test_sorting_engine Latency check failed for test Already Sorted: expected 17, got 20
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_sorting_engine.py", line 106, in test_sorting_engine
+                                                            await run_test(dut, "Already Sorted", test_in, expected, width)
+                                                          File "/src/test_sorting_engine.py", line 62, in run_test
+                                                            assert False, f"Latency check failed for test {test_name}: expected {expected_latency}, got {latency}"
+                                                        AssertionError: Latency check failed for test Already Sorted: expected 17, got 20
+                                                        assert False
+   230.00ns WARNING  cocotb.regression                  test_sorting_engine.test_sorting_engine failed
+   230.00ns INFO     cocotb.regression                  *************************************************************************************************
+                                                        ** TEST                                     STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************
+                                                        ** test_sorting_engine.test_sorting_engine   FAIL         230.00           0.00      56464.15  **
+                                                        *************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                           230.00           0.01      20531.87  **
+                                                        *************************************************************************************************
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+FAILED
+../../src/test_runner.py::test_sort[2] [DEBUG] Running simulation with WIDTH=2
+[DEBUG] Parameters: {'WIDTH': 2}
+
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s sorting_engine -g2012 -Psorting_engine.WIDTH=2 -f /code/rundir/sim_build/cmds.f /code/rtl/sorting_engine.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1777960146
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_sorting_engine.test_sorting_engine (1/1)
+                                                            Cocotb Testbench for the sorting_engine module.
+     0.00ns INFO     cocotb.sorting_engine              ***** Starting Test: Already Sorted *****
+   230.00ns ERROR    cocotb.sorting_engine              Test Already Sorted FAILED: Expected latency 17 cycles, got 20 cycles
+   230.00ns WARNING  ..rting_engine.test_sorting_engine Latency check failed for test Already Sorted: expected 17, got 20
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_sorting_engine.py", line 106, in test_sorting_engine
+                                                            await run_test(dut, "Already Sorted", test_in, expected, width)
+                                                          File "/src/test_sorting_engine.py", line 62, in run_test
+                                                            assert False, f"Latency check failed for test {test_name}: expected {expected_latency}, got {latency}"
+                                                        AssertionError: Latency check failed for test Already Sorted: expected 17, got 20
+                                                        assert False
+   230.00ns WARNING  cocotb.regression                  test_sorting_engine.test_sorting_engine failed
+   230.00ns INFO     cocotb.regression                  *************************************************************************************************
+                                                        ** TEST                                     STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************
+                                                        ** test_sorting_engine.test_sorting_engine   FAIL         230.00           0.00      55298.93  **
+                                                        *************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                           230.00           0.01      20518.77  **
+                                                        *************************************************************************************************
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+FAILED
+../../src/test_runner.py::test_sort[3] [DEBUG] Running simulation with WIDTH=3
+[DEBUG] Parameters: {'WIDTH': 3}
+
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s sorting_engine -g2012 -Psorting_engine.WIDTH=3 -f /code/rundir/sim_build/cmds.f /code/rtl/sorting_engine.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1777960146
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_sorting_engine.test_sorting_engine (1/1)
+                                                            Cocotb Testbench for the sorting_engine module.
+     0.00ns INFO     cocotb.sorting_engine              ***** Starting Test: Already Sorted *****
+   230.00ns ERROR    cocotb.sorting_engine              Test Already Sorted FAILED: Expected latency 17 cycles, got 20 cycles
+   230.00ns WARNING  ..rting_engine.test_sorting_engine Latency check failed for test Already Sorted: expected 17, got 20
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_sorting_engine.py", line 106, in test_sorting_engine
+                                                            await run_test(dut, "Already Sorted", test_in, expected, width)
+                                                          File "/src/test_sorting_engine.py", line 62, in run_test
+                                                            assert False, f"Latency check failed for test {test_name}: expected {expected_latency}, got {latency}"
+                                                        AssertionError: Latency check failed for test Already Sorted: expected 17, got 20
+                                                        assert False
+   230.00ns WARNING  cocotb.regression                  test_sorting_engine.test_sorting_engine failed
+   230.00ns INFO     cocotb.regression                  *************************************************************************************************
+                                                        ** TEST                                     STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************
+                                                        ** test_sorting_engine.test_sorting_engine   FAIL         230.00           0.00      59190.69  **
+                                                        *************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                           230.00           0.01      20951.48  **
+                                                        *************************************************************************************************
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+FAILED
+../../src/test_runner.py::test_sort[4] [DEBUG] Running simulation with WIDTH=4
+[DEBUG] Parameters: {'WIDTH': 4}
+
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s sorting_engine -g2012 -Psorting_engine.WIDTH=4 -f /code/rundir/sim_build/cmds.f /code/rtl/sorting_engine.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1777960147
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_sorting_engine.test_sorting_engine (1/1)
+                                                            Cocotb Testbench for the sorting_engine module.
+     0.00ns INFO     cocotb.sorting_engine              ***** Starting Test: Already Sorted *****
+   230.00ns ERROR    cocotb.sorting_engine              Test Already Sorted FAILED: Expected latency 17 cycles, got 20 cycles
+   230.00ns WARNING  ..rting_engine.test_sorting_engine Latency check failed for test Already Sorted: expected 17, got 20
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_sorting_engine.py", line 106, in test_sorting_engine
+                                                            await run_test(dut, "Already Sorted", test_in, expected, width)
+                                                          File "/src/test_sorting_engine.py", line 62, in run_test
+                                                            assert False, f"Latency check failed for test {test_name}: expected {expected_latency}, got {latency}"
+                                                        AssertionError: Latency check failed for test Already Sorted: expected 17, got 20
+                                                        assert False
+   230.00ns WARNING  cocotb.regression                  test_sorting_engine.test_sorting_engine failed
+   230.00ns INFO     cocotb.regression                  *************************************************************************************************
+                                                        ** TEST                                     STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************
+                                                        ** test_sorting_engine.test_sorting_engine   FAIL         230.00           0.00      58398.81  **
+                                                        *************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                           230.00           0.01      20036.76  **
+                                                        *************************************************************************************************
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+FAILED
+../../src/test_runner.py::test_sort[5] [DEBUG] Running simulation with WIDTH=5
+[DEBUG] Parameters: {'WIDTH': 5}
+
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s sorting_engine -g2012 -Psorting_engine.WIDTH=5 -f /code/rundir/sim_build/cmds.f /code/rtl/sorting_engine.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1777960147
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_sorting_engine.test_sorting_engine (1/1)
+                                                            Cocotb Testbench for the sorting_engine module.
+     0.00ns INFO     cocotb.sorting_engine              ***** Starting Test: Already Sorted *****
+   230.00ns ERROR    cocotb.sorting_engine              Test Already Sorted FAILED: Expected latency 17 cycles, got 20 cycles
+   230.00ns WARNING  ..rting_engine.test_sorting_engine Latency check failed for test Already Sorted: expected 17, got 20
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_sorting_engine.py", line 106, in test_sorting_engine
+                                                            await run_test(dut, "Already Sorted", test_in, expected, width)
+                                                          File "/src/test_sorting_engine.py", line 62, in run_test
+                                                            assert False, f"Latency check failed for test {test_name}: expected {expected_latency}, got {latency}"
+                                                        AssertionError: Latency check failed for test Already Sorted: expected 17, got 20
+                                                        assert False
+   230.00ns WARNING  cocotb.regression                  test_sorting_engine.test_sorting_engine failed
+   230.00ns INFO     cocotb.regression                  *************************************************************************************************
+                                                        ** TEST                                     STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************
+                                                        ** test_sorting_engine.test_sorting_engine   FAIL         230.00           0.00      61374.85  **
+                                                        *************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                           230.00           0.01      21879.02  **
+                                                        *************************************************************************************************
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+FAILED
+
+=================================== FAILURES ===================================
+_________________________________ test_runner __________________________________
+
+WIDTH = 4
+
+    def test_runner(WIDTH: int=4):
+    
+        parameter = {"WIDTH":WIDTH}
+        # Debug information
+        print(f"[DEBUG] Running simulation with WIDTH={WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+    
+            # Arguments
+            always=True,
+            clean=True,
+            verbose=True,
+            parameters=parameter,
+            timescale=("1ns", "1ps"),
+            log_file="sim.log")
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:33: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s sorting_engine -g2012 -Psorting_engine.WIDTH=4 -f /code/rundir/sim_build/cmds.f /code/rtl/sorting_engine.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_________________________________ test_sort[1] _________________________________
+
+WIDTH = 1
+
+    @pytest.mark.parametrize("WIDTH", [1,2,3,4,5])
+    
+    def test_sort(WIDTH):
+        # Run the simulation with specified parameters
+>       test_runner(WIDTH=WIDTH)
+
+/src/test_runner.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+WIDTH = 1
+
+    def test_runner(WIDTH: int=4):
+    
+        parameter = {"WIDTH":WIDTH}
+        # Debug information
+        print(f"[DEBUG] Running simulation with WIDTH={WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+    
+            # Arguments
+            always=True,
+            clean=True,
+            verbose=True,
+            parameters=parameter,
+            timescale=("1ns", "1ps"),
+            log_file="sim.log")
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:33: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s sorting_engine -g2012 -Psorting_engine.WIDTH=1 -f /code/rundir/sim_build/cmds.f /code/rtl/sorting_engine.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_________________________________ test_sort[2] _________________________________
+
+WIDTH = 2
+
+    @pytest.mark.parametrize("WIDTH", [1,2,3,4,5])
+    
+    def test_sort(WIDTH):
+        # Run the simulation with specified parameters
+>       test_runner(WIDTH=WIDTH)
+
+/src/test_runner.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+WIDTH = 2
+
+    def test_runner(WIDTH: int=4):
+    
+        parameter = {"WIDTH":WIDTH}
+        # Debug information
+        print(f"[DEBUG] Running simulation with WIDTH={WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+    
+            # Arguments
+            always=True,
+            clean=True,
+            verbose=True,
+            parameters=parameter,
+            timescale=("1ns", "1ps"),
+            log_file="sim.log")
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:33: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s sorting_engine -g2012 -Psorting_engine.WIDTH=2 -f /code/rundir/sim_build/cmds.f /code/rtl/sorting_engine.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_________________________________ test_sort[3] _________________________________
+
+WIDTH = 3
+
+    @pytest.mark.parametrize("WIDTH", [1,2,3,4,5])
+    
+    def test_sort(WIDTH):
+        # Run the simulation with specified parameters
+>       test_runner(WIDTH=WIDTH)
+
+/src/test_runner.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+WIDTH = 3
+
+    def test_runner(WIDTH: int=4):
+    
+        parameter = {"WIDTH":WIDTH}
+        # Debug information
+        print(f"[DEBUG] Running simulation with WIDTH={WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+    
+            # Arguments
+            always=True,
+            clean=True,
+            verbose=True,
+            parameters=parameter,
+            timescale=("1ns", "1ps"),
+            log_file="sim.log")
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:33: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s sorting_engine -g2012 -Psorting_engine.WIDTH=3 -f /code/rundir/sim_build/cmds.f /code/rtl/sorting_engine.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_________________________________ test_sort[4] _________________________________
+
+WIDTH = 4
+
+    @pytest.mark.parametrize("WIDTH", [1,2,3,4,5])
+    
+    def test_sort(WIDTH):
+        # Run the simulation with specified parameters
+>       test_runner(WIDTH=WIDTH)
+
+/src/test_runner.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+WIDTH = 4
+
+    def test_runner(WIDTH: int=4):
+    
+        parameter = {"WIDTH":WIDTH}
+        # Debug information
+        print(f"[DEBUG] Running simulation with WIDTH={WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+    
+            # Arguments
+            always=True,
+            clean=True,
+            verbose=True,
+            parameters=parameter,
+            timescale=("1ns", "1ps"),
+            log_file="sim.log")
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:33: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s sorting_engine -g2012 -Psorting_engine.WIDTH=4 -f /code/rundir/sim_build/cmds.f /code/rtl/sorting_engine.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_________________________________ test_sort[5] _________________________________
+
+WIDTH = 5
+
+    @pytest.mark.parametrize("WIDTH", [1,2,3,4,5])
+    
+    def test_sort(WIDTH):
+        # Run the simulation with specified parameters
+>       test_runner(WIDTH=WIDTH)
+
+/src/test_runner.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+WIDTH = 5
+
+    def test_runner(WIDTH: int=4):
+    
+        parameter = {"WIDTH":WIDTH}
+        # Debug information
+        print(f"[DEBUG] Running simulation with WIDTH={WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+    
+            # Arguments
+            always=True,
+            clean=True,
+            verbose=True,
+            parameters=parameter,
+            timescale=("1ns", "1ps"),
+            log_file="sim.log")
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:33: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s sorting_engine -g2012 -Psorting_engine.WIDTH=5 -f /code/rundir/sim_build/cmds.f /code/rtl/sorting_engine.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-y3y7ph4y'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/lastfailed: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-hbld9aci'
+    config.cache.set("cache/lastfailed", self.lastfailed)
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-u7295nek'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_runner - SystemExit: 1
+FAILED ../../src/test_runner.py::test_sort[1] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_sort[2] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_sort[3] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_sort[4] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_sort[5] - SystemExit: 1
+======================== 6 failed, 3 warnings in 3.51s =========================
+Cleaning up Docker resources...

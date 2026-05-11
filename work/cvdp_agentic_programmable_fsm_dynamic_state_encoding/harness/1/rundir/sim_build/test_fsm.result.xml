@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777960124" />
+    <testcase name="fsm_test" classname="test_fsm" file="/src/test_fsm.py" lineno="12" time="0.010221719741821289" sim_time_ns="32.0" ratio_time="3130.5886688591886">
+      <failure error_type="AttributeError" error_msg="fsm contains no child object named encoded_state" />
+    </testcase>
+  </testsuite>
+</testsuites>

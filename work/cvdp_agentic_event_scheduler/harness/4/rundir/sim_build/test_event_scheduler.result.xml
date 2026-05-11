@@ -1,0 +1,35 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777959917" />
+    <testcase name="tc1_add_event_and_trigger" classname="test_event_scheduler" file="/src/test_event_scheduler.py" lineno="50" time="0.010411262512207031" sim_time_ns="20.0" ratio_time="1920.9966107905102">
+      <failure error_type="AttributeError" error_msg="event_scheduler contains no child object named modify_event" />
+    </testcase>
+    <testcase name="tc2_cancel_event" classname="test_event_scheduler" file="/src/test_event_scheduler.py" lineno="74" time="0.003017425537109375" sim_time_ns="30.0" ratio_time="9942.250316055626">
+      <failure error_type="AttributeError" error_msg="event_scheduler contains no child object named modify_event" />
+    </testcase>
+    <testcase name="tc3_modify_event" classname="test_event_scheduler" file="/src/test_event_scheduler.py" lineno="104" time="0.0025742053985595703" sim_time_ns="30.0" ratio_time="11654.081689358156">
+      <failure error_type="AttributeError" error_msg="event_scheduler contains no child object named modify_event" />
+    </testcase>
+    <testcase name="tc4_duplicate_add" classname="test_event_scheduler" file="/src/test_event_scheduler.py" lineno="136" time="0.002542734146118164" sim_time_ns="30.0" ratio_time="11798.323488045007">
+      <failure error_type="AttributeError" error_msg="event_scheduler contains no child object named modify_event" />
+    </testcase>
+    <testcase name="tc5_modify_nonexistent" classname="test_event_scheduler" file="/src/test_event_scheduler.py" lineno="169" time="0.0026526451110839844" sim_time_ns="30.0" ratio_time="11309.466115405357">
+      <failure error_type="AttributeError" error_msg="event_scheduler contains no child object named modify_event" />
+    </testcase>
+    <testcase name="tc6_cancel_nonexistent" classname="test_event_scheduler" file="/src/test_event_scheduler.py" lineno="190" time="0.0024466514587402344" sim_time_ns="30.0" ratio_time="12261.656597154551">
+      <failure error_type="AttributeError" error_msg="event_scheduler contains no child object named modify_event" />
+    </testcase>
+    <testcase name="tc7_recurring_event" classname="test_event_scheduler" file="/src/test_event_scheduler.py" lineno="209" time="0.0026895999908447266" sim_time_ns="30.0" ratio_time="11154.074993351653">
+      <failure error_type="AttributeError" error_msg="event_scheduler contains no child object named modify_event" />
+    </testcase>
+    <testcase name="tc8_logging" classname="test_event_scheduler" file="/src/test_event_scheduler.py" lineno="237" time="0.0027010440826416016" sim_time_ns="30.0" ratio_time="11106.816135581252">
+      <failure error_type="AttributeError" error_msg="event_scheduler contains no child object named modify_event" />
+    </testcase>
+    <testcase name="tc9_modify_then_cancel" classname="test_event_scheduler" file="/src/test_event_scheduler.py" lineno="261" time="0.0025391578674316406" sim_time_ns="30.0" ratio_time="11814.940845070423">
+      <failure error_type="AttributeError" error_msg="event_scheduler contains no child object named modify_event" />
+    </testcase>
+    <testcase name="tc10_priority_selection" classname="test_event_scheduler" file="/src/test_event_scheduler.py" lineno="302" time="0.002712249755859375" sim_time_ns="30.0" ratio_time="11060.928270042194">
+      <failure error_type="AttributeError" error_msg="event_scheduler contains no child object named modify_event" />
+    </testcase>
+  </testsuite>
+</testsuites>

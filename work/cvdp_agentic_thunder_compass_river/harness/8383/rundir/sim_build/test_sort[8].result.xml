@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778495221" />
+    <testcase name="test_order_matching_engine" classname="test_order_matching_engine" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_thunder_compass_river/harness/8383/src/test_order_matching_engine.py" lineno="23" time="0.0019567012786865234" sim_time_ns="340.0" ratio_time="173761.83258194223" />
+  </testsuite>
+</testsuites>

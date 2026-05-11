@@ -1,0 +1,7 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778522994" />
+    <testcase name="test_filo_default_clocks" classname="test_async_filo" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_async_filo/harness/1/src/test_async_filo.py" lineno="118" time="0.0034875869750976562" sim_time_ns="421.0" ratio_time="120713.8353841947" />
+    <testcase name="test_filo_random_clocks" classname="test_async_filo" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_async_filo/harness/1/src/test_async_filo.py" lineno="124" time="0.003437519073486328" sim_time_ns="697.0" ratio_time="202762.5113053128" />
+  </testsuite>
+</testsuites>

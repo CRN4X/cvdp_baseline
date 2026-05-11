@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777960147" />
+    <testcase name="test_sorting_engine" classname="test_sorting_engine" file="/src/test_sorting_engine.py" lineno="79" time="0.0037474632263183594" sim_time_ns="230.0" ratio_time="61374.851762310725">
+      <failure error_type="AssertionError" error_msg="Latency check failed for test Already Sorted: expected 17, got 20&#10;assert False" />
+    </testcase>
+  </testsuite>
+</testsuites>

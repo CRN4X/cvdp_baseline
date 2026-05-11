@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778523530" />
+    <testcase name="test_bcd_top_compare" classname="test_bcd_adder" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_bcd_adder/harness/4/src/test_bcd_adder.py" lineno="24" time="0.004669904708862305" sim_time_ns="185.0" ratio_time="39615.36937764844" />
+  </testsuite>
+</testsuites>

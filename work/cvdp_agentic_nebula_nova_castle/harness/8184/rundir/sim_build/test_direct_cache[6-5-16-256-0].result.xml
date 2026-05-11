@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778491360" />
+    <testcase name="test_direct_map_cache" classname="test_direct_map_cache" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_nebula_nova_castle/harness/8184/src/test_direct_map_cache.py" lineno="12" time="0.015390872955322266" sim_time_ns="210.0" ratio_time="13644.45022771633" />
+  </testsuite>
+</testsuites>

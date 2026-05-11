@@ -1,0 +1,7 @@
+[
+  "src/test_runner.py::test_runner",
+  "src/test_runner.py::test_sort[12]",
+  "src/test_runner.py::test_sort[4]",
+  "src/test_runner.py::test_sort[5]",
+  "src/test_runner.py::test_sort[8]"
+]

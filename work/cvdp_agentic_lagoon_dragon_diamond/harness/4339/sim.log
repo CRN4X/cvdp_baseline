@@ -1,0 +1,6 @@
+/home/snuc/Study/agents_for-chip-design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_lagoon_dragon_diamond/4339/rtl/correlate.sv: No such file or directory
+/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_lagoon_dragon_diamond/4339/rtl/cross_correlation.sv:40: error: Unknown module type: correlate
+2 error(s) during elaboration.
+*** These modules were missing:
+        correlate referenced 1 times.
+***

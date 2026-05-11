@@ -1,0 +1,11 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778491160" />
+    <testcase name="basic_test" classname="test_clock_estimator" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_forest_fountain_river/harness/702/src/test_clock_estimator.py" lineno="57" time="0.017991065979003906" sim_time_ns="2550.0" ratio_time="141737.0156374238" />
+    <testcase name="multi_en_check" classname="test_clock_estimator" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_forest_fountain_river/harness/702/src/test_clock_estimator.py" lineno="85" time="0.052150726318359375" sim_time_ns="11748.0" ratio_time="225270.1127935045" />
+    <testcase name="reset_behavior_test" classname="test_clock_estimator" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_forest_fountain_river/harness/702/src/test_clock_estimator.py" lineno="124" time="0.0077931880950927734" sim_time_ns="1142.0" ratio_time="146538.23134579498" />
+    <testcase name="boundary_condition_test" classname="test_clock_estimator" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_forest_fountain_river/harness/702/src/test_clock_estimator.py" lineno="138" time="0.08418917655944824" sim_time_ns="12610.0" ratio_time="149781.72391430553" />
+    <testcase name="stress_test" classname="test_clock_estimator" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_forest_fountain_river/harness/702/src/test_clock_estimator.py" lineno="162" time="0.16228818893432617" sim_time_ns="9759.0" ratio_time="60133.76613592758" />
+    <testcase name="interrupt_behavior_test" classname="test_clock_estimator" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_forest_fountain_river/harness/702/src/test_clock_estimator.py" lineno="182" time="0.04454827308654785" sim_time_ns="6650.0" ratio_time="149276.26907288772" />
+  </testsuite>
+</testsuites>

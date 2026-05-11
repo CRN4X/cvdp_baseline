@@ -1,0 +1,17 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777959940" />
+    <testcase name="test_lfsr_with_Fixed_seed" classname="test_bit16_lfsr" file="/src/test_bit16_lfsr.py" lineno="7" time="3.4810798168182373" sim_time_ns="655380.0" ratio_time="188269.16775468475">
+      <failure error_type="AssertionError" error_msg="LFSR does not support maximal length sequence, first value 0xd670 does not match last value 0x8a34&#10;assert 54896 == 35380" />
+    </testcase>
+    <testcase name="test_lfsr_random_seed" classname="test_bit16_lfsr" file="/src/test_bit16_lfsr.py" lineno="34" time="3.348412036895752" sim_time_ns="655390.0" ratio_time="195731.58642912997">
+      <failure error_type="AssertionError" error_msg="LFSR does not support maximal length sequence, first value 0x2ae4 does not match last value 0xd8ee&#10;assert 10980 == 55534" />
+    </testcase>
+    <testcase name="test_lfsr_all_bits_set_seed" classname="test_bit16_lfsr" file="/src/test_bit16_lfsr.py" lineno="61" time="3.32682728767395" sim_time_ns="655390.0" ratio_time="197001.51024618873">
+      <failure error_type="AssertionError" error_msg="LFSR does not support maximal length sequence, first value 0x7fff does not match last value 0x43ef&#10;assert 32767 == 17391" />
+    </testcase>
+    <testcase name="test_lfsr_alternating_bits_seed" classname="test_bit16_lfsr" file="/src/test_bit16_lfsr.py" lineno="88" time="3.2604475021362305" sim_time_ns="655390.0" ratio_time="201012.28422496957">
+      <failure error_type="AssertionError" error_msg="LFSR does not support maximal length sequence, first value 0xd555 does not match last value 0xc15a&#10;assert 54613 == 49498" />
+    </testcase>
+  </testsuite>
+</testsuites>

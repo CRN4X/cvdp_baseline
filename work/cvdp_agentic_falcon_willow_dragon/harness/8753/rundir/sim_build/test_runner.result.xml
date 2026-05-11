@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778495139" />
+    <testcase name="test_APBGlobalHistoryRegister_secure_top" classname="test_APBGlobalHistoryRegister_secure_top" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_falcon_willow_dragon/harness/8753/src/test_APBGlobalHistoryRegister_secure_top.py" lineno="62" time="0.005644083023071289" sim_time_ns="945.0" ratio_time="167431.9807375491" />
+  </testsuite>
+</testsuites>

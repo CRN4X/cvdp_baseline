@@ -1,0 +1,140 @@
+Running harness with project name: cvdp_agentic_lfsr_5_1777959938
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_runner 
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s bit16_lfsr -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/bit16_lfsr.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1777959940
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_bit16_lfsr.test_lfsr_with_Fixed_seed (1/4)
+                                                            Test LFSR with a given seed value
+Seed value: 0xace1
+LFSR output at cycle 0: 1101011001110000
+Computed next value (cycle 1): 0x6b38
+LFSR output at cycle 1 (DUT): 0xeb38
+LFSR output at cycle 65535: 1000101000110100
+655380.00ns WARNING  ..d_seed.test_lfsr_with_Fixed_seed LFSR does not support maximal length sequence, first value 0xd670 does not match last value 0x8a34
+                                                        assert 54896 == 35380
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_bit16_lfsr.py", line 31, in test_lfsr_with_Fixed_seed
+                                                            await run_lfsr_sequence_check(dut, cycles=65536, check_maximal_length=True)
+                                                          File "/src/test_bit16_lfsr.py", line 153, in run_lfsr_sequence_check
+                                                            assert first_value == last_value, f"LFSR does not support maximal length sequence, first value {hex(first_value)} does not match last value {hex(last_value)}"
+                                                        AssertionError: LFSR does not support maximal length sequence, first value 0xd670 does not match last value 0x8a34
+                                                        assert 54896 == 35380
+655380.00ns WARNING  cocotb.regression                  test_bit16_lfsr.test_lfsr_with_Fixed_seed failed
+655380.00ns INFO     cocotb.regression                  running test_bit16_lfsr.test_lfsr_random_seed (2/4)
+                                                            Test LFSR with a random seed value
+Seed value: 0x55c9
+LFSR output at cycle 0: 0010101011100100
+Computed next value (cycle 1): 0x9572
+LFSR output at cycle 1 (DUT): 0x9572
+LFSR output at cycle 65535: 1101100011101110
+1310771.00ns WARNING  ..andom_seed.test_lfsr_random_seed LFSR does not support maximal length sequence, first value 0x2ae4 does not match last value 0xd8ee
+                                                         assert 10980 == 55534
+                                                         Traceback (most recent call last):
+                                                           File "/src/test_bit16_lfsr.py", line 58, in test_lfsr_random_seed
+                                                             await run_lfsr_sequence_check(dut, cycles=65536, check_maximal_length=True)
+                                                           File "/src/test_bit16_lfsr.py", line 153, in run_lfsr_sequence_check
+                                                             assert first_value == last_value, f"LFSR does not support maximal length sequence, first value {hex(first_value)} does not match last value {hex(last_value)}"
+                                                         AssertionError: LFSR does not support maximal length sequence, first value 0x2ae4 does not match last value 0xd8ee
+                                                         assert 10980 == 55534
+1310771.00ns WARNING  cocotb.regression                  test_bit16_lfsr.test_lfsr_random_seed failed
+1310771.00ns INFO     cocotb.regression                  running test_bit16_lfsr.test_lfsr_all_bits_set_seed (3/4)
+                                                             Test LFSR with all bits set (0xFFFF) seed value
+Seed value: 0xffff
+LFSR output at cycle 0: 0111111111111111
+Computed next value (cycle 1): 0x3fff
+LFSR output at cycle 1 (DUT): 0x3fff
+LFSR output at cycle 65535: 0100001111101111
+1966162.00ns WARNING  ..seed.test_lfsr_all_bits_set_seed LFSR does not support maximal length sequence, first value 0x7fff does not match last value 0x43ef
+                                                         assert 32767 == 17391
+                                                         Traceback (most recent call last):
+                                                           File "/src/test_bit16_lfsr.py", line 85, in test_lfsr_all_bits_set_seed
+                                                             await run_lfsr_sequence_check(dut, cycles=65536, check_maximal_length=True)
+                                                           File "/src/test_bit16_lfsr.py", line 153, in run_lfsr_sequence_check
+                                                             assert first_value == last_value, f"LFSR does not support maximal length sequence, first value {hex(first_value)} does not match last value {hex(last_value)}"
+                                                         AssertionError: LFSR does not support maximal length sequence, first value 0x7fff does not match last value 0x43ef
+                                                         assert 32767 == 17391
+1966162.00ns WARNING  cocotb.regression                  test_bit16_lfsr.test_lfsr_all_bits_set_seed failed
+1966162.00ns INFO     cocotb.regression                  running test_bit16_lfsr.test_lfsr_alternating_bits_seed (4/4)
+                                                             Test LFSR with alternating bits (0xAAAA) seed value
+Seed value: 0xaaaa
+LFSR output at cycle 0: 1101010101010101
+Computed next value (cycle 1): 0x6aaa
+LFSR output at cycle 1 (DUT): 0xeaaa
+LFSR output at cycle 65535: 1100000101011010
+2621553.00ns WARNING  ...test_lfsr_alternating_bits_seed LFSR does not support maximal length sequence, first value 0xd555 does not match last value 0xc15a
+                                                         assert 54613 == 49498
+                                                         Traceback (most recent call last):
+                                                           File "/src/test_bit16_lfsr.py", line 112, in test_lfsr_alternating_bits_seed
+                                                             await run_lfsr_sequence_check(dut, cycles=65536, check_maximal_length=True)
+                                                           File "/src/test_bit16_lfsr.py", line 153, in run_lfsr_sequence_check
+                                                             assert first_value == last_value, f"LFSR does not support maximal length sequence, first value {hex(first_value)} does not match last value {hex(last_value)}"
+                                                         AssertionError: LFSR does not support maximal length sequence, first value 0xd555 does not match last value 0xc15a
+                                                         assert 54613 == 49498
+2621553.00ns WARNING  cocotb.regression                  test_bit16_lfsr.test_lfsr_alternating_bits_seed failed
+2621553.00ns INFO     cocotb.regression                  *********************************************************************************************************
+                                                         ** TEST                                             STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                         *********************************************************************************************************
+                                                         ** test_bit16_lfsr.test_lfsr_with_Fixed_seed         FAIL      655380.00           3.48     188269.17  **
+                                                         ** test_bit16_lfsr.test_lfsr_random_seed             FAIL      655390.00           3.35     195731.59  **
+                                                         ** test_bit16_lfsr.test_lfsr_all_bits_set_seed       FAIL      655390.00           3.33     197001.51  **
+                                                         ** test_bit16_lfsr.test_lfsr_alternating_bits_seed   FAIL      655390.00           3.26     201012.28  **
+                                                         *********************************************************************************************************
+                                                         ** TESTS=4 PASS=0 FAIL=4 SKIP=0                               2621553.00          13.43     195263.19  **
+                                                         *********************************************************************************************************
+ERROR    Icarus:runner.py:572 ERROR: Failed 4 of 4 tests.
+FAILED
+
+=================================== FAILURES ===================================
+_________________________________ test_runner __________________________________
+
+    def test_runner():
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="build.log")
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:24: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s bit16_lfsr -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/bit16_lfsr.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 4 of 4 tests.
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-gbt1dr5c'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/lastfailed: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-dasob3i5'
+    config.cache.set("cache/lastfailed", self.lastfailed)
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-gnp5vqwy'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_runner - SystemExit: 1
+======================== 1 failed, 3 warnings in 14.09s ========================
+Cleaning up Docker resources...

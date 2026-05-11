@@ -1,0 +1,6 @@
+{
+  "src/test_runner.py::test_runner": true,
+  "src/test_runner.py::test_elevator_control_system[8]": true,
+  "src/test_runner.py::test_elevator_control_system[5]": true,
+  "src/test_runner.py::test_elevator_control_system[10]": true
+}

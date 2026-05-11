@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778494687" />
+    <testcase name="test_detect_sequence" classname="test_detect_sequence" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_lagoon_dragon_diamond/harness/4339/src/test_detect_sequence.py" lineno="9" time="0.09579205513000488" sim_time_ns="1020.0" ratio_time="10648.064691959053" />
+  </testsuite>
+</testsuites>

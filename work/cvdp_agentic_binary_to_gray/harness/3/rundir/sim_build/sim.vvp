@@ -1,0 +1,33 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
+S_0x556faf48bdc0 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -9;
+S_0x556faf48bf50 .scope module, "binary_to_gray" "binary_to_gray" 3 1;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 5 "binary_in";
+    .port_info 1 /OUTPUT 5 "gray_out";
+P_0x556faf48c0e0 .param/l "WIDTH" 0 3 2, +C4<00000000000000000000000000000101>;
+o0x7fda85ae80a8 .functor BUFZ 5, C4<zzzzz>; HiZ drive
+L_0x556faf4d4640 .functor XOR 5, o0x7fda85ae80a8, L_0x556faf4d44d0, C4<00000>, C4<00000>;
+v0x556faf4b26a0_0 .net *"_ivl_0", 4 0, L_0x556faf4d44d0;  1 drivers
+v0x556faf4d3f90_0 .net *"_ivl_2", 3 0, L_0x556faf4d43d0;  1 drivers
+L_0x7fda85a9f018 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x556faf4d4070_0 .net *"_ivl_4", 0 0, L_0x7fda85a9f018;  1 drivers
+v0x556faf4d4160_0 .net "binary_in", 4 0, o0x7fda85ae80a8;  0 drivers
+v0x556faf4d4240_0 .net "gray_out", 4 0, L_0x556faf4d4640;  1 drivers
+L_0x556faf4d43d0 .part o0x7fda85ae80a8, 1, 4;
+L_0x556faf4d44d0 .concat [ 4 1 0 0], L_0x556faf4d43d0, L_0x7fda85a9f018;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/my-agent/agent_files/cvdp_agentic_binary_to_gray/3/rtl/binary_to_gray.sv";

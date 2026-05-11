@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777959884" />
+    <testcase name="test_direct_map_cache" classname="test_direct_map_cache" file="/src/test_direct_map_cache.py" lineno="12" time="0.012941598892211914" sim_time_ns="190.0" ratio_time="14681.338958383229">
+      <failure error_type="AttributeError" error_msg="direct_map_cache contains no child object named victimway" />
+    </testcase>
+  </testsuite>
+</testsuites>

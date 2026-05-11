@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778518769" />
+    <testcase name="test_aes128_encrypt" classname="test_aes128_encrypt" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_AES_encryption_decryption/harness/3/src/test_aes128_encrypt.py" lineno="18" time="13.458512783050537" sim_time_ns="120070.0" ratio_time="8921.490950412774" />
+  </testsuite>
+</testsuites>

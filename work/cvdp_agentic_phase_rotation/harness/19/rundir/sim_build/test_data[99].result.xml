@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777960070" />
+    <testcase name="test_convolution_0" classname="test_phase_lut" file="/src/test_phase_lut.py" lineno="9" time="0.0019638538360595703" sim_time_ns="0.0" ratio_time="0.0">
+      <failure error_type="AttributeError" error_msg="phase_lut contains no child object named clk" />
+    </testcase>
+  </testsuite>
+</testsuites>

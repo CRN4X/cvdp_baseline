@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778521617" />
+    <testcase name="test_Min_Hamming_Distance_Finder" classname="test_Min_Hamming_Distance_Finder" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_Min_Hamming_Distance_Finder/harness/1/src/test_Min_Hamming_Distance_Finder.py" lineno="25" time="0.010284662246704102" sim_time_ns="270.0" ratio_time="26252.68516586689" />
+  </testsuite>
+</testsuites>

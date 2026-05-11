@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778495362" />
+    <testcase name="test_thermostat_secure_top" classname="test_thermostat_secure_top" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_breeze_crystal_zenith/harness/1259/src/test_thermostat_secure_top.py" lineno="28" time="0.003953218460083008" sim_time_ns="651.0" ratio_time="164675.94861588566" />
+  </testsuite>
+</testsuites>

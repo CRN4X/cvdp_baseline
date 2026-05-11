@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778040932" />
+    <testcase name="test_search_bst" classname="test_delete_node_binary_search_tree" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_sunrise_ivory_glacier/harness/9089/src/test_delete_node_binary_search_tree.py" lineno="262" time="0.0034003257751464844" sim_time_ns="520.0" ratio_time="152926.5236292245">
+      <failure error_type="AssertionError" error_msg="Latency incorrect. Got: 10, Expected: 11&#10;assert 11 == 10" />
+    </testcase>
+  </testsuite>
+</testsuites>

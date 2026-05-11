@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777960109" />
+    <testcase name="test_detect_sequence" classname="test_detect_sequence" file="/src/test_detect_sequence.py" lineno="9" time="0.006103992462158203" sim_time_ns="20.0" ratio_time="3276.5440199984378">
+      <failure error_type="AssertionError" error_msg="Parameter NBW_TH_UNLOCK does not exist&#10;assert False&#10; +  where False = hasattr(HierarchyObject(detect_sequence), 'NBW_TH_UNLOCK')" />
+    </testcase>
+  </testsuite>
+</testsuites>

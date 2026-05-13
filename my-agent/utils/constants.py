@@ -55,7 +55,9 @@ SIM_ERROR_PATTERNS = ("error:", "FAILED", "AssertionError", "Traceback", "No mod
 
 # Codex CLI
 CODEX_STREAM_BANNER = "codex"
-CODEX_EXEC_CMD = ("codex", "exec", "-", "--skip-git-repo-check", "-C")
+# Force writable sandbox for iterative local-fix flow; harness requires writing
+# work/*/rundir artifacts and staged RTL under my-agent/agent_files.
+CODEX_EXEC_CMD = ("codex", "exec", "-", "--skip-git-repo-check", "--sandbox", "workspace-write", "-C")
 CODEX_TIMEOUT_RETURN_CODE = 124
 
 # Tokenization
@@ -91,3 +93,6 @@ AGENT_CODEX_ITERATION_COUNT_ENV = "AGENT_CODEX_ITERATION_COUNT"
 AGENT_PIPELINE_START_EPOCH_ENV = "AGENT_PIPELINE_START_EPOCH"
 AGENT_BATCH_TS_ENV = "AGENT_BATCH_TS"
 AGENT_MANAGED_PROBLEM_LOG_ENV = "AGENT_MANAGED_PROBLEM_LOG"
+AGENT_BATCH_OUTPUT_MODE_ENV = "AGENT_BATCH_OUTPUT_MODE"
+BATCH_OUTPUT_MODE_SINGLE = "single"
+BATCH_OUTPUT_MODE_BATCH = "batch"

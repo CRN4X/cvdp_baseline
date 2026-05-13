@@ -1,1 +1,11 @@
-{}
+{
+  "src/test_runner.py::test_bst[5-6]": true,
+  "src/test_runner.py::test_bst[5-16]": true,
+  "src/test_runner.py::test_bst[5-32]": true,
+  "src/test_runner.py::test_bst[10-6]": true,
+  "src/test_runner.py::test_bst[10-16]": true,
+  "src/test_runner.py::test_bst[10-32]": true,
+  "src/test_runner.py::test_bst[15-6]": true,
+  "src/test_runner.py::test_bst[15-16]": true,
+  "src/test_runner.py::test_bst[15-32]": true
+}

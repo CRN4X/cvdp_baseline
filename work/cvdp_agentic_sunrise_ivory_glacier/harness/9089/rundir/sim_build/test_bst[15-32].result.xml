@@ -1,6 +1,0 @@
-<testsuites name="results">
-  <testsuite name="all" package="all">
-    <property name="random_seed" value="1778490758" />
-    <testcase name="test_search_bst" classname="test_delete_node_binary_search_tree" file="/home/snuc/Study/agents_for_chip_design/Agents-for-Chip-Design-Automation/baseline_NVIDIA-ICLAD25-Hackathon-main/work/cvdp_agentic_sunrise_ivory_glacier/harness/9089/src/test_delete_node_binary_search_tree.py" lineno="262" time="0.005276918411254883" sim_time_ns="1250.0" ratio_time="236880.67591379388" />
-  </testsuite>
-</testsuites>

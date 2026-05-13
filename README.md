@@ -79,6 +79,10 @@ Important:
 ### Single-index mode (`-i 7`)
 
 - Live run log: `work/run.log`
+- Single-run summary CSV (no timestamp folder):
+  - `my-agent/batch_reports/local_eval_summary_run_<YYYYMMDD_HHMMSS>.csv`
+- Single-run problem log (no timestamp folder):
+  - `my-agent/batch_reports/<YYYYMMDD_HHMMSS>_run_<problem_name>_<problem_id>.log`
 - Optional archive with `--save_log`:
   - `work/logs/run_<unix_timestamp>__<index>.log`
 

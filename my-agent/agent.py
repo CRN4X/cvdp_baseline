@@ -19,6 +19,7 @@ import subprocess
 import sys
 import time
 import shlex
+import shutil
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 from utils.constants import (
@@ -40,7 +41,11 @@ from utils.constants import (
     HARNESS_SIM_LOG_FILENAME,
     MAX_SOLVE_RUN_CYCLES,
     MY_AGENT_DIRNAME,
+    BATCH_REPORTS_DIRNAME,
     AGENT_BATCH_TS_ENV,
+    AGENT_BATCH_OUTPUT_MODE_ENV,
+    BATCH_OUTPUT_MODE_BATCH,
+    BATCH_OUTPUT_MODE_SINGLE,
     AGENT_MANAGED_PROBLEM_LOG_ENV,
     AGENT_PIPELINE_START_EPOCH_ENV,
     RUN_LOG_FILENAME,
@@ -81,6 +86,17 @@ from utils.tokens import (
 
 def infer_repo_root() -> Path:
     return Path(__file__).resolve().parent.parent
+
+
+def resolve_entry_id_for_index(repo_root: Path, idx: int) -> Optional[str]:
+    dataset_path = repo_root / DATASET_DIRNAME / DATASET_FILENAME
+    if not dataset_path.exists():
+        return None
+    entries = load_dataset_entries(dataset_path)
+    if idx < 1 or idx > len(entries):
+        return None
+    entry_id = str(entries[idx - 1].get("id", "")).strip()
+    return entry_id or None
 
 
 def build_codex_prompt(
@@ -201,6 +217,7 @@ def run_post_benchmark(
     harness_path: Path,
     pipeline_start_epoch: int,
     batch_run_ts: str,
+    batch_output_mode: str,
     codex_iteration_count: Optional[int],
     codex_token_usage: Dict[str, Optional[int]],
 ) -> subprocess.CompletedProcess:
@@ -212,6 +229,7 @@ def run_post_benchmark(
         f". {shlex.quote(str(repo_root / AGENT_ENV_DIRNAME / BIN_DIRNAME / ACTIVATE_SCRIPT_NAME))} && "
         f"export {AGENT_PIPELINE_START_EPOCH_ENV}={pipeline_start_epoch} && "
         f"export {AGENT_BATCH_TS_ENV}={shlex.quote(batch_run_ts)} && "
+        f"export {AGENT_BATCH_OUTPUT_MODE_ENV}={shlex.quote(batch_output_mode)} && "
         f"export {AGENT_MANAGED_PROBLEM_LOG_ENV}=1 && "
         f"{codex_reporting_env}"
         f"./{MY_AGENT_DIRNAME}/run_local_eval_batch.sh {shlex.quote(str(repo_root))} --harness {shlex.quote(str(harness_path))}",
@@ -370,6 +388,7 @@ def main() -> None:
                 repo_root,
                 batch_run_ts,
                 batch_run_dir=batch_run_dir,
+                batch_output_mode=BATCH_OUTPUT_MODE_BATCH,
             )
             if rc != 0:
                 failed_indices.append(idx)
@@ -381,12 +400,30 @@ def main() -> None:
             print(f"[Write Permission Error] Could not create/update work/run.log file. {exc}", file=sys.stderr)
             sys.exit(2)
 
+        entry_id_for_log = resolve_entry_id_for_index(repo_root, idx)
         try:
-            rc = _main_orchestrator(idx, max_retries, repo_root, batch_run_ts)
+            rc = _main_orchestrator(
+                idx,
+                max_retries,
+                repo_root,
+                batch_run_ts,
+                batch_output_mode=BATCH_OUTPUT_MODE_SINGLE,
+            )
             if rc != 0:
                 failed_indices.append(idx)
         finally:
             stop_run_log(log_file, orig_stdout, orig_stderr)
+            reports_dir = repo_root / MY_AGENT_DIRNAME / BATCH_REPORTS_DIRNAME
+            reports_dir.mkdir(parents=True, exist_ok=True)
+            log_key = entry_id_for_log if entry_id_for_log else f"index_{idx}"
+            single_run_log_path = reports_dir / f"{batch_run_ts}_run_{log_key}.log"
+            source_run_log = repo_root / WORK_DIRNAME / RUN_LOG_FILENAME
+            if source_run_log.exists():
+                try:
+                    shutil.copy2(source_run_log, single_run_log_path)
+                    log(f"Single-run problem log saved: {single_run_log_path}")
+                except OSError as exc:
+                    print(f"[Write Permission Error] Could not save single-run problem log. {exc}", file=sys.stderr)
             if save_log:
                 try:
                     archived = archive_run_log(repo_root, idx)
@@ -419,6 +456,7 @@ def _main_orchestrator(
     repo_root: Path,
     batch_run_ts: str,
     batch_run_dir: Optional[Path] = None,
+    batch_output_mode: str = BATCH_OUTPUT_MODE_BATCH,
 ) -> int:
     pipeline_start_epoch = int(time.time())
     default_batch_log_name = f"run_index_{idx}.log"
@@ -543,6 +581,7 @@ def _main_orchestrator(
             harness_path,
             pipeline_start_epoch,
             batch_run_ts,
+            batch_output_mode,
             codex_iteration_count,
             codex_token_usage,
         )

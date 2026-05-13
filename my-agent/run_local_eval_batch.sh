@@ -48,9 +48,15 @@ case "$TS" in
     TS=$(date +%Y%m%d_%H%M%S)
     ;;
 esac
-RUN_DIR="$OUT_DIR/$TS"
+BATCH_OUTPUT_MODE="${AGENT_BATCH_OUTPUT_MODE:-batch}"
+if [ "$BATCH_OUTPUT_MODE" = "single" ]; then
+  RUN_DIR="$OUT_DIR"
+  CSV="$OUT_DIR/local_eval_summary_run_$TS.csv"
+else
+  RUN_DIR="$OUT_DIR/$TS"
+  CSV="$RUN_DIR/local_eval_summary_run_$TS.csv"
+fi
 mkdir -p "$RUN_DIR"
-CSV="$RUN_DIR/local_eval_summary_run_$TS.csv"
 
 if [ -n "$TARGET_HARNESS" ]; then
   TARGET_HARNESS=$(cd "$TARGET_HARNESS" && pwd)

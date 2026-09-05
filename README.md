@@ -13,7 +13,7 @@ This repository runs local agentic RTL debug/eval workflows for harnessed verifi
 ## One-Time Setup
 
 Run from repo root:
-  Works on MacOS/Linux, for Windows use gitbash
+ - Works on MacOS/Linux, for Windows use gitbash
 
 ```bash
 ./setup_local_no_docker.sh

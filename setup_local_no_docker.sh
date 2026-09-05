@@ -57,7 +57,7 @@ ensure_iverilog() {
       ;;
     MINGW*|MSYS*|CYGWIN*)
       if command -v winget.exe >/dev/null 2>&1; then
-        winget.exe install --id IcarusVerilog.IcarusVerilog -e --accept-package-agreements --accept-source-agreements
+        winget.exe install --id Icarus.Verilog -e --accept-package-agreements --accept-source-agreements
       elif command -v choco >/dev/null 2>&1; then
         choco install iverilog -y
       else

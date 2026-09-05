@@ -5,15 +5,13 @@ This repository runs local agentic RTL debug/eval workflows for harnessed verifi
 ## Prerequisites
 
 - Python `3.12`
-- Codex CLI (`codex`) on `PATH`
-- Icarus Verilog tools on `PATH`:
-  - `iverilog`
-  - `vvp`
+- Codex CLI (`codex`)
 
 ## One-Time Setup
 
 Run from repo root:
  - Works on MacOS/Linux, for Windows use gitbash
+ - `iverilog` will be installed first time, if prompted permisson, kindly permit to install
 
 ```bash
 ./setup_local_no_docker.sh
